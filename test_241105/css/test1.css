@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+/* 폰트를 선언한 css파일을 불러서 사용하는 방식 입니다. 이 방식을 cdm방식이라 부릅니다.*/
+/* 해당 css파일에서 서체의 이름을 이미 정의해서 놨기 때문에 반드시 쓰라고 하는 방식으로 서체의 이름을 써야함*/
+
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    /* 글자스타일은  상속을 받음 그래서 기본스타일(예, p태그)을 body에 선언해서 상속받게 한다*/
+    font-size: 17px;
+    font-weight: 400;
+    color: #3d3d3d;
+    line-height: 1.4;
+    /*line-height = 행간 인풋은 배수로 입력*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.weapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.fabr {
+    background-color: #041e37;
+    
+    color: #ffffff;
+    /* 배경색 또는 이미지가 진하게 들어가면 글자색상이 변하면
+    동시에 선언하는게 좋음*/
+    /*fabr에서 컬러 정의하면 '기업의~'의 블루는 어케 정의함?
+    p태그인데?*/
+    height: 500px;
+
+}
+
+.fabr h1 {
+    color: #ffffff;
+    padding: 200px 0 14px 0; 
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.fabr h1 strong {
+    font-weight: 700;
+    color: #24d0f6;
+    /* strong태그는 브라우저가 bold를 줌
+    h1 */
+}
+
+.fabr .sub_tit {
+    color: #24d0f6;
+    font-size: 30px;
+    margin: 0 0 17px 0;
+
+}
+
+.ai {
+    
+    margin: 120px 0 0 0;
+
+}
+
+.ai h1 strong {
+    color: #24d0f6;
+}
+
+.ai h1 {
+    color: #1d1d1d;
+    margin: 0 0 50px 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+
+
