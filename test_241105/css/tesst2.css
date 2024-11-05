@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+    font-family: "Noto Sans KR", serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #3d3d3d;
+    line-height: 1.4;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.what {    /* 경로의 ../는 폴더 밖으로 나가라는 명령어
+    주의사항) ./와 ../는 의미가 다름 그래서 오타에 주의 할 것*/
+    background: url(../images/what_bg.png) no-repeat center center /cover;
+    height: 900px;
+    color: #ffffff;
+    text-align: center;
+
+}
+
+.what h1 {
+    padding: 400px 0 50px 0;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.what .wrapper {
+    text-align: center;
+
+}
