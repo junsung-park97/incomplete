@@ -1,5 +1,180 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #3d3d3d;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    /* em은 글자크기를 1em으로 보는 상대크기*/
 }
+
+/*tag reset*/
+h1,h2 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+strong {
+    font-weight: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+/*stely*/
+.story {
+    margin: 75px 0 75px 0;
+}
+
+.story .tit {
+    display: flex;
+    justify-content: space-between;/*item 가로 배치 조절*/
+    align-items: flex-end;/*item 새로 배치 조절*/
+    margin: 0 0 75px 0;
+}
+
+.story .tit .inner strong {
+    font-size: 17px;
+    font-weight: 700;
+    color: #f38b5e;
+}
+
+.story .tit .inner h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 5px 0 27px 0;
+}
+
+.tit > .more > a {
+    background-color: #f38b5e;
+    padding: 15px 70px;
+    border-radius: 20px;
+    display: block;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.story .list {
+    margin: 73px 0 155px 0;
+}
+
+.story .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.story .list ul li {
+    width: 297px;
+}
+
+.story .list ul li a {
+    display: block;
+}
+
+.story .list ul li a .photo{
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    /*이미지는 영역 밖으로 빠죠나감 > 그걸 가리는 용도(overflow hidden)*/
+    font-size: 0;
+    line-height: 0;
+    /*이미지의 여백은 폰트사이즈와 행간의 여백으로 들어감 why.....진짜 주먹 주고싶네 이랬다 저랬다 진짜;*/
+}
+
+.story .list ul li a .inner {
+    background-color: #f4f4f4;
+    border-radius: 0 0 20px 20px ;
+    padding: 20px 10px;
+}
+
+.story .list ul li a .inner h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+}
+
+.story .list ul li a .inner span {
+    font-weight: 700;
+    color: #f38b5e;
+    margin: 21px 0 5px 0;
+    display: block;
+    /*span is inline요소임, so display block property 사용해야됨*/
+}
+
+/* why why why!!!!!!!!!!*/
+/*.list 에 flex fuck you*/
+/* list가 아니라 ul에 해야된다고? why!!!!!!!!!!!! 아 싯팔 이해됬다 ㅋ.ㅋ!!*/
+
+.support {
+    margin: 165px 0 100px 0;
+}
+
+.support .title {
+    margin: 0 0 60px 0;
+}
+
+.support .title strong {
+    color: #f38b5e;
+    font-weight: 700;
+    
+}
+
+.title h1 {
+    color: #1d1d1d;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 7px 0 30px 0;
+}
+
+.support .cont {
+    display: flex;
+    /*width를 정의해줘야 flex시에 여백이 생김*/
+    justify-content: space-between;
+}
+
+.support .cont .photo {
+    border-radius: 20px;
+    overflow: hidden;
+    /*overflow hidden 좀 잊지마라 제발 이새끼야*/
+    /*이미지는 여백을 잡아주는데 그게 행간임 근데 글자크기도 정의 해야됨 왜냐면 컴터가 지능이 ㅈㄴ낮아 시발럼*/
+    font-size: 0;
+    line-height: 0;
+}
+
+.support .cont .inner {
+    width: 516px;
+    margin: 77px 0 0 0;
+}
+
+.support .cont .inner h2 {
+    color: #1d1d1d;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.support .cont .inner .point {
+    color: #f38b5e;
+    font-weight: 700;
+    margin: 20px 0 60px 0;
+    font-size: 25px;
+}
+
