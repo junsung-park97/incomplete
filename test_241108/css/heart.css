@@ -72,6 +72,11 @@ li {
     display: block;
     color: #ffffff;
     font-weight: 700;
+    
+}
+
+.tit > .more > a:hover {
+    background-color: #e96532;
 }
 
 .story .list {
@@ -177,4 +182,5 @@ li {
     margin: 20px 0 60px 0;
     font-size: 25px;
 }
+
 
