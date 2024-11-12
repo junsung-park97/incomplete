@@ -1,0 +1,57 @@
+@import url(default.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #3d3d3d;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+}
+
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+
+}
+
+header {
+    height: 100px;
+}
+
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+header .logo {
+    margin: 0 0 30px 0;
+}
+
+header .gnb ul {
+    display: flex;
+}
+
+header .gnb ul li a {
+    padding: 40px 70px;
+    color: #1d1d1d;
+    display: block;
+}
+
+.visual {
+    background: url(../images/그룹\ 3.png) no-repeat center center / cover;
+    height: 700px;
+    color: #fff;
+
+}
+
+.visual h2 {
+    font-size: 60px;
+    font-weight: 700;
+    padding: 210px 0 22px 0;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+}
+
