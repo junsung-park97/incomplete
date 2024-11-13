@@ -109,8 +109,10 @@ header .gnb ul li a {
     margin: 26px 0 0 0;
 }
 
-.biz .list ul li .more:hover {
-    background-color: #f1f1f1;
+.biz .list ul li a:hover .more {
+    background-color: #1d1d1d;
+    color: #fff;
+    border-color: #1d1d1d;
 }
 
 .brand {
@@ -145,5 +147,30 @@ header .gnb ul li a {
 }
 
 footer {
-    margin: 0 0 500px 0;
+    background-color: #1d1d1d;
+    color: rgba(255,255,255,0.8);
+    padding: 55px 0 65px 0;
+}
+
+footer .f_nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 340px;
+}
+
+footer .f_nav ul li:first-child {
+    font-weight: 700;
+}
+
+footer .f_info {
+    margin: 23px 0;
+}
+
+footer .f_info span {
+   margin-right: 16px;
+   display: inline-block;
+}
+
+footer .copyreight {
+    color: rgba(255,255,255,0.5);
 }
