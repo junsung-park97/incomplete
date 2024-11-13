@@ -8,6 +8,8 @@ body {
     color: #3d3d3d;
     line-height: 1.4;
     letter-spacing: -0.02em;
+    word-break: keep-all;/* 단어별로 줄 바꿈 할께~ 이자식은 단어를 이해못해 띄어쓰기로 이해함*/
+    word-wrap: break-word;/*그래서 단어가 엄청 길면 줄바꿈이 안되니까 강제로 줄바꿈을 함 keep all의 오류를 수정*/
 }
 
 .wrapper {
@@ -43,7 +45,7 @@ header .gnb ul li a {
 .visual {
     background: url(../images/그룹\ 3.png) no-repeat center center / cover;
     height: 700px;
-    color: #fff;
+    color: #fff;    
 
 }
 
@@ -55,3 +57,93 @@ header .gnb ul li a {
     line-height: 1.2;
 }
 
+.biz {
+    margin: 129px 0 0 0;   
+}
+
+.biz .tit  {
+    text-align: center;
+    margin: 0 0 35px 0;
+}
+
+.biz .tit h2 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #1d1d1d;
+
+}
+
+.biz .tit h2 strong{
+    color: #015BD5;
+}
+
+.biz .list ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 35px 0 0 0;
+}
+
+.biz .list ul li {
+    width: 297px;
+}
+
+.biz .list ul li a {
+    display: block; /* a 태그는 무조건 무지성 display block를 준다 이런 무지성 별로 안좋은데,,,*/
+    text-align: center;
+}
+
+.biz .list ul li h3 {
+    font-size: 35px;
+    color: #1d1d1d;
+    margin: 11px 0 10px 0;
+}
+
+.biz .list ul li a .inner {
+    margin: 0 19px;
+}
+
+.biz .list ul li .more {
+    border: 1px solid #cccccc;
+    display: block;
+    padding: 12px 0 ;
+    margin: 26px 0 0 0;
+}
+
+.biz .list ul li .more:hover {
+    background-color: #f1f1f1;
+}
+
+.brand {
+    margin: 214px 0 0 0;
+    height: 800px;
+    background: url(../images/brand_bg.png) no-repeat center center / cover;
+    color: #fff;
+}
+
+.brand h2 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    padding: 168px 0 40px 0;
+}
+
+.brand .more {
+    margin: 73px 0 0 0;
+}
+
+.brand .more a {
+    background-color: #3d3d3d;
+    padding: 12px 65px;
+    width: 310px;
+    display: inline-block;
+}
+
+.brand .more a:hover {
+   background-color: #1d1d1d;
+   border: #1d1d1d;
+}
+
+footer {
+    margin: 0 0 500px 0;
+}
