@@ -15,7 +15,12 @@ body {
 .wrapper {
     width: 1260px;
     margin: 0 auto;
+}
 
+#wrap {
+    min-width: 1300px;
+    /*브라우져의 최소 넓이를 지정함 why 작은 부라우저에서 가로스크롤이 잘림
+    wrapper에서 지정한 width에 좌우 여백 20px씩 준 값 */
 }
 
 header {
