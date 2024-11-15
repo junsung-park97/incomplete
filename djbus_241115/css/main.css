@@ -1,13 +1,13 @@
 @import url(default.css);
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
+
 body {
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: "pretendard", sans-serif;
     font-size: 17px;
     font-weight: 400;
     color: #3d3d3d;
     line-height: 1.4;
-    letter-spacing: -0.02em;
     word-break: keep-all;/* 단어별로 줄 바꿈 할께~ 이자식은 단어를 이해못해 띄어쓰기로 이해함*/
     word-wrap: break-word;/*그래서 단어가 엄청 길면 줄바꿈이 안되니까 강제로 줄바꿈을 함 keep all의 오류를 수정*/
 }
