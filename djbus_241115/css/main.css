@@ -22,3 +22,67 @@ body {
     /*브라우져의 최소 넓이를 지정함 why 작은 부라우저에서 가로스크롤이 잘림
     wrapper에서 지정한 width에 좌우 여백 20px씩 준 값 */
 }
+
+header {
+    height: 100px;
+}
+
+header .logo {
+    margin-top: 27px;
+}
+
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul {
+    display: flex;
+    font-size: 20px;
+}
+
+header ul a {
+    padding: 38px 20px 32px 20px;
+    display: block;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    position: relative;
+}
+
+header ul a:hover{
+    color: #004A8B;
+    font-weight: 700;
+    
+}
+
+header ul a:hover::after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    width: calc(100% - 20px);
+    background-color: #004A8B;
+    height: 5px;
+}
+
+.visual {
+    height: 800px;
+    background: url(../img/visual.png) no-repeat center center / cover;
+    color: #fff;
+    
+}
+
+.visual strong {
+    font-size: 25px;
+    font-weight: 700;
+    padding: 393px 0 10px 0;
+    display: block;
+}
+
+.visual h2 {
+    font-size: 50px;
+    font-weight: 700;
+    padding: 0 0 330px 0;
+}
+
+
