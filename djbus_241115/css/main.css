@@ -85,4 +85,323 @@ header ul a:hover::after {
     padding: 0 0 330px 0;
 }
 
+.int {
+    margin: 190px 0 0 0;
+}
 
+.int .txt_left,         /*다중선택자 .int ..txt_left, .txt_right 이렇게 쓰면 안된다 무조건 .int 들어가야됨*/
+.int .txt_right {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*.int .txt_left .inner
+.int .txt_right .inner {
+    width: 502px;
+}*/
+
+.int .txt_right {
+    margin: 70px 0 0 0;
+}
+.int .inner {
+    width: 502px;
+}
+
+/* 
+    <div class="int">
+        <div class="txt_left">
+            <div class="inner">
+
+            </div>
+        </div>
+        <div class="txt_right">
+            <div class="inner">
+            
+            </div>
+        </div>
+    </div>
+
+    .int .txt_left .inner,
+    .int .txt_right .inner {}
+
+    or
+
+    .int .inner {}
+
+    둘다 같다?
+*/
+
+.int strong {
+    font-size: 25px;
+    display: block;
+    color: #004A8B;
+}
+
+.int .txt_left strong {
+    margin: 240px 0 15px 0;
+}
+
+.int .txt_right strong {
+    margin: 180px 0 15px 0;
+}
+
+.int h2 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #1d1d1d;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+}
+
+
+.int h2 em {
+    color: #004A8B;
+}
+
+.int h3 {
+    font-size: 20px;
+    margin: 8px 0 14px 0;
+}
+
+.int .more {
+    margin: 40px 0 0 0;
+    display: flex;
+    /* a태그가 인라인태그라서 좌우로 배치되지만
+    중간에 스페이스 여백이 존재함 
+    이를 없애 내가 한 디자인 그대로 하기 위해서 스페이스 여백을 없애기위해 준다.*/
+}
+
+.int .more a {
+    color: #004A8B;
+    border: 1px solid #004A8B;
+    padding: 10px 40px;
+    border-radius: 35px;
+    display: inline-block;
+    /* a태그는 ★무조건 block or inline block★ 준다*/
+    /* 플렉스는 하위요소를 블럭요소로 바꾼다 그래서 */
+    margin: 0 10px 0 0;
+}
+
+.int .more a.point {
+    /*a.point a랑 point랑 붙여쓰는게 수많은 a태그중에 point클래스를 선택한다는 뜻*/
+    background-color: #004A8B;
+    color: #fff;
+}
+
+.int .more a:hover {
+    border-color: #E86C77;
+    background-color: #E86C77;
+    color: #fff;
+}
+
+.int .photo {
+    border-radius: 30px;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    /* 이미지를 감싸고 있는 애의 여백을 없애야 잘리는애를....  아 이해안되는데....*/
+}
+.pr {
+    background: url(../img/pr_bg.jpg) no-repeat center top;
+    margin: 200px 0 0 0;
+    color: #fff;
+}
+
+.pr .news {
+     display: flex;
+     justify-content: space-between;
+     padding: 150px 0 0 0;
+     position: relative;
+     /* more 정렬의 기준*/   
+}
+
+.pr .news .title strong {
+    font-size: 25px;
+    color: #FCDB02;
+}
+
+.pr .news .title h2 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    margin: 15px 0 20px 0;
+}
+
+.pr .news .title h2 em {
+    color: #FCDB02;
+}
+
+.pr .news .list {
+    width: 725px;
+}
+
+.pr .news .list ul li {
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+.pr .news .list ul li:first-child {
+    border-top: 1px solid rgba(255,255,255,0.4);
+}
+
+.pr .news .list ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 0 32px 0;
+}
+
+.pr .news .list ul li a h3 {
+    font-size: 20px;
+}
+
+.pr .news .list ul li a:hover h3 {
+    font-weight: 700;
+}
+
+.pr .news .list ul li a span {
+    color: rgba(255,255,255,0.8);
+}
+
+.pr .news .more {
+    position: absolute;
+    /* news를 기준으로 정렬 */
+    left: 0;
+    top: 400px;
+}
+
+.pr .news .more a {
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 35px;
+    display: block;
+}
+
+.pr .news .more a:hover {
+    border-color: #FCDB02;
+    background-color: #FCDB02;
+    color: #3d3d3d;
+}
+.pr .video {
+    margin: 177px 0 0 0;
+    position: relative;
+}
+
+.pr .video .tit h2 {
+    font-size: 45px;
+    font-weight: 700;
+    color: #1d1d1d;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    margin: 15px 0 50px 0;
+}
+
+.pr .video .tit h2 em {
+    color: #FCDB02;
+}
+
+.pr .video .tit strong {
+    font-size: 20px;
+    font-weight: 400;
+    color: #1d1d1d;
+}
+
+.pr .video .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pr .video .list ul li {
+    width: 404px;
+}
+
+.pr .video .list ul li a {
+    display: block;
+}
+
+.pr .video .list ul li a .photo {
+    border-radius: 30px;
+    border: 2px solid #004A8B;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+
+.pr .video .list ul li a h3 {
+    color: #3d3d3d;
+    font-size: 20px;
+    margin: 26px 0 0 15px;
+}
+
+.pr .video .list ul li a:hover h3 {
+    font-weight: 700;
+}
+
+.pr .video .more a {
+    color: #3d3d3d;
+    border: 1px solid #3d3d3d;
+    padding: 10px 40px;
+    border-radius: 35px;
+    position: absolute;/* video를 기준으로 정렬*/
+    right: 30px;
+    top: 55px;
+}
+
+footer {
+    background-color: #1d1d1d;
+    padding: 59px 0 78px 0;
+    color: rgba(255,255,255,0.8);
+    margin: 250px 0 0 0;
+}
+
+footer .f_nav ul {
+    display: flex;
+}
+
+footer .f_nav ul li {
+    margin: 0 40px 0 0;
+    position: relative;/* after 정렬의 기준 */
+}
+
+footer .f_nav ul li::after {
+    /* content는 필수 값*/
+    content: "";
+    position: absolute;/* li를 기준으로 정렬*/
+    right: -23px;
+    top: 7px;
+    width: 1px;
+    height: 12px;
+    background-color: rgb(255,255,255,0.8);
+}
+
+footer .f_nav ul li:last-child::after {
+    /* 목적 : li중에서 마지막 li의 after가 숨김처리 되야함 */
+    display: none; /*숨김처리*/
+}
+
+footer .f_nav ul li a {
+    display: block;
+}
+
+footer .f_nav ul li.privacy a {
+    font-weight: 700;
+    color: #E86C77;
+}
+
+footer .f_nav ul li a:hover {
+    text-decoration: underline;
+}
+
+footer .f_info {
+    margin: 30px 0 30px 0;
+}
+
+footer .f_info span {
+    margin: 0 16px 0 0;
+}
+
+footer .copylight {
+    color: rgba(255,255,255,0.4);
+}

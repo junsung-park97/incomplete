@@ -25,6 +25,6 @@ strong  {
     font-weight: inherit;
 }
 
-address {
+address, em {
     font-style: normal;
 }
