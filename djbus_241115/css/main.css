@@ -328,6 +328,12 @@ header ul a:hover::after {
     font-size: 0;
     line-height: 0;
 }
+.pr .video .list ul li a .photo img{
+    transition: 0.5s;/*0.5동안 부드럽게 처리함*/
+}
+.pr .video .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1); /*가로세로 1,2배*/
+}
 
 .pr .video .list ul li a h3 {
     color: #3d3d3d;
@@ -405,3 +411,4 @@ footer .f_info span {
 footer .copylight {
     color: rgba(255,255,255,0.4);
 }
+
