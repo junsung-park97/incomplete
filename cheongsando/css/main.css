@@ -1,0 +1,17 @@
+@import url(default.css); /* default.css 문서를 불러오기 */
+@import url(font.css);
+@import url(common.css);
+
+.visual {
+    background: url(../img/visual_bg.jpg) no-repeat center center ;
+    height: 100vh;
+}
+
+.visual h2 {
+    padding-top: 404px;
+}
+
+body {
+    
+    margin-bottom: 500px;
+}
