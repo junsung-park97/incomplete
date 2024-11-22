@@ -1,0 +1,20 @@
+body, html {
+    font-family: "Pretendard", sans-serif; /* sans-serlf 는 고딕 필수적으로 써줘야합니다.*/
+    font-weight: 400;
+    font-size: 17px;
+    color: #555;
+    line-height: 1.4;
+    letter-spacing: 0;/*자간*/
+    word-break: keep-all; /*단어별로 줄바꿈*/
+    word-wrap: break-word;
+}
+
+.wrapper {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.wrap {
+    min-width: 1300px;
+    /*콘텐츠영역이 1260px 좌우여백 20px씩 해서 여백을 더줌.*/
+}
