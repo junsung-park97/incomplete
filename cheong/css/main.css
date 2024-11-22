@@ -14,6 +14,7 @@ header {
        내부 요소 만큼만 늘어남 */
     height: 100px;
     border-bottom: 1px solid rgba(255,255,255,0.5);
+    /* 해더의 높이를 정의하고 그 헤더의 보더에 선을 줌 */
 }
 header .wrapper {
     display: flex;
@@ -94,8 +95,264 @@ header .gnb ul li a {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.00033 35.0003C4.08366 35.0003 3.29894 34.6739 2.64616 34.0212C1.99338 33.3684 1.66699 32.5837 1.66699 31.667V11.667C1.66699 10.7503 1.99338 9.9656 2.64616 9.31283C3.29894 8.66005 4.08366 8.33366 5.00033 8.33366H10.2503L12.3337 6.08366C12.6392 5.75033 13.0073 5.48644 13.4378 5.29199C13.8684 5.09755 14.3198 5.00033 14.792 5.00033H21.667C22.1392 5.00033 22.535 5.16005 22.8545 5.47949C23.1739 5.79894 23.3337 6.19477 23.3337 6.66699C23.3337 7.13921 23.1739 7.53505 22.8545 7.85449C22.535 8.17394 22.1392 8.33366 21.667 8.33366H14.792L11.7503 11.667H5.00033V31.667H31.667V18.3337C31.667 17.8614 31.8267 17.4656 32.1462 17.1462C32.4656 16.8267 32.8614 16.667 33.3337 16.667C33.8059 16.667 34.2017 16.8267 34.5212 17.1462C34.8406 17.4656 35.0003 17.8614 35.0003 18.3337V31.667C35.0003 32.5837 34.6739 33.3684 34.0212 34.0212C33.3684 34.6739 32.5837 35.0003 31.667 35.0003H5.00033ZM31.667 8.33366H30.0003C29.5281 8.33366 29.1323 8.17394 28.8128 7.85449C28.4934 7.53505 28.3337 7.13921 28.3337 6.66699C28.3337 6.19477 28.4934 5.79894 28.8128 5.47949C29.1323 5.16005 29.5281 5.00033 30.0003 5.00033H31.667V3.33366C31.667 2.86144 31.8267 2.4656 32.1462 2.14616C32.4656 1.82671 32.8614 1.66699 33.3337 1.66699C33.8059 1.66699 34.2017 1.82671 34.5212 2.14616C34.8406 2.4656 35.0003 2.86144 35.0003 3.33366V5.00033H36.667C37.1392 5.00033 37.535 5.16005 37.8545 5.47949C38.1739 5.79894 38.3337 6.19477 38.3337 6.66699C38.3337 7.13921 38.1739 7.53505 37.8545 7.85449C37.535 8.17394 37.1392 8.33366 36.667 8.33366H35.0003V10.0003C35.0003 10.4725 34.8406 10.8684 34.5212 11.1878C34.2017 11.5073 33.8059 11.667 33.3337 11.667C32.8614 11.667 32.4656 11.5073 32.1462 11.1878C31.8267 10.8684 31.667 10.4725 31.667 10.0003V8.33366ZM18.3337 29.167C20.417 29.167 22.1878 28.4378 23.6462 26.9795C25.1045 25.5212 25.8337 23.7503 25.8337 21.667C25.8337 19.5837 25.1045 17.8128 23.6462 16.3545C22.1878 14.8962 20.417 14.167 18.3337 14.167C16.2503 14.167 14.4795 14.8962 13.0212 16.3545C11.5628 17.8128 10.8337 19.5837 10.8337 21.667C10.8337 23.7503 11.5628 25.5212 13.0212 26.9795C14.4795 28.4378 16.2503 29.167 18.3337 29.167ZM18.3337 25.8337C17.167 25.8337 16.1809 25.4309 15.3753 24.6253C14.5698 23.8198 14.167 22.8337 14.167 21.667C14.167 20.5003 14.5698 19.5142 15.3753 18.7087C16.1809 17.9031 17.167 17.5003 18.3337 17.5003C19.5003 17.5003 20.4864 17.9031 21.292 18.7087C22.0975 19.5142 22.5003 20.5003 22.5003 21.667C22.5003 22.8337 22.0975 23.8198 21.292 24.6253C20.4864 25.4309 19.5003 25.8337 18.3337 25.8337Z' fill='%2360E3D5'/%3E%3C/svg%3E%0A");
 }
 
+.culture {
+    margin-top: 235px;
+}
+
+.culture .wrapper {
+    position: relative; /*more 정렬의 기준*/
+}
+
+
+.culture .tit h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin-bottom: 22px;
+}
+
+.culture .list {
+    margin: 82px 0 229px 0;
+}
+
+.culture .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.culture .list ul li {
+    width: 404px;
+}
+
+.culture .list ul li a {
+    display: block;
+}
+.culture .list ul li a .photo{
+    overflow: hidden;/*photo 영역 밖으로 나가는 이미지를 숨김*/
+    font-size: 0;   /* 이거 안하면 확대되면서 이미지 영역이 커짐  */
+    line-height: 0;
+}
+.culture .list ul li a .photo img{
+    transition: 1s; /*만약 커서가 오버되었을때 액션을 준다면 액션이 천천히 일어나도록 정의*/
+}
+.culture .list ul li a:hover .photo img {
+    transform: scale3d(1.2,1.2,1); /* 커서가 오버되었을때 이미지를 확대 but, 확대만 되지 영역이 정의되지 않아서 밖으로 빠져나감*/
+}
+
+.culture .list ul li a h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 20px 0 8px 0;
+}
+
+.culture .list ul li a span {
+    color: #8e8e8e;
+    margin: 30px 0 0 0;
+    display: inline-block;
+    position: relative;
+    padding-right: 27px; /*글자에 오른쪽에 아이콘이 들어가면 그 아이콘이 들어갈 영역까지 padding으로 늘려놓음 */
+}
+
+/*.culture .list ul li a span::before {
+    position: absolute;
+    content: "";
+    bottom: 0; 밑줄의
+    left: 0; 위치 정의
+    width: calc( 100% - 8px); 넓이 정의
+    background-color: #8e8e8e; 밑줄의 색상 정의
+    height: 1px; 밑줄의 굵기 정의
+} 밑줄디자인 */
+
+.culture .list ul li a span::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 24px; /*아이콘 넓이*/
+    height: 24px; /*아이콘 높이*/
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6008 11.9969L8.70078 8.09688C8.51745 7.91354 8.42578 7.68021 8.42578 7.39688C8.42578 7.11354 8.51745 6.88021 8.70078 6.69688C8.88411 6.51354 9.11745 6.42188 9.40078 6.42188C9.68411 6.42188 9.91745 6.51354 10.1008 6.69688L14.7008 11.2969C14.8008 11.3969 14.8716 11.5052 14.9133 11.6219C14.9549 11.7385 14.9758 11.8635 14.9758 11.9969C14.9758 12.1302 14.9549 12.2552 14.9133 12.3719C14.8716 12.4885 14.8008 12.5969 14.7008 12.6969L10.1008 17.2969C9.91745 17.4802 9.68411 17.5719 9.40078 17.5719C9.11745 17.5719 8.88411 17.4802 8.70078 17.2969C8.51745 17.1135 8.42578 16.8802 8.42578 16.5969C8.42578 16.3135 8.51745 16.0802 8.70078 15.8969L12.6008 11.9969Z' fill='%238E8E8E'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.culture .more {
+    position: absolute; /* wrapper a::after의 정렬의 기준 를 기준으로 정렬*/
+    right: 0;
+    top: 61px;
+    /* padding: ; 전체보기의 아이콘이 들어간다면 아이콘이 떨어질 값을 정의 */
+}
+
+.culture .more a {
+    display: block;
+    border: 1px solid #8e8e8e;
+    padding: 10px 38px;
+    border-radius: 30px;
+}
+
+.culture .more a:hover {
+    background-color: #006DBB;
+    color: #fff;
+}
+
+/*.culture .more a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6008 11.9969L8.70078 8.09688C8.51745 7.91354 8.42578 7.68021 8.42578 7.39688C8.42578 7.11354 8.51745 6.88021 8.70078 6.69688C8.88411 6.51354 9.11745 6.42188 9.40078 6.42188C9.68411 6.42188 9.91745 6.51354 10.1008 6.69688L14.7008 11.2969C14.8008 11.3969 14.8716 11.5052 14.9133 11.6219C14.9549 11.7385 14.9758 11.8635 14.9758 11.9969C14.9758 12.1302 14.9549 12.2552 14.9133 12.3719C14.8716 12.4885 14.8008 12.5969 14.7008 12.6969L10.1008 17.2969C9.91745 17.4802 9.68411 17.5719 9.40078 17.5719C9.11745 17.5719 8.88411 17.4802 8.70078 17.2969C8.51745 17.1135 8.42578 16.8802 8.42578 16.5969C8.42578 16.3135 8.51745 16.0802 8.70078 15.8969L12.6008 11.9969Z' fill='%238E8E8E'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain; 전체보기의 아이콘 then, absolute의 relative는 어디?
+    transition: 1s;
+}
+
+.culture .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6008 11.9969L8.70078 8.09688C8.51745 7.91354 8.42578 7.68021 8.42578 7.39688C8.42578 7.11354 8.51745 6.88021 8.70078 6.69688C8.88411 6.51354 9.11745 6.42188 9.40078 6.42188C9.68411 6.42188 9.91745 6.51354 10.1008 6.69688L14.7008 11.2969C14.8008 11.3969 14.8716 11.5052 14.9133 11.6219C14.9549 11.7385 14.9758 11.8635 14.9758 11.9969C14.9758 12.1302 14.9549 12.2552 14.9133 12.3719C14.8716 12.4885 14.8008 12.5969 14.7008 12.6969L10.1008 17.2969C9.91745 17.4802 9.68411 17.5719 9.40078 17.5719C9.11745 17.5719 8.88411 17.4802 8.70078 17.2969C8.51745 17.1135 8.42578 16.8802 8.42578 16.5969C8.42578 16.3135 8.51745 16.0802 8.70078 15.8969L12.6008 11.9969Z' fill='%238E8E8E'/%3E%3C/svg%3E%0A");
+    transform: rotate(360deg);
+    아이콘의 회전을 정의함
+}*/
+
+.tour {
+    background-color: #f7f7f7;
+    margin: 229px 0 322px 0;
+    padding-top: 224px;
+    height: 1120px; 
+}
+
+.tour .wrapper {
+    position: relative;
+}
+
+.tour .tit h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin-bottom: 22px;
+}
+
+.tour .list {
+    margin-top: 66px;
+}
+
+.tour .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tour .list ul li {
+    width: 190px;
+    margin-top: 50px;
+}
+
+
+
+.tour .list ul li a {
+    height: 378px; /* 선택영역 정의 li어느부분을 눌러도 a의 영역으로 될 수 있도록*/
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+
+    /* 오버되지 않은 li의 스타일*/
+    text-align: center;
+    padding-top: 314px;
+}
+
+.tour .list ul li.on {
+    width: 654px;
+}
+
+.tour .list ul li.on a {
+    padding: 261px 0 0 40px;
+    text-align: left;
+}
+
+.tour .list ul li.on a p {
+    display: block /* display none은 무슨값이든 주기만 하면 바로 풀림*/;
+}
+
+.tour .list ul li.on a span {
+    display: inline-block;
+}
+
+.tour .list ul li.list1 a {
+    background-image: url(../images/tour_bg01.jpg);
+}
+
+.tour .list ul li.list2 a {
+    background-image: url(../images/tour_02.jpg);
+}
+
+.tour .list ul li.list3 a {
+    background-image: url(../images/tour_03.jpg);
+}
+
+.tour .list ul li.list4 a {
+    background-image: url(../images/tour_04.jpg);
+}
+
+/* 오버되지 않은 li의 스타일*/
+.tour .list ul li a h3 {
+    font-weight: 700;
+    font-size: 20px;
+    /* p와의 여백 - 오버했을때만 적용될 스타일이지만 지금줘도 문제는 되지않음, 그럼 미리 그타일 주는게 좋음*/
+    margin-bottom: 10px;
+}
+
+.tour .list ul li a p {
+    display: none;
+}
+
+.tour .list ul li a span {
+    /* 오버했을때만 나타날 요소이지만 미리 스타일 주고 나중에 보이고 안보이고 상태만 변경*/
+    margin-top: 15px;
+    font-size: 15px;
+    padding-right: 27px;
+    /* display: inline-block; */
+    display: none;
+    /* 커서를 오버 했을때 보이게 할것임 */
+    position: relative;
+}
+
+.tour .list ul li a span::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -2px;
+    width: 24px;
+    height: 24px;
+    background-image:url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6008 11.9969L8.70078 8.09688C8.51745 7.91354 8.42578 7.68021 8.42578 7.39688C8.42578 7.11354 8.51745 6.88021 8.70078 6.69688C8.88411 6.51354 9.11745 6.42188 9.40078 6.42188C9.68411 6.42188 9.91745 6.51354 10.1008 6.69688L14.7008 11.2969C14.8008 11.3969 14.8716 11.5052 14.9133 11.6219C14.9549 11.7385 14.9758 11.8635 14.9758 11.9969C14.9758 12.1302 14.9549 12.2552 14.9133 12.3719C14.8716 12.4885 14.8008 12.5969 14.7008 12.6969L10.1008 17.2969C9.91745 17.4802 9.68411 17.5719 9.40078 17.5719C9.11745 17.5719 8.88411 17.4802 8.70078 17.2969C8.51745 17.1135 8.42578 16.8802 8.42578 16.5969C8.42578 16.3135 8.51745 16.0802 8.70078 15.8969L12.6008 11.9969Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+
+.tour .more {
+    position: absolute; /* wrapper a::after의 정렬의 기준 를 기준으로 정렬*/
+    right: 0;
+    top: 61px;
+    /* padding: ; 전체보기의 아이콘이 들어간다면 아이콘이 떨어질 값을 정의 */
+}
+
+.tour .more a {
+    display: block;
+    border: 1px solid #8e8e8e;
+    padding: 10px 38px;
+    border-radius: 30px;
+}
+
+.tour .more a:hover {
+    background-color: #006DBB;
+    color: #fff;
+}
+
+
+
+
+
 
 
 #wrap {
     padding-bottom: 500px;
 }
+
