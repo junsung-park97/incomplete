@@ -1,12 +1,11 @@
-
-/*웹 폰트 파일을 이용해서 웹폰트의 이름과 두께 등을 선언*/
+/* 웹폰트 파일을 이용해서 웹폰트의 이름과 두께 등을 선언 */
 @font-face {
 	font-family: 'Pretendard';
 	font-weight: 900;
 	font-display: swap;
 	src: local('Pretendard Black'), url(../fonts/Pretendard-Black.woff2) format('woff2'), url(../fonts/Pretendard-Black.woff) format('woff');
 }
-/*만약에 당신의 컴퓨터에 서체가 깔려잇다면 그걸 먼저 사용하라!는 뜻*/
+/* local 만약 당신의 컴퓨터에 서체가 깔려있다면 그걸 먼저 사용해라 뜻 */
 @font-face {
 	font-family: 'Pretendard';
 	font-weight: 800;
