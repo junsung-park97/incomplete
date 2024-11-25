@@ -246,8 +246,6 @@ header .gnb ul li a {
     margin-top: 50px;
 }
 
-
-
 .tour .list ul li a {
     height: 378px; /* 선택영역 정의 li어느부분을 눌러도 a의 영역으로 될 수 있도록*/
     display: block;
