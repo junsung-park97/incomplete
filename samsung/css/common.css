@@ -18,7 +18,7 @@ body, html {
     min-width: 1300px;
     /* 콘텐츠영역이 1260px 좌우여백 20px씩 
        1260 + 20 + 20 = 1300 */
-    overflow: hidden; 
+     
     /* wrap 영역 밖으로 나간 요소는 숨김처리
        absolute가 대부분 나감. */
 }

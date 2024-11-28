@@ -3,7 +3,7 @@
 @import url(common.css);
 
 header {
-    position: absolute; /* body를 기준으로 */
+    position: absolute;
     left: 0;
     top: 0;
     z-index: 100; 
@@ -97,4 +97,247 @@ header .tnb .global button::before {
     font-weight: 700;
     line-height: 1.1;
     padding: 638px 0 11px 0;
+}
+.biz {
+    margin: 168px 0 327px 0;
+}
+.biz .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* flex주면 두 요소가 같은 높이를 가지게됨, so 각각 요소대로 높이가 정의될수 있도록 하는 property */
+}
+.biz .tit {
+    position: sticky;
+    top: 0;
+}
+.biz .tit strong {
+    color: #2962FF;
+    font-size: 20px;
+}
+.biz .tit h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #1d1d1d;
+    margin: 5px 0 20px 0;
+}
+.biz .list {
+    width: 832px;
+}
+.biz .list ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.biz .list ul li {
+    width: 404px;
+}
+.biz .list ul li:nth-child(odd) {
+    transform: translateY(155px);
+}
+/* 홀수 선택자 */
+/* .biz .list ul li:nth-child(even) 짝수 선택자 */
+
+.biz .list ul li a {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    height: 500px;
+    color: rgba(255,255,255,0.8);
+    border-radius: 20px;
+    overflow: hidden;
+}
+.biz .list ul li a .photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.biz .list ul li a .inner {
+    padding: 0 30px 40px 30px;
+}
+.biz .list ul li a h3 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.biz .list ul li a p {
+    display: none;
+}
+.biz .list ul li a span {
+    display: none;
+    position: relative;
+}
+.biz .list ul li a span::after {
+    content: "";
+    position: absolute;
+    right: -27px;
+    bottom: -3px;
+    width: 27px;
+    height: 27px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_23_16)'%3E%3Cpath d='M12.6008 11.9969L8.70078 8.09688C8.51745 7.91354 8.42578 7.68021 8.42578 7.39688C8.42578 7.11354 8.51745 6.88021 8.70078 6.69688C8.88411 6.51354 9.11745 6.42188 9.40078 6.42188C9.68411 6.42188 9.91745 6.51354 10.1008 6.69688L14.7008 11.2969C14.8008 11.3969 14.8716 11.5052 14.9133 11.6219C14.9549 11.7385 14.9758 11.8635 14.9758 11.9969C14.9758 12.1302 14.9549 12.2552 14.9133 12.3719C14.8716 12.4885 14.8008 12.5969 14.7008 12.6969L10.1008 17.2969C9.91745 17.4802 9.68411 17.5719 9.40078 17.5719C9.11745 17.5719 8.88411 17.4802 8.70078 17.2969C8.51745 17.1135 8.42578 16.8802 8.42578 16.5969C8.42578 16.3135 8.51745 16.0802 8.70078 15.8969L12.6008 11.9969Z' fill='white' fill-opacity='0.8'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_23_16'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.biz .list ul li a .photo::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2962FF;
+    opacity: 0.8;
+    display: none;
+}
+.biz .list ul li a:hover .photo::before {
+    display: block;
+}
+.biz .list ul li a:hover p {
+    display: block;
+}
+.biz .list ul li a:hover span {
+    display: inline-block;
+    margin-top: 20px;
+}
+.news {
+    background-color: #E0E3E8;
+    padding: 138px 0 127px 0;
+}
+.news .tit {
+    position: relative;
+}
+.news .tit strong {
+    color: #2962FF;
+}
+.news .tit h2 {
+    font-size: 45px;
+    font-weight: 700;
+    font-family: 'Gmarket Sans';
+    color: #1d1d1d;
+    
+}
+.news .list ul li a {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 26px 40px;
+    margin-top: 10px;
+}
+.news .list ul li:first-child a{
+    margin-top: 37px;
+}
+.news .list ul li a:hover {
+    color: #fff;
+    background-color: #2962FF;
+}
+.news .wrapper {
+    position: relative;
+}
+.news .more {
+    position: absolute;
+    top: 50px;
+    right: 15px;
+}
+.news .more a {
+    padding: 5px 20px 5px 5px;
+    display: inline-block;
+}
+.news .more a::after{
+    content: "";
+    position: absolute;
+    top: 1;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.37492 10.6247H5.20825C5.03117 10.6247 4.88277 10.5647 4.76304 10.4449C4.64318 10.325 4.58325 10.1765 4.58325 9.99947C4.58325 9.82224 4.64318 9.67384 4.76304 9.55426C4.88277 9.43454 5.03117 9.37467 5.20825 9.37467H9.37492V5.20801C9.37492 5.03092 9.43485 4.88252 9.55471 4.7628C9.67457 4.64294 9.82304 4.58301 10.0001 4.58301C10.1773 4.58301 10.3258 4.64294 10.4453 4.7628C10.5651 4.88252 10.6249 5.03092 10.6249 5.20801V9.37467H14.7916C14.9687 9.37467 15.1171 9.4346 15.2368 9.55447C15.3567 9.67433 15.4166 9.8228 15.4166 9.99988C15.4166 10.1771 15.3567 10.3255 15.2368 10.4451C15.1171 10.5648 14.9687 10.6247 14.7916 10.6247H10.6249V14.7913C10.6249 14.9684 10.565 15.1168 10.4451 15.2365C10.3253 15.3564 10.1768 15.4163 9.99971 15.4163C9.82249 15.4163 9.67408 15.3564 9.5545 15.2365C9.43478 15.1168 9.37492 14.9684 9.37492 14.7913V10.6247Z' fill='%23666666'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.news .more a:hover{
+    color: #2962FF;
+}
+.news .more a:hover::after{
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.37492 10.6247H5.20825C5.03117 10.6247 4.88277 10.5647 4.76304 10.4449C4.64318 10.325 4.58325 10.1765 4.58325 9.99947C4.58325 9.82224 4.64318 9.67384 4.76304 9.55426C4.88277 9.43454 5.03117 9.37467 5.20825 9.37467H9.37492V5.20801C9.37492 5.03092 9.43485 4.88252 9.55471 4.7628C9.67457 4.64294 9.82304 4.58301 10.0001 4.58301C10.1773 4.58301 10.3258 4.64294 10.4453 4.7628C10.5651 4.88252 10.6249 5.03092 10.6249 5.20801V9.37467H14.7916C14.9687 9.37467 15.1171 9.4346 15.2368 9.55447C15.3567 9.67433 15.4166 9.8228 15.4166 9.99988C15.4166 10.1771 15.3567 10.3255 15.2368 10.4451C15.1171 10.5648 14.9687 10.6247 14.7916 10.6247H10.6249V14.7913C10.6249 14.9684 10.565 15.1168 10.4451 15.2365C10.3253 15.3564 10.1768 15.4163 9.99971 15.4163C9.82249 15.4163 9.67408 15.3564 9.5545 15.2365C9.43478 15.1168 9.37492 14.9684 9.37492 14.7913V10.6247Z' fill='%230A55A6'/%3E%3C/svg%3E%0A");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.webzine{
+    margin: 113px 0 200px 0;
+}
+.webzine .tit h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #1d1d1d;
+    margin: 5px 0 20px 0;
+}
+.webzine .tit strong {
+    color: #2962FF;
+    font-size: 20px;
+}
+.webzine .list {
+    margin-top: 35px;
+}
+.webzine .list ul {
+    display: flex;
+    gap: 24px;
+    width: 2116px;
+}
+.webzine .list ul li {
+    width: 404px;
+    /* 넓이가 wrapper보다 클때, flex로 정렬된 li들은 무조건 한줄로 들어가려고 하다보니 넓이가 변동된다. 그래서 전체 넓이를 계산해서 집단의 장에게 정의 해줘야됨. */
+}
+.webzine .list ul li a {
+    display: block;
+}
+.webzine .list ul li a .photo {
+    height: 248px;
+    position: relative;
+    overflow: hidden;
+}
+.webzine .list ul li a .photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.webzine .list ul li a .cate {
+    position: absolute;
+    bottom: 9px;
+    left: 9px;
+    background-color: #2962FF;
+    border-radius: 20px;
+    color: #fff;
+    padding: 7px 20px;
+}
+.webzine .list ul li a h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 24px 0 15px 0;
+    font-family: 'Gmarket Sans';
+    color: #1d1d1d;
+
+    /* 줄바꿈 제한 */
+    line-height: 1.1;
+    height: 2.2em;
+    overflow: hidden;
+}
+.webzine .list ul li a p {
+    line-height: 1.4;
+    height: 2.8em;
+    overflow: hidden;
+    color: #1d1d1d;
+}
+.webzine .list ul li a:hover .photo img{
+    transform: scale3d(1.2,1.2,1);
 }
