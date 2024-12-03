@@ -1,0 +1,207 @@
+@import url(default.css); /* default.css를 이 문서에 복사해서 넣은 것처럼 불러오기 */
+@import url(font.css);
+@import url(common.css);
+
+.data {
+    margin: 209px 0 0 0;
+}
+.data h2 {
+    font-size: 45px;
+    font-weight: 800;
+    color: #1d1d1d;
+    line-height: 1.2;
+    margin: 0 0 14px 0;
+}
+.data .photo {
+    margin: 32px 0 0 0;
+    border-radius: 20px; /* 모서리 둥근값 */
+    overflow: hidden; /* 영역 밖에 나가는 이미지 숨김 */
+}
+.data .photo.case1 {
+    font-size: 0;
+    line-height: 0;
+    /* img태그로 삽입한 이미지 사이즈 그대로 사용
+       이미지 하단에 여백 삭제
+       -- photo의 높이와 이미지의 높이가 동일해짐 */
+}
+.data .photo.case2 {
+    height: 346px; 
+    /* 영역에 이미지가 들어갈 넓이가 높이가 잡혀야함
+       block요소라서 넓이는 주지 않아도 잡힘 */
+}
+.data .photo.case2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width:640px){ /* 브라우저 넓이가 640px 이하일때 */
+                    .data {
+                        margin: 112px 0 0 0;
+                    }
+                    .data h2 {
+                        font-size: 30px;
+                        margin: 0 0 13px 0;
+                    }
+                    .data .photo {
+                        margin: 19px 0 0 0;
+                        border-radius: 10px; /* 모서리 둥근값 */
+                    }
+                    .data .photo.case1 img {
+                        width: 100%; 
+                        /* 이미지를 감싸는 photo의 넓이에 딱맞게 사이즈 조절
+                           그리고 높이는 비율에 맞게 조절 */
+                    }
+                    .data .photo.case2 {
+                        height: 250px;
+                    }
+}/*media*/
+
+.esg {
+    margin: 147px 0 0 0;
+}
+.esg h2 {
+    font-size: 45px;
+    font-weight: 800;
+    color: #1d1d1d;
+    line-height: 1.2;
+    margin: 0 0 14px 0;
+}
+.esg .list {
+    margin: 41px 0 0 0;
+}
+.esg .list ul {
+    display: flex;
+    flex-wrap: wrap; /* 줄바꿈 허용 */
+    gap: 24px;
+}
+.esg .list ul li {
+    width: 618px;
+}
+.esg .list ul li a {
+    display: block; /* a는 block아니면 inline-block 필수 */
+    height: 251px;
+    color: #fff;
+    padding: 54px 45px 0 45px; /* 높이를 줬기 때문에 하단 여백X */
+    border-radius: 20px;
+}
+.esg .list ul li.bg1 a {
+    background-color: #0A0045;
+}
+.esg .list ul li.bg2 a {
+    background-color: #2264DC;
+}
+.esg .list ul li.bg3 a {
+    background-color: #5A8CFF;
+}
+.esg .list ul li.bg4 a {
+    background-color: #01B4D2;
+}
+.esg .list ul li a h3 {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 14px 0;
+}
+.esg .list ul li a span {
+    margin: 24px 0 0 0; /* 상단에 p태그와의 여백 */
+    padding: 0 32px 0 0; /* 오른쪽 아이콘까지의 범위 */
+    display: inline-block; /* margin과 padding을 정상적으로 적용시키려고 */
+    position: relative; /* after 정렬의 기준 */
+}
+.esg .list ul li a span::after {
+    content: "";
+    position: absolute; /* span를 기준으로 정렬 */
+    right: 0;
+    top: 0;
+    width: 24px; /* 아이콘의 넓이 */
+    height: 24px;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.6 12L8.69999 8.10005C8.51665 7.91672 8.42499 7.68338 8.42499 7.40005C8.42499 7.11672 8.51665 6.88338 8.69999 6.70005C8.88332 6.51672 9.11665 6.42505 9.39999 6.42505C9.68332 6.42505 9.91665 6.51672 10.1 6.70005L14.7 11.3C14.8 11.4 14.8708 11.5084 14.9125 11.625C14.9542 11.7417 14.975 11.8667 14.975 12C14.975 12.1334 14.9542 12.2584 14.9125 12.375C14.8708 12.4917 14.8 12.6 14.7 12.7L10.1 17.3C9.91665 17.4834 9.68332 17.575 9.39999 17.575C9.11665 17.575 8.88332 17.4834 8.69999 17.3C8.51665 17.1167 8.42499 16.8834 8.42499 16.6C8.42499 16.3167 8.51665 16.0834 8.69999 15.9L12.6 12Z' fill='white' fill-opacity='0.8'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+@media screen and (max-width:640px){ /* 브라우저 넓이가 640px 이하일때 */
+                            .esg {
+                                margin: 71px 0 0 0;
+                            }
+                            .esg h2 {
+                                font-size: 30px;
+                                margin: 0 0 13px 0;
+                            }
+                            .esg .list {
+                                margin: 22px 0 0 0;
+                            }
+                            .esg .list ul {
+                                gap: 16px;
+                            }
+                            .esg .list ul li {
+                                width: calc(50% - 8px);
+                                /* 100 / 한줄에 나타날 li갯수 2 = 50%
+                                   li사이의 여백 16 * (한줄에 나타날 li갯수 - 1) / 한줄에 나타날 li갯수 =  16 * 1 / 2 = 8 
+                                   한줄의 여백의 총합 / 한줄에 나타날 li의 갯수 
+                                   calc(50%  - 8px) 
+
+                                   1줄에 3개 나오면 
+                                   100/3 = 33.33%
+                                   16*(3-1)/3 = 10.66px
+                                   calc(33.33% - 10.66px)
+
+                                   --- 브라우저 사이즈가 줄어들어도 여백은 같고 넓이만 바뀜
+                                */
+                            }
+                            .esg .list ul li a {
+                                height: 100%; /* li와 높이를 동일하게 */
+                                padding: 36px 15px 28px 15px; /* 하단여백 추가 */
+                                border-radius: 10px;
+                            }
+                            .esg .list ul li a h3 {
+                                font-size: 20px;
+                                margin: 0 0 10px 0;
+                            }
+                            .esg .list ul li a span {
+                                margin: 23px 0 0 0; /* 상단에 p태그와의 여백 */
+                                padding: 0 25px 0 0; /* 오른쪽 아이콘까지의 범위 */
+                            }
+                            .esg .list ul li a span::after {
+                                top: 0;
+                                width: 19px; /* 아이콘의 넓이 */
+                                height: 19px;
+                            }
+}/*media*/
+@media screen and (max-width:460px){ /* 브라우저 넓이가 640px 이하일때 */
+                            .esg .list ul li {
+                                width: auto; 
+                                /* 본래 li의 속성대로 넓이가 들어감, block태그라서
+                                   100% 넓이가 들어감 - 100% 주는 것과는 다름 */
+                            }
+}/*media*/
+
+.work {
+    margin: 178px 0 0 0;
+}
+.work h2 {
+    font-size: 45px;
+    font-weight: 800;
+    color: #1d1d1d;
+    line-height: 1.2;
+    margin: 0 0 14px 0;
+}
+@media screen and (max-width:640px){ /* 브라우저 넓이가 640px 이하일때 */
+                            .work {
+                                margin: 71px 0 0 0;
+                            }
+                            .work h2 {
+                                font-size: 30px;
+                                margin: 0 0 13px 0;
+                            }
+                            .work p br {
+                                display: none; 
+                                /* p태그 안에 줄바꿈 태그를 숨김 처리 */
+                            }
+}
+
+body {
+    margin-bottom: 500px;
+}

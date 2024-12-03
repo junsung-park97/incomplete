@@ -1,0 +1,226 @@
+@import url(default.css); /* default.css를 이 문서에 복사해서 넣은 것처럼 불러오기 */
+@import url(font.css);
+@import url(common.css);
+
+.introduce .photo {
+    margin: 94px 0 0 0;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.introduce .photo.case1 {
+    /* 이미지가 안짤리고 모두 보임 즉, 브라우져가 변하면 넓이,높이가 계속 변함 */
+    /* img 사이즈와 photo사이즈ㅜ를 동일하개? 뭔 개소리지 */
+    font-size: 0;
+    line-height: 0;
+
+}
+.introduce .photo.case1 img {
+    width: 100%;
+    /* img를 감싸는 photo의 넓이에 100%로 정의함 */
+
+}
+.introduce .photo.case2 {
+    /* 넓이는 변경되지만 높이가 고정됨 > 즉 이미지는 짤리게됨. */
+    /* 즉, 높이를정의함, 넓이는 block요소이기 때문에 이미 100%임 */
+    height: 372px;
+
+}
+.introduce .photo.case2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.introduce .group {
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+    margin: 50px 0 92px 0;
+}
+.introduce .group p {
+    width: 832px;
+}
+.introduce .group p strong {
+    font-size: 20px;
+    font-weight: 700;
+    color: #3d3d3d;
+}
+.introduce .group h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #1d1d1d;
+    line-height: 1.2;
+}
+.introduce .group h2 span {
+    display: block;
+}
+
+.news {
+    margin: 150px 0;
+}
+.news h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #1d1d1d;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.news .news_wrap {
+   display: flex;
+   gap: 32px;
+}
+.news .news_wrap .notice {
+    width: 617px;
+    background-color: #d9d9d9;
+    padding: 40px 40px  ;
+}
+.news .news_wrap .notice ul li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.news .news_wrap .notice ul li:last-child {
+    border-bottom: none;
+}
+.news .news_wrap .notice ul li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+.news .news_wrap .notice ul li a strong {
+    font-weight: 700;
+    color: #1d1d1d;
+    width: calc(100% - 200px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.news .news_wrap .notice ul li a:hover strong {
+    font-weight: 800;
+}
+.news .news_wrap .notice ul li a span {
+    color: #666666;
+    font-weight: 400;
+}
+.news .news_wrap .notice h3 {
+    display: none;
+}
+
+.news .news_wrap .gallery {
+    width: 594px;
+}
+.news .news_wrap .gallery h3 {
+    display: none;
+}
+.news .news_wrap .gallery ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+.news .news_wrap .gallery ul li {
+    width: calc(50% - 12px);
+}
+.news .news_wrap .gallery ul li a{
+    display: block;
+}
+.news .news_wrap .gallery ul li a .photo {
+    height: 183px;
+    overflow: hidden;
+    /* 브라우져에 가서 개발자도구에서 클릭해서 크기 확인해보고 내가 하고싶은 사이즈에다가 overflow hidden주기 */
+}
+.news .news_wrap .gallery ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.news .news_wrap .gallery ul li a:hover .photo img{
+    transform: scale3d(1.2,1.2,1);
+}
+.news .news_wrap .gallery ul li a strong {
+    color: #1d1d1d;
+    line-height: 1.2;
+    margin-top: 11px;
+    display: block;
+    /* 2. 제목을 무조건 한줄로 나타나게 함. white-space : nowrap  */
+    /* 3. 글자가 영역을 넘치면 잘라버림. overflow:hidden */
+    /* 4. 잘린글자는 뒤에 ...추가 text - overflow */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+@media screen and (max-width:640px){ /* 브라우져의 넓이가 640일 경우에만 실행됨 */
+    .news {
+        margin: 75px 0;
+    }
+    .news h2 {
+        font-size: 20px;
+    }
+    .news .news_wrap {
+       display: block; 
+       /* flex 해체 */
+    }
+    .news .news_wrap .notice {
+        width: auto;
+        padding: 13px ;
+    }
+    .news .news_wrap .notice ul li a {
+        padding: 13px 0;
+    }
+    .news .news_wrap .notice ul li a strong {
+        font-size: 14px;
+        width: calc(100% - 168px);
+    }
+    .news .news_wrap .notice ul li a span {
+        font-size: 13px;
+    }
+    
+    .news .news_wrap .gallery {
+        width: auto;
+        margin: 28px 0 0 0;
+    }
+    .news .news_wrap .gallery ul {
+        gap: 16px;
+    }
+    .news .news_wrap .gallery ul li {
+        width: calc(50% - 8px);
+    }
+    .news .news_wrap .gallery ul li a .photo {
+        height: 100px;
+        /* 브라우져에 가서 개발자도구에서 클릭해서 크기 확인해보고 내가 하고싶은 사이즈에다가 overflow hidden주기 */
+    }
+    .news .news_wrap .gallery ul li a strong {
+        margin-top: 6px;
+        /* 한줄제한 => 무제한*/
+        white-space: normal;
+        overflow: visible;
+        text-overflow: ellipsis;
+    }
+    .introduce .photo {
+        margin: 30px 0 0 0;
+        border-radius: 10px;
+    }
+    .introduce .photo.case2 {
+        /* 넓이는 변경되지만 높이가 고정됨 > 즉 이미지는 짤리게됨. */
+        /* 즉, 높이를정의함, 넓이는 block요소이기 때문에 이미 100%임 */
+        height: 184px;
+    }
+    .introduce .group {
+        display: block; /*flex 해체 - display에 다른 값을 정의해야함*/
+        margin-top: 50px;
+        margin: 30px 0 43px 0;
+    }
+    .introduce .group p {
+        width: auto; /*고정값을 삭제하고 원래대로 들어가기*/
+    }
+    .introduce .group p strong {
+        font-weight: 400;
+        color: #1d1d1d;
+    }
+    .introduce .group h2 {
+        font-size: 20px;
+        margin: 0 0 14px 0;
+    }
+    .introduce .group h2 br {
+        display: none;
+    }
+} /*media*/
