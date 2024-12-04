@@ -204,20 +204,17 @@ header .gnb .gnb_wrap ul li a:hover span::after{
         font-weight: 700;
     }
     .introduce .photo{
-        height: 568px;
+        height: 200px;
         border-radius: 30px;
         overflow: hidden;
     }
     .introduce .photo img {
         height: 100%;
         width: 100%;
-        margin-top: 15px;
         object-fit: cover;
     }
     .introduce .more {
-        display: flex;
-        gap: 10px;
-        margin-top: 40px;
+        margin: 20px 0 20px 0;
     }
     .introduce .more a {
         padding: 5px 15px;
