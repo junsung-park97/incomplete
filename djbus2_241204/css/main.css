@@ -109,6 +109,7 @@ header .gnb .gnb_wrap ul li a:hover span::after{
 }
 .introduce .more {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     margin-top: 40px;
 }
@@ -182,39 +183,34 @@ header .gnb .gnb_wrap ul li a:hover span::after{
     }
     .introduce .text_left {
         display: block;
+        margin-top: 20px;
     }
     .introduce .text_right {
         display: block;
-    }
-    .introduce .text_left .inner{
-        margin-top: 20px;
-    }
-    .introduce .text_right .inner {
         margin-top: 50px;
+    }
+    .introduce .inner{
+        width: auto;
+        margin-bottom: 20px;
     }
     .introduce .inner strong {
         font-size: 13px;
     }
     .introduce .inner h2 {
         font-size: 25px;
+        margin: 6px 0 6px 0;
     }
     .introduce .inner .sub_tit {
         margin: 4px 0 8px 0;
-        font-size: 13px;
-        font-weight: 700;
+        font-size: 17px;
     }
     .introduce .photo{
-        height: 200px;
-        border-radius: 30px;
-        overflow: hidden;
-    }
-    .introduce .photo img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
+        height: 168px;
+        border-radius: 10px;
     }
     .introduce .more {
-        margin: 20px 0 20px 0;
+        gap: 5px;
+        margin-top: 20px;
     }
     .introduce .more a {
         padding: 5px 15px;
@@ -231,9 +227,6 @@ header .gnb .gnb_wrap ul li a:hover span::after{
 
 
 
-body{
-    background-color: aqua;
-}
 footer {
     margin-top: 500px;
 }
