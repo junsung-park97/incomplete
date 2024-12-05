@@ -61,6 +61,7 @@ header .gnb .gnb_wrap ul li a:hover span::after{
 .visual h2 {
     font-size: 50px;
     font-weight: 800;
+    line-height: 1.2;
 }
 .introduce {
     margin-top: 63px;
@@ -89,6 +90,7 @@ header .gnb .gnb_wrap ul li a:hover span::after{
     font-weight: 800;
     color: #1d1d1d;
     margin: 8px 0;
+    line-height: 1.2;
 }
 .introduce .inner h2 em {
     color: #255698;
@@ -127,6 +129,204 @@ header .gnb .gnb_wrap ul li a:hover span::after{
     color: #fff;
     background-color: #229EA0;
     border-color: #229EA0;
+}
+.pr {
+    margin-top: 140px;
+    color: #fff;
+    position: relative;
+    /* before정렬의 기준 */
+}
+.pr::before {
+    /* pr을 기준으로 정렬 */
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    /* 콘텐츠를 가장 아래로 배치 */
+    width: 100%;
+    height: 882px;
+    background: url(../images/pr_bg.jpg) no-repeat center top / cover;
+}
+.pr .news {
+    padding-top: 137px;
+}
+.pr .news .wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.pr .news .tit strong{
+    color: #229EA0;
+}
+.pr .news .tit h2 {
+    font-size: 40px;
+    font-weight: 800
+}
+.pr .news .tit em {
+    color: #229EA0;
+}
+.pr .news .list {
+    width: 725px;
+}
+.pr .news .list ul li {
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+.pr .news .list ul li:first-child {
+    border-top: 1px solid rgba(255,255,255,0.4);
+}
+.pr .news .list ul li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+.pr .news .list ul li a strong {
+    font-size: 20px;
+        /* if strong태그가 길어서 여러줄이 된다면? */
+    /* 한줄로 정의 해야함 */
+    width: calc(100% - 225px);
+    /* 여기서 125px은 어디서 온것인가? */
+    /* 그것은 span태그로부터 일정한 간격만큼을 재서 빼준것 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.pr .news .list ul li a:hover strong{
+    font-weight: 700;
+}
+.pr .news .list ul li a span {
+    color: rgba(255,255,255,0.8);
+}
+.pr .news .more{
+    position: absolute;
+    left: 0;
+    top: 200px;
+}
+.pr .news .more a {
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    padding: 10px 25px;
+}
+.pr .news .more a:hover {
+    background-color: #229EA0;
+    border-color: #229EA0;
+
+}
+.pr .news .more a span {
+    display: none;
+}
+.pr .video {
+    margin-top: 200px;
+}
+.pr .wrapper {
+    position: relative;
+}
+.pr .video .tit em {
+    color: #229EA0;
+}
+.pr .video .tit br {
+    display: none;
+}
+.pr .video .tit strong {
+    color: #229EA0;
+}
+.pr .video .tit h2 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-top: 8px;
+}
+.pr .video .list {
+    margin: 25px 0 0 0;
+}
+.pr .video .list ul {
+    display: flex;
+    gap: 24px;
+}
+.pr .video .list ul li {
+    width: calc(33.33% - 16px);
+}
+.pr .video .list ul li a {
+    display: block;
+    
+}
+.pr .video .list ul li a .photo {
+    height: 227px;
+    overflow: hidden;
+    border-radius: 20px;
+
+}
+.pr .video .list ul li a .photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+.pr .video .list ul li a:hover .photo img{
+    transform: scale3d(1.2,1.2,1);
+}
+.pr .video .list ul li a strong {
+    margin: 20px 14px 0 14px;
+    color: #1d1d1d;
+    display: block;
+}
+.pr .more {
+    /* video를 기준으로 정렬 */
+    position: absolute; 
+    top: 50px;
+    right: 30px;
+}
+.pr .more a {
+    border: 1px solid #fff;
+    padding: 10px 20px 8px 20px;
+    border-radius: 25px;
+    display: block;
+}
+.pr .more a:hover {
+    background-color: #229EA0;
+    border-color: #229EA0;
+}
+.pr .more a strong {
+    display: none;
+}
+footer {
+    margin: 135px 0 0 0;
+    background-color: #202020;
+    padding: 68px 0;
+    color: rgba(255,255,255,0.8);
+}
+footer .f_nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 42px;
+}
+footer .f_nav ul li{
+    position: relative;
+}
+footer .f_nav ul li::after {
+    position: absolute;
+    content: "";
+    top: 3px;
+    right: -21px;
+    width: 2px;
+    height: 14px;
+    background-color: rgba(255,255,255,0.2);
+}
+footer .f_nav ul li:last-child:after {
+    display: none;
+}
+footer .f_nav ul li.privarcy {
+    font-weight: 700;
+    color: #229EA0;
+}
+footer .f_info {
+    margin: 35px 0;
+}
+footer .f_info span {
+    margin: 0 15px 0 0;
+}
+footer .copyright {
+    color: rgba(255,255,255,0.3);
 }
 @media screen and (max-width:640px){/* 브라우저 넓이 640px에서만 실행 */
     header{
@@ -216,17 +416,184 @@ header .gnb .gnb_wrap ul li a:hover span::after{
         padding: 5px 15px;
         border-radius: 20px;
     }
-    
+    .pr {
+        margin-top: 60px;
+    }
+    .pr::before {
+        display: none; 
+        /* 배경을 주는 대상이 변경됨 그러므로 숨김처리 후 다른 선택자에서 정의 */
+    }
+    .pr .news {
+        padding: 65px 0;
+        background: url(../images/pr_bg.jpg) no-repeat center top / cover;
+    }
+    .pr .news .wrapper {
+        display: block;
+    }
+    .pr .news .tit h2 {
+        font-size: 25px;
+        margin: 6px 0 9px 0;
+    }
+    .pr .news .list {
+        width: auto;
+        /* 넓이 고정 해체 */
+        margin: 43px 0 0 0;
+    }
+    .pr .news .list ul li a {
+        padding: 13px 0;
+    }
+    .pr .news .list ul li a strong {
+        width: calc(100% - 90px);
+        font-size: 15px;
+    }
+    .pr .news .list ul li a span {
+        color: rgba(255,255,255,0.8);
+        font-size: 13px;
+    }
+    .pr .news .more{
+        position: relative;
+        /* absolute를 해체하려면 position중에 다른 값을 줘야함 그나마 괜찮은 값이 reletive임 */
+        left: auto;
+        /* left를 선언하지 않았던 상태로 돌아가는 값 */
+        top: auto;
+        /* top을 선언하지 않았던 상태로 돌아가는 값 */
+        margin: 20px 0 0 0;
+        text-align: center;
+    }
+    .pr .news .more a {
+        padding: 8px 44px 6px 17px;
+        position: relative;
+    }
+    .pr .news .more a::after {
+        content: "";
+        position: absolute;
+        top: 13px;
+        right: 21px;
+        width: 5px;
+        height: 8px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4.684' height='7.973' viewBox='0 0 4.684 7.973'%3E%3Cpath id='chevron_right_24dp_5F6368_FILL0_wght400_GRAD0_opsz24' d='M339.985-699.014,337.2-701.8a.678.678,0,0,1-.2-.5.678.678,0,0,1,.2-.5.678.678,0,0,1,.5-.2.678.678,0,0,1,.5.2l3.289,3.289a.627.627,0,0,1,.152.232.792.792,0,0,1,.045.268.791.791,0,0,1-.045.268.626.626,0,0,1-.152.232l-3.289,3.289a.678.678,0,0,1-.5.2.678.678,0,0,1-.5-.2.678.678,0,0,1-.2-.5.678.678,0,0,1,.2-.5Z' transform='translate(-337 703)' fill='%23fff'/%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .pr .news .more a span {
+        display: inline-block;
+        /* inline이 들어가야 줄바꿈 없이 들어감 그냥 block만 주면 영역때매 두줄로 들어감 */
+    }
+    .pr .video {
+        margin-top: 69px;
+    }
+    .pr .video .tit em {
+        color: #255698;
+    }
+    .pr .video .tit br {
+        display: block;
+    }
+    .pr .video .tit strong {
+        color: #255698;
+    }
+    .pr .video .tit h2 {
+        font-size: 20px;
+        margin-top: 4px;
+        color: #1d1d1d;
+    }
+    .pr .video .list {
+        margin: 25px 0 25px 0;
+    }
+    .pr .video .list ul {
+        display: flex;
+        gap: 24px;
+    }
+    .pr .video .list ul li {
+        width: calc(50% - 8px);
+    }
+    .pr .video .list ul li:last-child {
+        display: none;
+    }
+    .pr .video .list ul li a .photo {
+        height: 98px;
+        border-radius: 10px;
+    }
+    .pr .video .list ul li a .photo img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 1s;
+    }
+    .pr .video .list ul li a strong {
+        margin: 10px 0 0 0 ;
+    }
+    .pr .video .more {
+        /* video를 기준으로 정렬 */
+        position: relative; 
+        top: auto;
+        right: auto;
+        text-align: center;
+    }
+    .pr .video .more a {
+        border-color: #255698;
+        color: #255698;
+        padding: 8px 30px 7px 16px;
+        border-radius: 25px;
+        display: inline-block;
+        position: relative;
+        /* after정렬의 기준 */
+    }
+    .pr .video .more a::after{
+        content: "";
+        position: absolute;
+        top: 13px;
+        right: 12px;
+        width: 5px;
+        height: 8px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4.684' height='7.973' viewBox='0 0 4.684 7.973'%3E%3Cpath id='chevron_right_24dp_5F6368_FILL0_wght400_GRAD0_opsz24' d='M339.985-699.014,337.2-701.8a.678.678,0,0,1-.2-.5.678.678,0,0,1,.2-.5.678.678,0,0,1,.5-.2.678.678,0,0,1,.5.2l3.289,3.289a.627.627,0,0,1,.152.232.792.792,0,0,1,.045.268.791.791,0,0,1-.045.268.626.626,0,0,1-.152.232l-3.289,3.289a.678.678,0,0,1-.5.2.678.678,0,0,1-.5-.2.678.678,0,0,1-.2-.5.678.678,0,0,1,.2-.5Z' transform='translate(-337 703)' fill='%23255698'/%3E%3C/svg%3E%0A");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .pr .video .more a strong {
+        display: inline-block;
+    }
+    footer {
+        margin: 80px 0 0 0;
+        padding: 40px 0 60px 0;
+    }
+    footer .f_nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 42px;
+    }
+    footer .f_nav ul li{
+        position: relative;
+    }
+    footer .f_nav ul li::after {
+        position: absolute;
+        content: "";
+        top: 3px;
+        right: -21px;
+        width: 2px;
+        height: 14px;
+        background-color: rgba(255,255,255,0.2);
+    }
+    footer .f_nav ul li:last-child:after {
+        display: none;
+    }
+    footer .f_nav ul li.privarcy {
+        font-weight: 700;
+        color: #229EA0;
+    }
+    footer .f_nav ul li a:hover {
+        text-decoration: underline;
+    }
+    footer .f_info {
+        margin: 18px 0;
+    }
+    footer .f_info span {
+        margin: 0 15px 0 0;
+        display: inline-block;
+        /* 모바일에서 한단락씩 줄바꿈 되도록 하는 property임 */
+    }
+    footer .copyright {
+        color: rgba(255,255,255,0.6);
+    }
 }/*media*/
-
-
-
-
-
-
-
-
-
-footer {
-    margin-top: 500px;
-}
