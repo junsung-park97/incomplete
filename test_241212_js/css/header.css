@@ -1,0 +1,118 @@
+@import url(default.css); /* default.css를 이 문서에 복사해서 넣은 것처럼 불러오기 */
+@import url(font.css);
+@import url(common.css);
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    color: #fff;
+    height: 90px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo a {
+    display: block;
+    width: 186px;
+    height: 30px;
+    font-size: 0;
+    line-height: 0;
+    background: url(../images/logo_w.svg) no-repeat center center / contain;
+}
+
+header .gnb .gnb_open,
+header .gnb .gnb_close {
+    display: none;
+}
+header .gnb .gnb_wrap ul.depth1 {
+    display: flex;
+}
+header .gnb .gnb_wrap ul.depth1 li a {
+    display: block;
+    line-height: 90px;
+    padding-right: 50px;
+    font-size: 20px;
+}
+
+    /* 마우스를 오버했을때, 스크롤을 내렸을때 */
+header.on {
+    color: #1d1d1d;
+    background-color: #fff;
+    border-bottom: 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+header.on .logo a {
+    background-image: url(../images/logo.svg);
+}
+
+
+@media screen and (max-width:640px){ 
+    header {
+        height: 56px;
+    }
+    header .wrapper {
+        margin-right: 0;
+        /* 원래는 margin: 0 20인데 오른쪽 여백만 20 삭제 */
+    }
+    header .logo a {
+        width: 140px;
+        height: 25px;
+    }
+    header .gnb .gnb_wrap {
+        display: none;
+    }
+    header .gnb .gnb_open {
+        display: block;
+        width: 60px;
+        height: 60px;
+        font-size: 0;
+        line-height: 0;
+        position: relative;
+    }
+    header .gnb .gnb_open::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z' fill='white'/%3E%3C/svg%3E%0A");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 30px;
+    }
+    .visual {
+        height: 900px;
+        background: url(../images/visual_bg.jpg) no-repeat / cover;
+        background-position-x: 50%;
+    }
+    header.on .gnb .gnb_open::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z' fill='%235F6368'/%3E%3C/svg%3E ");
+    }
+    
+}
+.visual {
+    height: 900px;
+    background: url(../images/visual_bg.jpg) no-repeat center center / cover;
+}
+aside{
+    margin: 500px 20px 1000px 0;
+    text-align: right;
+}
+aside .top {
+    background-color: tomato;
+    color: #fff;
+    font-size: 20px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    line-height: 64px;
+    display: inline-block;   
+}
+
