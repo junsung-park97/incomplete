@@ -38,11 +38,3 @@ body, html {
                         }
 }/*media*/
 
-::selection {
-    background-color: #523F31;
-    color: #D5CABE;
-}
-::-moz-selection {
-    background-color: #523F31;
-    color: #D5CABE;
-}

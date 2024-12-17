@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/menu.js"></script>
+    <link rel="stylesheet" href="css/menu.css">
+    <title>반응형 menu</title>
+</head>
+<body>
+    <div id="wrap">
+        <!--
+            pc버전에는 메뉴에 마우스를 오버하면 header가 열리고  오버한 li에 클레스를 추가해서 오버된 li의 메뉴창을 열 예정
+                > pc버전 header : menu_pc
+                > over시에 : active
+            모바일버전에는 메뉴열기를 누르면 header에 클레스를 추가할 예정
+                > 모바일버전 header : menu_mo
+        -->
+        <header>
+            <div class="wrapper">
+                <h1 class="logo"><a href="menu.html">포르쉐</a></h1>
+                <nav class="gnb">
+                    <button class="gnb_open">열기</button>
+                    <div class="gnb_wrap">
+                        <ul class="depth1">
+                            <li>
+                                <a href="#n"><span>기업소개</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#n">CEO인사말</a></li>
+                                    <li><a href="#n">연  혁</a></li>
+                                    <li><a href="#n">오시는길</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#n"><span>기업소식</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#n">공지사항</a></li>
+                                    <li><a href="#n">활동소식</a></li>
+                                    <li><a href="#n">자동차소식</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#n"><span>고객센터</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#n">묻고답하기</a></li>
+                                    <li><a href="#n">FAQ</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#n"><span>AS센터</span></a>
+                                <ul class="depth2">
+                                    <li><a href="#n">접수센터</a></li>
+                                    <li><a href="#n">신고센터</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="gnb_close">닫기</button>
+                </nav>
+            </div>
+        </header>
+        <main class="container">
+            <section class="visual"></section>
+        </main>
+    </div>
+</body>
+</html>
