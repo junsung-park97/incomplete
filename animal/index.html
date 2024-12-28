@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--swiper 라이브러리 (내 css보다 위에 배치 : 그래야 내가 css를 변경할 수 있음)-->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.7.1.min.js"></script><!--jquery 라이브러리-->
+    <script src="js/main.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <title>동물보호센터</title>
+</head>
+<body>
+    <div id="wrap">
+        <!--
+            header에 마우스를 올렸을때 & 스크롤을 내렸을때(pc/mobile 공통) : fixed 
+            pc에서 메뉴에 마우스를 오버했을때 : menu_pc
+            모바일에서 메뉴를 열었을때 : menu_mo
+            검색을 클릭했을때 (pc/mobile 공통) : sch_open
+        -->
+        <header>
+            <h1 class="logo"><a href="index.html">PETcare</a></h1>
+            <nav class="gnb">
+                <button class="gnb_open">메뉴 열기</button>
+                <div class="gnb_wrap">
+                    <ul class="depth1">
+                        <!-- (pc일때) 메뉴에 마우스를 오버하면 over 클래스 추가
+                             (모바일일때) 1차메뉴를 클릭하면 open 클래스 추가 
+                             꼭 jquery에서 클래스를 추가하는 것으로 구현
+                             li:hover로 구현하면 접근성 안맞음 -->
+                        <li>
+                            <a href="https://www.naver.com/"><span>찾습니다</span></a>
+                            <ul class="depth2">
+                                <li><a href="#n"><span>실종신고</span></a></li>
+                                <li><a href="#n"><span>구조정보/목격담</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://www.naver.com/"><span>구조분양</span></a>
+                        </li>
+                        <li>
+                            <a href="https://www.naver.com/"><span>네트워크</span></a>
+                            <ul class="depth2">
+                                <li><a href="#n"><span>동물찾기 네트워크</span></a></li>
+                                <li><a href="https://www.animal.go.kr" target="_blank" title="새창연결"><span>국가동물보호정보시스템</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="https://www.naver.com/"><span>재회성공담</span></a>
+                        </li>
+                        <li>
+                            <a href="https://www.naver.com/"><span>대처방법</span></a>
+                            <ul class="depth2">
+                                <li><a href="#n"><span>실종시 대처방법</span></a></li>
+                                <li><a href="#n"><span>구조시 대처방법</span></a></li>
+                                <li><a href="#n"><span>고양이에 대해</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!--gnb_wrap-->
+                <button class="gnb_close">메뉴 닫기</button>
+            </nav>
+            <div class="tnb">
+                <a href="http://www.dogcat-e.com/index.php?code=apply" target="_blank" title="새창연결" class="paper">전단지</a>
+                <div class="search">
+                    <button class="search_open" title="검색 열기">검색</button>
+                    <div class="search_wrap">
+                        <h2>검색어를 입력해주세요</h2>
+                        <div class="search_area">
+                            <form>
+                                <fieldset>
+                                    <div class="inner">
+                                        <legend>검색</legend>
+                                        <label for="keyword">검색어입력</label>
+                                        <input type="text" id="keyword" class="keyword"><!--검색어 입력창-->
+                                        <input type="submit" class="btn"><!--검색버튼-->
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div><!--search_area-->
+                        <button class="search_close">검색 닫기</button>
+                    </div><!--search_wrap-->
+                </div><!--search-->
+            </div><!--tnb-->
+        </header>
+        <main class="container">
+            <section class="visual">
+                <h2>팝업</h2><!--section 반드시 제목이 있어야 함-->
+                <div class="swiper"> 
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/visual1.jpg" alt="동물사진"></div>
+                            <div class="visual_txt">
+                                <div class="wrapper">
+                                    <h3>반려동물, <br>
+                                        사랑으로 입양하세요. <br>
+                                        여러분의 삶이 행복해집니다.</h3>
+                                </div><!--wrapper-->
+                            </div><!--visual_txt-->
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/visual2.jpg" alt="동물사진"></div>
+                            <div class="visual_txt">
+                                <div class="wrapper">
+                                    <h3>반려동물,<br>
+                                        누군가의 가족입니다.</h3>
+                                </div><!--wrapper-->
+                            </div><!--visual_txt-->
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="photo"><img src="images/visual3.jpg" alt="동물사진"></div>
+                            <div class="visual_txt">
+                                <div class="wrapper">
+                                    <h3>사람과 동물이<br>
+                                        새로운 가족으로 만나<br>
+                                        아름다운 동행이 시작되는 공간입니다.</h3>
+                                </div><!--wrapper-->
+                            </div><!--visual_txt-->
+                        </li>
+                    </ul>
+                </div><!--swiper-->
+                <div class="btn_wrap">
+                    <button class="prev">이전 팝업 보기</button>
+                    <button class="next">다음 팝업 보기</button>
+                    <button class="stop">팝업 일시정지</button>
+                    <button class="play">팝업 다시 시작</button>
+                </div>
+            </section><!--visual-->
+            <section class="find">
+                <div class="wrapper">
+                    <h2>찾습니다</h2>
+                    <div class="tab_list">
+                        <ul>
+                            <!--tab하고 panel하고 연결고리가 있어야함 data-tab이 같으면 같은내용
+                             선택됨 tab에는 active 클래스 추가, button에는 title="선택됨" 추가..
+                             tab_panel에도 active 클래스 추가-->
+                            <li data-tab="tab01" role="tab" class="tab01 active"><button title="선택됨">가족을</button></li>
+                            <li data-tab="tab02" role="tab" class="tab02 "><button>주인을</button></li>
+                        </ul>
+                    </div><!--tab_list-->
+                    <div class="tab_content">
+                        <div data-tab="tab01" role="tabpanel" class="tab_panel panel01 active">
+                            <h3>실종된 동물(가족을) 찾아요</h3>
+                            <div class="swiper"> 
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab01_01.jpg" alt="동물 사진"></div>
+                                            <h4><strong class="cate01">실종</strong><span>기타견종(믹스) 암컷 4살</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2024-12-20</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>경기도 이천시 마장면 관리에 있는 발트하임펜션 옆</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>부정교합, 왼쪽코가 잘 막힘</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab01_02.jpg" alt="동물 사진"></div>
+                                            <h4><strong class="cate01">실종</strong><span>러시안 블루 암컷 나이모름</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2024-12-19</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>전라북도 익산시 신동 동북아파트 다동</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>렉시라고 이름부르면 반응할거고 사람많이좋아합니다.(지금은 겁먹은것 같아 모르겠습니다.)</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab01_03.jpg" alt="동물 사진"></div>
+                                            <h4><strong class="cate_end">종료</strong><span>비숑 프리제 수컷 10살</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2024-12-16</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>부산광역시 금정구 백두한의원 부근</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>코색깔이 연하고 혀에 검은점이 있습니다. 미용한지 몇일안되었습니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab01_04.jpg" alt="동물 사진"></div>
+                                            <h4><strong class="cate01">실종</strong><span>코리아 쇼트 헤어 암컷 3살 이름(마미)</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2024-11-26</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>서울특별시 서초구 신사역사거리 5번 출구에서 주유소 뒷편 100M 안쪽 상가 골목 파파QLee 라이브 클럽</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>만지려면 가볍게 물고 할퀴려 합니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab01_05.jpg" alt="동물 사진"></div>
+                                            <h4><strong class="cate01">실종</strong><span>믹스견(말티즈 푸들 혼종) 암컷 7살</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2024-12-7</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>경상북도 상주시 속리산휴게소(청주방향) 5km전지점</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>실종당시 사진과 같은 흰색줄무늬옷 입고 있었습니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab01_06.jpg" alt="동물 사진"></div>
+                                            <h4><strong class="cate01">실종</strong><span>조류(사랑앵무 /잉꼬) 암컷 1살미만</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2024-12-6</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>서울특별시 마포구 성산시영아파트 인근</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>하늘색 새입니다.. 입질이 심해요.. 거울을 좋아하고 호기심이 강합니다..</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div><!--swiper-->
+                            <div class="btn_wrap">
+                                <button class="prev">이전 팝업 보기</button>
+                                <button class="next">다음 팝업 보기</button>
+                                <div class="more"><a href="#n">전체보기</a></div>
+                            </div>
+                        </div><!--tab_panel-->
+                        <div data-tab="tab02" role="tabpanel" class="tab_panel panel02">
+                            <h3>실종된 동물을 목격 또는 구조했어요</h3>
+                            <div class="swiper"> 
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab02_01.jpg" alt="동물 사진"></div>
+                                            <h4><strong class="cate02">구조</strong><span>골든 리트리버 암컷 나이모름</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2024-12-23</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>충청북도 음성군 음성읍 현대폴리텍 앞</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>사람을 잘 따르고 애교가 많아요 코가 얼룩져있고 코 옆에 점이 있고 목줄을 착용하고 있습니다</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab02_02.jpg" alt="동물 사진"></div>
+                                            <h4><strong class="cate03">목격</strong><span>노르웨이지안 포레스트 캣</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2024-12-22</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>충청북도 청주시 흥덕구 석판리 주택가</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>어두운갈색 흰색양말신은 고양이</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab02_03.jpg" alt="동물 사진"></div>
+                                            <h4><strong class="cate_end">종료</strong><span>진돗개 암컷 1살미만</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2024-12-23</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>경상남도 양산시 서창 소방서 부근</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>온순하고 밝은성격에 사람을 잘 따름</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab02_04.jpg" alt="동물 사진"></div>
+                                            <h4><strong class="cate02">구조</strong><span>제퍼니즈 스피츠 수컷 나이모름</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2024-12-22</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>충청북도 청주시 서원구 남들공원 근처 놀이터</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>목줄을하고있었음 애교가많음 안짖음</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab02_05.jpg" alt="동물 사진"></div>
+                                            <h4><strong class="cate03">목격</strong><span>믹스견(말티즈 푸들 혼종) 암컷 7살</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2024-12-7</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>경상북도 상주시 속리산휴게소(청주방향) 5km전지점</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>실종당시 사진과 같은 흰색줄무늬옷 입고 있었습니다.</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo"><img src="images/find_tab02_06.jpg" alt="동물 사진"></div>
+                                            <h4><strong class="cate02">구조</strong><span>기타견종 성별모름 나이모름</span></h4>
+                                            <ul>
+                                                <li>
+                                                    <strong>실종날짜</strong>
+                                                    <span>2024-12-21</span>
+                                                </li>
+                                                <li>
+                                                    <strong>실종장소</strong>
+                                                    <span>부산광역시 남구 대연동 해연중학교 부근</span>
+                                                </li>
+                                                <li>
+                                                    <strong>특이사항</strong>
+                                                    <span>흰색, 목줄없음, 사람을 잘 따르는편</span>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div><!--swiper-->
+                            <div class="btn_wrap">
+                                <button class="prev">이전 팝업 보기</button>
+                                <button class="next">다음 팝업 보기</button>
+                                <div class="more"><a href="#n">전체보기</a></div>
+                            </div>
+                        </div><!--tab_panel-->
+                    </div><!--tab_content-->
+                </div><!--wrapper-->
+            </section><!--find-->
+            <section class="slogan">
+                <div class="wrapper">
+                    <h2>구조가 필요한 동물 발견 시 대처요령</h2>
+                    <p class="tit">공공장소<span class="txt01"></span>에서 주인 없이 떠도는 <br>
+                        동물<span class="txt02"></span>을 발견한 경우 <br>
+                        관할 시군구청 또는 동물보호센터<span class="txt03"></span>에 <br>
+                        신고<span class="txt04"></span>하시기 바랍니다.</p>
+                    <p class="sub_txt">※ 소유자를 알 수 없는 동물을 신고하지 않고 알선·구매하는 경우, 포획하여 팔거나 판매하거나 죽일 목적으로 포획하는 경우에는 <br>
+                        동물보호법 제10조제3항제1호·제3호·제4호를 위반하여 2년 이하 징역이나 2천만원 이하 벌금이 부과됩니다.</p>
+                </div><!--wrapper-->
+            </section><!--slogan-->
+            <section class="adopt">
+                <h2>가족이 되어주세요</h2>
+                <div class="list">
+                    <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                        <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/adopt01.jpg" alt="동물사진1"></div>
+                                    <strong class="cate01">분양</strong>
+                                    <span>(서울특별시 영등포구) 개냥이와 함께 해주실 분을 찾습니다!</span>
+                                </a>
+                            </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/adopt02.jpg" alt="동물사진1"></div>
+                                    <strong class="cate02">임보</strong>
+                                    <span>(강원도 춘천시) 로드킬 당할뻔했던 어린이 냥이 주인찾아요</span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/adopt03.jpg" alt="동물사진1"></div>
+                                    <strong class="cate02">임보</strong>
+                                    <span>(경기도 파주시) 회사 앞에 버려진 강아지 두마리를 사랑으로 키워주실</span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/adopt04.jpg" alt="동물사진1"></div>
+                                    <strong class="cate01">분양</strong>
+                                    <span>(충청북도 옥천군) 귀염둥이 새 가족을 찾습니다</span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/adopt05.jpg" alt="동물사진1"></div>
+                                    <strong class="cate02">임보</strong>
+                                    <span>(경기도 양주시) 도로 위에서 구조된 아가냥이의 가족을 찾습니다</span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/adopt06.jpg" alt="동물사진1"></div>
+                                    <strong class="cate01">분양</strong>
+                                    <span>(대구광역시 달성군) 완전 개냥이 새 가족을 찾아요 진짜 너무 귀여워요</span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <div class="photo"><img src="images/adopt07.jpg" alt="동물사진1"></div>
+                                    <strong class="cate01">분양</strong>
+                                    <span>(파주시) 이쁜 아기고양이 새가족을 찾습니다</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!--swiper-->
+                </div>
+                <div class="btn_wrap">
+                    <button class="prev">이전 팝업 보기</button>
+                    <button class="next">다음 팝업 보기</button>
+                    <div class="more"><a href="#n">전체보기</a></div>
+                </div>
+                <div class="flow_txt">
+                    <span>DON’T BUY  IT’S ADOPT THEMDON’T BUY  IT’S ADOPT THEMDON’T BUY  IT’S ADOPT THEMDON’T BUY  IT’S ADOPT THEM</span>
+                </div>
+            </section>
+            <section class="review">
+                <div class="wrapper">
+                    <h2>이렇게 찾았어요</h2>
+                    <div class="list">
+                        <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                            <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/review01.jpg" alt="동물사진"></div>
+                                        <h3>다들 꼭 찾길 바랍니다</h3>
+                                        <p>아파트 공동현관 앞에서 실종된지 3일째에 찾았습니다.
+                                            고양이 탐정님 첫날 둘째날 각각 불렀지만 찾지는 못하고 돌아가셨어요
+                                            첫날은 거의 낮부터 하루종일 찾고, 다음날은 밤 10~5시까지 찾았어요
+                                            나중에는 체력이 힘들어서 1~2시간마다 집에 들어와서 30분 정도 쉬다가 또 나가고 그랬어요</p>
+                                        <div class="date">
+                                            <strong>하하히오</strong>
+                                            <span>2024.08.30.</span>
+                                        </div>
+                                    </a>
+                                </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/review02.jpg" alt="동물사진"></div>
+                                        <h3>13년 동생을 하루 반나절만에 극적으로 찾았어요</h3>
+                                        <p>겁이 많아 멀리 못 갈 아이인데 천둥소리에 놀라 열린 대문사이로 뛰어나가 하루 넘게 돌아오지 못해 애태웠는데 나간뒤 비가와서인지 냄새로 집을 찾아 오지 못했는지 주택단지를 크게 돌아 대로변 상가 사이 건물 골목에서 극적으로 상봉을 했습니다.</p>
+                                        <div class="date">
+                                            <strong>오스틴</strong>
+                                            <span>2024.07.26.</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/review03.jpg" alt="동물사진"></div>
+                                        <h3>5일만에. 찾았어요</h3>
+                                        <p>24ㆍ5ㆍ29 방문객이 대문을 열어놓아서 그사이 집을 나갔었어요.양산 내원사 주변마을이라 산도있고 개장수도 가끔 있고해서 걱정이었어요. 집주변 5킬내를 다찾고 통도ic근처까지 4일동안 찾아다니다가 전단지와 유기견보호소를 검색하다 이공을 알게되어서 바로 긴급 등록하고 사이트내에 여기저기 클릭하다 공고란을 클릭했는데 아! 우리애가 그곳에 사진이 있는거예요</p>
+                                        <div class="date">
+                                            <strong>백사</strong>
+                                            <span>2024.06.02.</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#n">
+                                        <div class="photo"><img src="images/review04.jpg" alt="동물사진"></div>
+                                        <h3>반려견과의 재회 성공!!</h3>
+                                        <p>지난 1월 21일 일요일 2시경 무작정 집을 뛰쳐나간 제 반려견은 어제 그러니까 1월 27 토요일 오후 1시경 제 품으로 돌아왔습니다.</p>
+                                        <div class="date">
+                                            <strong>코쿠아빠asdsd</strong>
+                                            <span>2024.01.28.</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="more"><a href="#n"><strong>2,516</strong><span>건의 후기</span></a></div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="wrapper">
+                <div class="sns">
+                    <ul>
+                        <li><a href="https://www.facebook.com/angel.or.kr/" target="_blank" title="새창열기">페이스북</a></li>
+                        <li><a href="https://x.com/bohocenter" target="_blank" title="새창열기">트위터</a></li>
+                        <li><a href="https://cafe.naver.com/forangels" target="_blank" title="새창열기">네이버카페</a></li>
+                        <li><a href="https://cafe.daum.net/forangels" target="_blank" title="새창열기">다음카페</a></li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <ul>
+                        <li><a href="https://www.animal.go.kr/front/awtis/public/publicList.do?menuNo=1000000055" target="_blank" title="새창열기">전국 공고내역</a></li>
+                        <li><a href="https://www.animal.go.kr/front/awtis/institution/institutionList.do?menuNo=1000000059" target="_blank" title="새창열기">지역별 동물보호센터 연락처</a></li>
+                        <li><a href="https://www.animal.go.kr/front/awtis/relevant/relevantList.do?menuNo=5000000014" target="_blank" title="새창열기">지역별 동물보호 업무 부서</a></li>
+                    </ul>
+                </div>
+                <div class="f_nav">
+                    <ul>
+                        <li><a href="#n">동물정보</a></li>
+                        <li><a href="#n">동물찾기네트워크</a></li>
+                        <li><a href="#n">구조동물분양</a></li>
+                        <li><a href="#n">개인정보취급방침</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#n">회원가입</a></li>
+                        <li><a href="#n">마이페이지</a></li>
+                        <li><a href="#n">운영자에게</a></li>
+                        <li><a href="#n">로그인</a></li>
+                    </ul>
+                </div>
+                <div class="copyright">© 동물보호센터 Since 2004</div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
