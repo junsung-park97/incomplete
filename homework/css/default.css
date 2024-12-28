@@ -1,30 +1,23 @@
-/* 태그별로 브라우져가 주는 기본스타일을 삭제*/
-
-ul, li {
-    list-style: none;/* list 앞 동그라미 없기~*/
-
-}
-
-a {
-    color: inherit; /*상속되는 색상 사용 안할께~~*/
-    text-decoration: inherit; /* 밑줄 없앨께~*/
-}
-
-* {
+/* 브라우저가 태그에 주는 기본스타일을 모두 초기화 */
+* { /* 모든 태그의 여백 삭제, *(모든 태그를 지칭) */
     margin: 0;
-    padding: 0; /*여백 없앨께~*/
-    box-sizing: border-box; /*이거 뭐였지~? > 넓이랑 높이를 높이는 속성이 있는데 그거 없기~ 만약 내가 넓이랑 높이 주면 준 값을 유지할께~*/
+    padding: 0;
+    box-sizing: border-box;
 }
-
 h1, h2, h3, h4, h5, h6 {
-    font-size: inherit;/* 상속 안할께~*/
+    font-weight: inherit; /* 브라우저가 주는 속성 무시 */
+    font-size: inherit;
+}
+strong {
     font-weight: inherit;
 }
-
-strong  {
-    font-weight: inherit;
+ul, li, ol {
+    list-style: none; /* 앞에 동그라미 삭제 */
 }
-
-address, em {
-    font-style: normal;
+a {
+    color: inherit; /* 파란색을 body에서 선언한 색상으로 */
+    text-decoration: none; /* 밑줄삭제 */
+}
+em, address {
+    font-style: normal; /* 글자의 이탤릭 스타일을 삭제 */
 }
