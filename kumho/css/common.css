@@ -33,23 +33,29 @@ body, html {
                             margin: 0 20px;
                         }
 }/*media*/
+
 :root {
     --base-font-size: 17px;
     --header-h: 100px;
+    --header-depth2-h: 300px;
+    --main-color: #ED1C24;
 }
-@media screen and (max-width:1300px){ 
+@media screen and (max-width:1300px){
     :root {
         --base-font-size: 16px;
     }
-}
+}/* media */
 @media screen and (max-width:1000px){ 
     :root {
         --base-font-size: 15px;
     }
-}
+}/* media */
 @media screen and (max-width:768px){ 
     :root {
         --base-font-size: 14px;
         --header-h: 56px;
     }
-}
+}/* media */
+
+
+
