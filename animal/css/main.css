@@ -15,6 +15,7 @@ header {
     align-items: center; /* 위아래 가운데 */
     padding: 0 20px;
 }
+/* 그럼 나머지 flex요소들은 전부 ㅇㄷ로 간거지?*/
 header .logo a {
     display: block;
     width: 182px;
