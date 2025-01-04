@@ -3,71 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/common.js"></script>
     <script src="js/main.js"></script>
-    <title>cardlist animetion</title>
+    <link rel="stylesheet" href="css/main.css">
+    <title>금호건설</title>
 </head>
 <body>
     <div id="wrap">
         <header>
-            <div class="wrapper">
-                <div class="logo">
-                    <a href="index.html"><img src="img/logo.svg" alt="로고사진"></a>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#n">기업소개</a></li>
-                        <li><a href="#n">기업소식</a></li>
-                        <li><a href="#n">고객센터</a></li>
-                        <li><a href="#n">AS센터</a></li>
+            <h1 class="logo"><a href="index.html">금호건설</a></h1>
+            <nav class="gnb" id="skipNav">
+                <button class="gnbOpen">메뉴열기</button>
+                <ul class="depth1">
+                    <li><a href="#n">회사소개</a></li>
+                    <ul class="depth2">
+                        <li><a href="#n">기업정보</a></li>
+                        <li><a href="#n">CEO인사말</a></li>
+                        <li><a href="#n">연혁</a></li>
+                        <li><a href="#n">조직도</a></li>
+                        <li><a href="#n">기술혁신</a></li>
+                        <li><a href="#n">찾아오시는길</a></li>
                     </ul>
-                </nav>
+                    <li><a href="#n">ESG</a></li>
+                    <ul class="depth2">
+                        <li><a href="#n">윤리경영</a></li>
+                        <li><a href="#n">품질경영</a></li>
+                        <li><a href="#n">안전경영</a></li>
+                        <li><a href="#n">환경경영</a></li>
+                        <li><a href="#n">상생경영</a></li>
+                    </ul>
+                    <li><a href="#n">사업분야</a></li>
+                    <ul class="depth2">
+                        <li><a href="#n">건축사업</a></li>
+                        <li><a href="#n">토목사업</a></li>
+                        <li><a href="#n">주택사업</a></li>
+                        <li><a href="#n">플랜트/환경사업</a></li>
+                        <li><a href="#n">사업실적검색</a></li>
+                    </ul>
+                    <li><a href="#n">IR</a></li>
+                    <ul class="depth2">
+                        <li><a href="#n">기업지배구조</a></li>
+                        <li><a href="#n">경영정보</a></li>
+                        <li><a href="#n">재무정보</a></li>
+                        <li><a href="#n">주가정보</a></li>
+                        <li><a href="#n">IR Contact</a></li>
+                    </ul>
+                    <li><a href="#n">인재채용</a></li>
+                    <ul class="depth2">
+                        <li><a href="#n">금호채용</a></li>
+                        <li><a href="#n">직무가이드</a></li>
+                        <li><a href="#n">채용/면접 Tip</a></li>
+                    </ul>
+                    <li><a href="#n">홍보센터</a></li>
+                    <ul class="depth2">
+                        <li><a href="#n">금호뉴스</a></li>
+                        <li><a href="#n">분양뉴스</a></li>
+                        <li><a href="#n">CI/BI</a></li>
+                        <li><a href="#n">PR갤러리</a></li>
+                        <li><a href="#n">금호역사관</a></li>
+                    </ul>
+                </ul>
+                <button class="gnbClose">메뉴닫기</button>
+            </nav>
+            <div class="global">
+                <button title="">언어</button>
+                <div class="list">
+                    <ul>
+                        <li class="active"><a href="#n">KOR</a></li>
+                        <li><a href="#n">ENG</a></li>
+                    </ul>
+                </div>
             </div>
         </header>
         <main>
             <section class="visual">
-                <div class="wrapper">
-                    <div class="tit">
-                        <h2>미래를 만든다</h2>
-                        <p>미래와 혁신이 만나다</p>
-                    </div>
+                <h2>팝업</h2>
+                <div class="swiper">
+
                 </div>
-                </section>
-                <section class="caedList">
-                    <div class="tit">
-                        <h2>기업연혁</h2>
-                    </div>
-                    <div class="list">
-                        <ul>
-                            <li>
-                                <a href="#n">
-                                    <h3>asdasd</h3>
-                                    <p>asdsadasdasdas</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n">
-                                    <h3>asdada</h3>
-                                    <p>asdsadasasd</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n">
-                                    <h3>sadasdasd</h3>
-                                    <p>asdasdadasdsadasdsad</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#n">
-                                    <h3>sadasdsad</h3>
-                                    <p>sadasdasdasdasdsad</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
+            </section>
         </main>
     </div>
 </body>

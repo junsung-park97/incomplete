@@ -1,38 +1,4 @@
-@import url(default.css); /* default.css를 이 문서에 복사해서 넣은 것처럼 불러오기 */
+@import url(default.css);
 @import url(font.css);
 @import url(common.css);
-header {
-    position: fixed;
-    height: 90px;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: 100;
-    border-bottom: 1px solid rgba(255,255,255,0.4);
-}
-header .wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-header nav ul {
-    display: flex;
-    gap: 40px;
-}
-header nav ul li {
-    font-size: 25px;
-    color: #fff;
-    padding: 25px 0 30px 0;
-}
-main .visual {
-    background: url(../img/visual_bg.jpg) no-repeat center center / cover;
-    color: #fff;
-}
-main .visual .tit {
-    padding: 470px 0 340px 0;
-}
-main .visual .tit h2 {
-    font-size: 45px;
-    font-weight: 700;
-    line-height: 1.2;
-}
+@import url(layout.css); 
