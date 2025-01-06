@@ -383,13 +383,16 @@
     background-color: #ccc;
     transition: 1s;
 }
+.news .list .swiper ul li {
+    width: calc(100% - 16px);
+}
 .news .list .swiper ul li a {
     display: flex;
     flex-direction: column;
     gap: 0.8824em 0;
     position: relative;
     margin-top: 1em;
-    
+
 }
 .news .list .swiper ul li a:hover::before {
     content: "";
@@ -465,12 +468,12 @@
     background-size: contain;
 }
 
-@media screen and (max-width:1200px){
+@media screen and (max-width:1200px){ /*769 ~ 1200*/
     .news .list .swiper ul li a {
         width: 18.75em;
     }
 }
-@media screen and (max-width:769px){ /* 769이상 */
+@media screen and (max-width:769px){ /* 380 ~ 769 */
     .news {
         margin-top: 11.7647em;
     }
@@ -550,6 +553,11 @@
         background-size: contain;
     }
 }/* media */
+@media screen and (max-width:380px){ /* 321 ~ 769 까지 */
+    .news .list .swiper ul li {
+        width: calc(100% - 12px);
+    }
+}
 
 .service {
     background: url(../images/main/service_bg.jpg)no-repeat center center / cover;
