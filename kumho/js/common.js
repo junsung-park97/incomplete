@@ -94,71 +94,58 @@ $(document).ready(function(){
     */
     $('header .global').on('click', function(){
         if(device_status == 'pc'){
-            //console.log('누름!!!!!!')
-            if($(this).hasClass('open') == true){
-                //console.log('open')
+            if($(this).hasClass('open') == true){ //열려있는 상태
+                //console.log('열렸어요!!')
                 $(this).removeClass('open')
-                $(this).find('button').attr('title','언어선택 열기 버튼')
-            } else {
-                //console.log('close')
-                $(this).addClass('open')
-                $(this).find('button').attr('title','언어선택 닫기 버튼')
-            }
-        }
-    })
-    /************ 언어선택 열기 (닫기) *****************/
-    /* 모바일의 2차 메뉴 열고 닫기 (시작)*/
-
-    //1. header .gnb .gnb_wrap ul.depth1 > li > a
-    //2. 클릭 이벤트 삭제
-    //3. 1차 메뉴 li에 open클래스를 추가하거나 삭제 >> 열려있으면 닫고 ,닫혀있으면 다른애들 모두 닫고 선택자만 열어
-
-    $('header .gnb .gnb_wrap ul.depth1 > li > a').on('click',function(e){
-        if(device_status == 'mobile' && $(this).parent().hasClass('open') == true) {
-            e.preventDefault();
-            // console.log('OK')
-            $(this).parent().removeClass('open')
-            $(this).next().slideUp()
-        } else {
-            // console.log('NO')
-            $(this).parent().addClass('open')
-            $(this).next().slideDown()
-        }
-    })
-        
-
-    $('header .gnb .gnb_wrap ul.depth1 > li > a').on('click',function(e){
-        if(device_status == 'mobile'){
-            if($(this).parent().hasClass('open') == true){
-                e.preventDefault();
-                
+                $(this).find('button').attr('title', '언어선택 열기 버튼')
             }else{
-                
+                //console.log('닫혔어요!!!')
+                $(this).addClass('open')
+                $(this).find('button').attr('title', '언어선택 닫기 버튼')
             }
         }
     })
+    /************ 언어선택 열기 (종료) *****************/
 
+    /************ 모바일의 2차 메뉴 열고 닫기 (시작) ****************
+     * header .gnb .gnb_wrap ul.depth1 > li > a 를 클릭했을때
+     * 1. 클릭이벤트를 삭제(페이지 이동 막기)
+     * 1차 메뉴 li에 open 클래스를 추가하거나 삭제.. 
+     * >> 열려있으면 닫고, 닫혀있으면 (다른애들을 모두 닫고 나만 열기)
+    */
+    $('header .gnb .gnb_wrap ul.depth1 > li > a').on('click', function(e){
+        if(device_status == 'mobile'){
+            e.preventDefault(); //a의 클릭 막기
+            if($(this).parent().hasClass('open') == true){ //open이 있으면
+                $(this).parent().removeClass('open')
+                $(this).next().slideUp()
+                //$(this).next().slideUp()
+                //console.log('open있어요!! 열린애예요!!!')
+            }else{
+                $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('open')
+                $('header .gnb .gnb_wrap ul.depth1 > li ul.depth2') .slideUp()
+                $(this).parent().addClass('open')
+                $(this).next().slideDown()
+                //$(this).next().slideDown()
+                //console.log('open없어요!! 닫힌애예요!!!')
+            }
+        }
+    })
+    /************ 모바일의 2차 메뉴 열고 닫기 (종료) *****************/
+    /************ 모바일의 메뉴 열고 닫기 (시작) ***************
+     * header .gnb .gnb_open >> 클릭하면 열리고 header에 menu_mo 클래스 추가
+     * header .gnb .gnb_close >> 클릭하면 닫힘 header에 menu_mo 클래스 삭제
+    */
 
-
-            
-            
-            //console.log('ok')
-    
-
-    /* 모바일의 2차 메뉴 열고 닫기 (종료)*/
-    /* 모바일의 메뉴 열고 닫기 */
-
-    //header .gnb .gnb_open >> 클릭하면 열리고 header에 menu_mo 클래스 추가
-    //header .gnb .gnb_open >> 클릭하면 열리고 header에 menu_mo 클래스 삭제
-
-    $('header .gnb .gnb_open').on('click',function(){
+    $('header .gnb .gnb_open').on('click', function(){
         $('header').addClass('menu_mo')
     })
-    $('header .gnb .gnb_close').on('click',function(){
+    $('header .gnb .gnb_close').on('click', function(){
         $('header').removeClass('menu_mo')
     })
 
-    /* 모바일의 메뉴 열고 닫기 */
+    /************ 모바일의 메뉴 열고 닫기 (종료) ****************/
+
 
 })//$(document).ready
     

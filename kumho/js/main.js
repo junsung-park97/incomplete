@@ -33,4 +33,45 @@ $(document).ready(function(){
         $(this).hide()
         $('.visual .ctrl_wrap button.stop').show()
     })
+
+
+    //.biz .list 
+    $('.biz .list ul li').on('mouseenter',function(){
+        $('.biz .list ul li').removeClass('active')
+        $(this).addClass('active');
+        $('.biz .list').addClass('over');
+    })
+    $('.biz .list').on('mouseleave',function(){
+        $('.biz .list ul li').removeClass('active');
+        $('.biz .list').removeClass('over');
+    })
+
+    const swiper = new Swiper('.news .list .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 3, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+        spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
+        breakpoints: {
+            1200: {    /* 1200px 이상일때 적용 */
+                slidesPerView: 4,
+                spaceBetween: 24,
+            },
+            868: {    /* 768px 이상일때 적용 */
+                slidesPerView: 3,
+                spaceBetween: 24,
+            },
+            300: {    /* 300px 이상일때 적용 */
+                slidesPerView: 2,
+                spaceBetween: 24,
+            },
+            
+        },
+        loop: false,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
+
+        scrollbar: {
+            el: '.news .list .ctrol_wrap .scroll',
+            hide: false,
+            draggable: true,
+            dragSize: 150,
+          },
+});
+
 })//$(document).ready
