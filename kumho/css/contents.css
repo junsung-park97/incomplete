@@ -2,3 +2,22 @@
  * contents.css
  * 콘텐츠 페이지 (인사말, 연혁, 찾아오시는길) 스타일 저장
  */
+
+ /*  회사소개 > ceo인사말 */
+ .cnt_ceo4 .wrapper{
+    display: flex;
+    justify-content: space-between;
+ }
+ .cnt_ceo4 .photo-wrap {
+    position: relative;
+ }
+ .cnt_ceo4 .photo-wrap::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 6em);
+    z-index: -1;
+ }
+ .cnt
