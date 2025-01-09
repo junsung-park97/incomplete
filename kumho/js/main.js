@@ -34,44 +34,44 @@ $(document).ready(function(){
         $('.visual .ctrl_wrap button.stop').show()
     })
 
-
-    //.biz .list 
-    $('.biz .list ul li').on('mouseenter',function(){
+    /*********** biz에 마우스를 오버했을때 (시작) ****************
+     * .biz .list ul li에 마우스를 마우스를 올렸을때
+     * 마우스를 올린 li에만 active 클래스 추가
+     * .biz .list에 over 클래스 추가
+    */
+    $('.biz .list ul li').on('mouseenter', function(){
         $('.biz .list ul li').removeClass('active')
-        $(this).addClass('active');
-        $('.biz .list').addClass('over');
+        $(this).addClass('active')
+        $('.biz .list').addClass('over')
     })
-    $('.biz .list').on('mouseleave',function(){
-        $('.biz .list ul li').removeClass('active');
-        $('.biz .list').removeClass('over');
+    $('.biz .list').on('mouseleave', function(){
+        $('.biz .list ul li').removeClass('active')
+        $('.biz .list').removeClass('over')
     })
-
-    const swiper = new Swiper('.news .list .swiper', { /* 팝업을 감싼는 요소의 class명 */
-        slidesPerView: 3, /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
+    /*********** biz에 마우스를 오버했을때 (종료) *****************/
+    /*************** news의 swiper (시작) ***************/
+    const news_swiper = new Swiper('.news .list .swiper', { /* 팝업을 감싼는 요소의 class명 */
+        slidesPerView: 'auto', /* 한번에 보일 팝업의 수 - 모바일 제일 작은 사이즈일때 */
         spaceBetween: 16, /* 팝업과 팝업 사이 여백 */
         breakpoints: {
-            1200: {    /* 1200px 이상일때 적용 */
-                slidesPerView: 4,
-                spaceBetween: 24,
-            },
-            868: {    /* 768px 이상일때 적용 */
+            1001: {    /* 1000px 이상일때 적용 */
                 slidesPerView: 3,
                 spaceBetween: 24,
             },
-            300: {    /* 300px 이상일때 적용 */
-                slidesPerView: 1,
-                spaceBetween: 24,
-            },
-            
         },
         loop: false,  /* 마지막 팝업에서 첫번째 팝업으로 자연스럽게 넘기기 */
-
         scrollbar: {
-            el: '.news .list .ctrol_wrap .scroll',
-            hide: false,
+            el: ".news .list .ctrl_wrap .scroll",
+            hide: false, /* 보이게 */
             draggable: true,
-            dragSize: 150,
-          },
-});
+            dragSize: 120,
+        },
+    });
 
+    /* aos 애니메이션 */
+    AOS.init({
+        offset: 150, // 해당 콘텐츠가 하단에서 몇 px 위로 올라와에 나타나는 효과가 나타날지 셋팅하는 값
+        duration: 500, // 애니메이션 효과가 작동되는 시간
+        easing: 'ease', // 가속도
+    });
 })//$(document).ready

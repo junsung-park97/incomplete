@@ -255,9 +255,10 @@ header.fixed .logo a::before, header.menu_pc .logo a::before {
                     background-color: #fff;
                 }
                 header.menu_pc .gnb .gnb_wrap ul.depth1 > li > ul.depth2 {
-                    display: block !important;
-                    /* 모바일에서 2차메뉴에 슬라이드를 주면 display none이 됨 그걸 해결하기 위해 imporetant를 주면 우선순위가 변경됨 */
-                    /* 나타남 */
+                    display: block !important; 
+                    /* 2차메뉴를 모바일에서 jquery로 slide 효과를 줘서 style="display:none;"이라고 
+                    써놓는 경우, 일반적인 css보다 우선순위가 높음
+                    그래서 css에서 important를 주면 우선순위를 높일 수 있음 */
                 }
 }/* media */
 @media screen and (max-width:1000px){
@@ -321,14 +322,13 @@ header.fixed .logo a::before, header.menu_pc .logo a::before {
                     background-size: contain;
                 }
                 header .gnb .gnb_wrap ul.depth1 > li ul.depth2 {
-                    /*display: none;*/
-                    overflow: hidden;
-                    height: 0;
+                    display: none;
+                    /*overflow: hidden;
+                    height: 0;*/
                     background-color: var(--main-color);
                     color: #fff;
                     font-size: 1.2143rem;
-                    transition: height 0.5s;
-                    /*padding: 1.4706em 0 1.4706em 1.1765em;*/
+                    padding: 1.4706em 0 1.4706em 1.1765em;
                 }
                 header .gnb .gnb_wrap ul.depth1 > li ul.depth2 > li > a {
                     display: block;
@@ -344,8 +344,8 @@ header.fixed .logo a::before, header.menu_pc .logo a::before {
                     transform: rotate(180deg);
                 }
                 header .gnb .gnb_wrap ul.depth1 > li.open ul.depth2 {
-                    /*display: block;  나타남 */
-                    height: 300px;
+                    /*display: block;  나타남
+                    height: 300px; */
                 }
                 header .gnb .gnb_close {
                     /* display: none;  숨김 */
@@ -428,5 +428,129 @@ header.fixed .logo a::before, header.menu_pc .logo a::before {
 
 
 footer {
-    margin-top: 2000px;
+    background-color: #2D2D2D;
+    color: rgba(255,255,255,0.8);
+    padding: 5.2941em 0 8.1176em 0;
+    position: relative; /* top정렬의 기준 */
 }
+footer .top {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    transform: translateY(-50%);
+    /* 나 자신의 높이의 절반을 상단으로 */
+}
+footer .top button {
+    width: 2.8235em;
+    height: 2.8235em;
+    background-color: var(--main-color);
+    color: transparent; /* 투명 */
+}
+footer .top button::before {
+    content: "";
+    position: absolute; /* top을 기준으로 정렬 */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 10.4534L7.927 14.5267C7.7885 14.665 7.61441 14.7358 7.40475 14.7392C7.19525 14.7423 7.018 14.6715 6.873 14.5267C6.72816 14.3817 6.65575 14.206 6.65575 13.9997C6.65575 13.7933 6.72816 13.6177 6.873 13.4727L11.3672 8.97841C11.4609 8.88491 11.5597 8.81891 11.6635 8.78041C11.7673 8.74191 11.8795 8.72266 12 8.72266C12.1205 8.72266 12.2327 8.74191 12.3365 8.78041C12.4403 8.81891 12.5391 8.88491 12.6327 8.97841L17.127 13.4727C17.2653 13.6112 17.3362 13.7852 17.3395 13.9949C17.3427 14.2044 17.2718 14.3817 17.127 14.5267C16.982 14.6715 16.8063 14.7439 16.6 14.7439C16.3937 14.7439 16.218 14.6715 16.073 14.5267L12 10.4534Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse; /* 좌우 요소 뒤집기 */
+    align-items: flex-start; /* flex는 좌우로 정렬되는 요소의 높이를 똑같이 줌. 높이를 각자주는 값이 align-item */
+}
+footer .family_site {
+    position: relative; /* list 정렬의 기준 */
+}
+footer .family_site button {
+    background-color: #404040;
+    padding: 0 0 0 1.1765em;
+    width: 12.2353em;
+    height: 2.8235em;
+    line-height: 2.8235em;
+    text-align: left;
+    position: relative; /* after 정렬의 기준 */
+}
+footer .family_site button::after {
+    content: "";
+    position: absolute; /* button을 기준으로 정렬 */
+    right: 1em;
+    top: 0.6em;
+    width: 1.4118em;
+    height: 1.4118em;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 10.4534L7.927 14.5267C7.7885 14.665 7.61441 14.7358 7.40475 14.7392C7.19525 14.7423 7.018 14.6715 6.873 14.5267C6.72816 14.3817 6.65575 14.206 6.65575 13.9997C6.65575 13.7933 6.72816 13.6177 6.873 13.4727L11.3672 8.97841C11.4609 8.88491 11.5597 8.81891 11.6635 8.78041C11.7673 8.74191 11.8795 8.72266 12 8.72266C12.1205 8.72266 12.2327 8.74191 12.3365 8.78041C12.4403 8.81891 12.5391 8.88491 12.6327 8.97841L17.127 13.4727C17.2653 13.6112 17.3362 13.7852 17.3395 13.9949C17.3427 14.2044 17.2718 14.3817 17.127 14.5267C16.982 14.6715 16.8063 14.7439 16.6 14.7439C16.3937 14.7439 16.218 14.6715 16.073 14.5267L12 10.4534Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    transition: 0.5s;
+}
+footer .family_site .list {
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 2.9em;
+    width: 100%;
+    background-color: #404040;
+    padding: 0.8235em 0 0.8235em 1.1765em;
+}
+footer .family_site .list ul li a {
+    display: block;
+    line-height: 2;
+}
+/**********family_site가 열렸을때**************/
+footer .family_site.open button::after {
+    transform: rotate(180deg);
+}
+footer .f_nav {
+    margin: 0.6471em 0 1.7059em 0;
+}
+footer .f_nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em 2.9412em;
+}
+footer .f_nav ul li {
+    position: relative; /* after 정렬의 기준 */
+}
+footer .f_nav ul li::after {
+    content: "";
+    position: absolute; /* li를 기준으로 정렬 */
+    right: -1.45em;
+    top: 0.3em;
+    width: 1px;
+    height: 0.6471em;
+    background-color: rgba(255,255,255,0.2);
+}
+footer .f_nav ul li:last-child:after {
+    display: none;
+}
+footer .copyright {
+    color: rgba(255,255,255,0.6);
+}
+@media screen and (max-width:1000px){ /* 1000px이하 */
+    footer {
+        padding: 3.8571em 0 5.6429em 0;
+    }
+    footer .top {
+        position: absolute;
+        right: 20px;
+        top: 0;
+        transform: translateY(-50%);
+        /* 나 자신의 높이의 절반을 상단으로 */
+    }
+    footer .wrapper {
+        display: block; /* flex해제 */
+    }
+    footer .family_site button {
+        width: 100%;
+    }
+    footer .f_nav {
+        margin: 3.2143em 0 2.0714em 0;
+    }
+}   

@@ -116,18 +116,18 @@ $(document).ready(function(){
     $('header .gnb .gnb_wrap ul.depth1 > li > a').on('click', function(e){
         if(device_status == 'mobile'){
             e.preventDefault(); //a의 클릭 막기
-            if($(this).parent().hasClass('open') == true){ //open이 있으면
+            if($(this).parent().hasClass('open') == true){ //open이 있으면 (닫아야함)
                 $(this).parent().removeClass('open')
                 $(this).next().slideUp()
-                //$(this).next().slideUp()
-                //console.log('open있어요!! 열린애예요!!!')
-            }else{
+                /*
+                    <a></a> ------------------------ $(this)
+                    <ul class="depth2"></ul> ------- $(this).next()로 선택가능
+                */
+            }else{ //open이 없으면 (열기)
                 $('header .gnb .gnb_wrap ul.depth1 > li').removeClass('open')
-                $('header .gnb .gnb_wrap ul.depth1 > li ul.depth2') .slideUp()
+                $('header .gnb .gnb_wrap ul.depth1 > li ul.depth2').slideUp()
                 $(this).parent().addClass('open')
                 $(this).next().slideDown()
-                //$(this).next().slideDown()
-                //console.log('open없어요!! 닫힌애예요!!!')
             }
         }
     })
@@ -145,7 +145,35 @@ $(document).ready(function(){
     })
 
     /************ 모바일의 메뉴 열고 닫기 (종료) ****************/
+    /************ top버튼을 클릭하면 상단으로 스크롤 (시작) ****************/
+    $('footer .top button').on('click', function(){
+        $('html, body').animate({
+            scrollTop: 0,
+        }, 500)
+    })
+    /************ top버튼을 클릭하면 상단으로 스크롤 (종료) ****************/
+    /************ family site 클릭해서 열기 (시작) ***************
+     * footer .family_site button  클릭했을때
+     * footer .family_site 에 open 클래스 추가
+     * button에 title의 문구 변경
+     * footer .family_site .list 열고 닫기 slideUp slideDown
+     * >> 현재 버튼이 열려있는지 닫혀 있는지 구분 >> open클래스 존재 유무로
+    */
+    $('footer .family_site button').on('click', function(){
+        if($(this).parent().hasClass('open') == true){//open클래스가 있을때 (열렸을때 >> 닫는기능)
+            //console.log('open클래스 있음')
+            $(this).parent().removeClass('open')
+            $(this).next().slideUp()
+            $(this).attr('title', '열기버튼')
+        }else{ //open클래스가 없을때 (닫혔을때 >>> 여는기능)
+            //console.log('open클래스 없음')
+            $(this).parent().addClass('open')
+            $(this).next().slideDown()
+            $(this).attr('title', '닫기버튼')
+        }
+    })
 
+    /************ family site 클릭해서 열기 (종료) ****************/
 
 })//$(document).ready
     
