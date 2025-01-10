@@ -2,43 +2,99 @@
 * contents.js
 * 각각의 콘텐츠 페이지에서 작동될 스크립트 저장
 */
-$(document).ready(function () {
-    let lastScrollTime = Date.now(); // 마지막 스크롤 시간 저장
-    let allScrollInter = [];
-    let averageScrollInterval = 200; // 초기 평균 스크롤 간격
-    let scrollTimer; // 타이머를 저장할 변수
+$(document).ready(function(){
 
-    $(window).on("scroll", function () {
-        const currentTime = Date.now(); // 현재 시간
-        const interval = currentTime - lastScrollTime; // 현재와 마지막 스크롤 간의 시간 차이
+    /* history_tab를 active 클래스 주거나 빼는 효과 (시작) 
+    * contents.js는 모든 서브페이지에서 불림... 
+    * >> 스크롤 할때마다 계산식을 써야 하는데.... 
+    * >> 다른 모든 페이지에서 계산 안됨 ... 
+    * >> 여기가 .cnt_history가 있니??? 라고 물어봐서 있으면 계산함 
+    */
 
-        // 50ms 이상일 경우만 간격 기록 (너무 짧은 간격은 무시)
-        if (interval > 50) {
-            allScrollInter.push(interval);
+    
+    if($('.sub_contents').hasClass('cnt_history')){
+        let area_name = $('.cnt_history')
+        let obj_name = $('.cnt_history .history_tab')
+        let obj_anchor
+        let area_scroll
+        let area_top 
+        let area_h 
+        let area_btm 
+        let scrolling
+        let window_h
+        let tab01_name = $('.cnt_history #history_2010')
+        let tab01_top
+        let tab02_name = $('.cnt_history #history_2000')
+        let tab02_top
+        let tab03_name = $('.cnt_history #history_1990')
+        let tab03_top
+        let tab04_name = $('.cnt_history #history_1980')
+        let tab04_top
+      
+        obj_name.find('li').on('click', function(){
+            obj_anchor = $(this).attr('data-anchor')
+            area_scroll = $('.cnt_history #'+obj_anchor).offset().top - window_h*0.49
+            //console.log(area_scroll)
+            //$(window).scrollTop(area_scroll)
+            $('html, body').animate({
+                scrollTop: area_scroll
+            }, 500)
+        })
 
-            // 최근 10개의 간격만 유지 (필요 이상으로 쌓이지 않도록)
-            if (allScrollInter.length > 10) {
-                allScrollInter.shift();
-                
+        function history_tab_show(){
+            area_top = area_name.offset().top
+            area_h = area_name.height()
+            area_btm = area_top + area_h
+            scrolling = $(window).scrollTop()
+            window_h = $(window).height()
+            tab01_top = tab01_name.offset().top
+            tab02_top = tab02_name.offset().top
+            tab03_top = tab03_name.offset().top
+            tab04_top = tab04_name.offset().top
+
+            if(scrolling > (area_top - window_h*0.5)){
+                if(scrolling > (area_btm - window_h*0.9)){
+                    //console.log('이제 그만 보였으면 좋겠다....')
+                    obj_name.removeClass('active')
+                }else{
+                    //console.log('보인다..')
+                    obj_name.addClass('active')
+                    if(scrolling > (tab04_top - window_h*0.5)){
+                        obj_name.find('li').removeClass('active')
+                        obj_name.find('[data-anchor="history_1980"]').addClass('active')
+                        console.log('4번 탭이 보이는 중')
+                    }else if(scrolling > (tab03_top - window_h*0.5)){
+                        obj_name.find('li').removeClass('active')
+                        obj_name.find('[data-anchor="history_1990"]').addClass('active')
+                        //console.log('3번 탭이 보이는 중')
+                    }else if(scrolling > (tab02_top - window_h*0.5)){
+                        obj_name.find('li').removeClass('active')
+                        obj_name.find('[data-anchor="history_2000"]').addClass('active')
+                        //console.log('2번 탭이 보이는 중')
+                    }else{
+                        obj_name.find('li').removeClass('active')
+                        obj_name.find('[data-anchor="history_2010"]').addClass('active')
+                        //console.log('1번 탭이 보이는 중')
+                    }
+                }
+            }else{
+                //console.log('아직 안보인다...')
+                obj_name.removeClass('active')
             }
-
-            // 평균 스크롤 간격 계산
-            averageScrollInterval =
-                allScrollInter.reduce((sum, val) => sum + val, 0) /
-                allScrollInter.length;
-                
         }
 
-        // 스크롤 중에는 버튼 바 숨김
-        $(".cnt_history .history_tab").fadeOut(100);
+        history_tab_show()//로딩되었을때 한번 실행
 
-        // 스크롤이 멈췄는지 확인
-        clearTimeout(scrollTimer); // 기존 타이머 초기화
-        scrollTimer = setTimeout(function () {
-            // 평균 스크롤 간격 이후에 버튼 바 표시
-            $(".cnt_history .history_tab").fadeIn(100);
-        }, averageScrollInterval);
+        $(window).resize(function(){ //리사이즈 될때마다 실행
+            history_tab_show()
+        })//$(window).resize
 
-        lastScrollTime = currentTime; // 마지막 스크롤 시간 업데이트
-    });
-});
+        $(window).scroll(function(){
+            history_tab_show()
+        })
+        
+    }
+
+    /* history_tab를 active 클래스 주거나 빼는 효과 (종료) */
+
+})//$(document).ready
