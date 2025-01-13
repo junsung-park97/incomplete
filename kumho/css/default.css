@@ -45,3 +45,10 @@ input, textarea, select {
     color: inherit;
     line-height: inherit;
 }
+table caption {
+    display: none;/* caption은 접근성때문에 써야 하지만 표지 X - 숨김처리 */
+}
+th {
+    font-weight: inherit;
+    text-align: inherit;
+}
