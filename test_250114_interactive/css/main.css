@@ -1,0 +1,135 @@
+/*
+ * main.css
+ * 메인페이지에만 적용되는 스타일 입력,
+ * 다른 css import 
+ */
+ @import url(default.css);
+ @import url(font.css);
+ @import url(common.css);
+ @import url(layout.css); 
+.txtAni {
+   margin: 500px 0;
+   }
+.txtAni .txtWrap {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;  
+}
+.txtAni .txtWrap .row {
+   font-size: 3.5vw;
+   font-weight: 700;
+   color: #EDEDED;
+   white-space: nowrap;
+   position: relative;
+}
+.txtAni .txtWrap .row span {
+   color: #1d1d1d;
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 0;
+   overflow: hidden;
+   animation-name: txtAni;
+   animation-iteration-count: 1;   /*  한번만 실행 */
+   animation-fill-mode: forwards;  /* 종료후 유지 */
+}
+.txtAni .txtWrap .row:nth-child(1) span {
+   animation-delay: 0.5s;
+   animation-duration: 1.5s;
+}
+.txtAni .txtWrap .row:nth-child(2) span {
+   animation-delay: 1.5s;
+   animation-duration: 4s;
+}
+@keyframes txtAni {
+   0% {
+      width: 0;
+   }
+   100% {
+      width: 100%;
+   }
+}
+.txt_slide {
+    margin: 100vh 0 0 0;
+}
+.txt_slide .txt_wrap {
+    display: flex;
+    flex-direction: column;
+   align-items: flex-start;   
+}
+.txt_slide .txt_wrap .row {
+    font-size: 4vw;
+    font-weight: 700;
+    color: #EDEDED;
+    position: relative; /* span */
+    white-space: nowrap;
+}
+.txt_slide .txt_wrap .row span {
+    color: #1d1d1d;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+}
+@media screen and (max-width:1300px){
+   .txt_slide .txt_wrap .row {
+      font-size: 5vw;
+   }
+}
+
+.photo_resize {
+   margin: 150px 0 0 0;
+}
+.photo_resize .photo {
+   overflow: hidden;
+   height: 334px;
+   margin: 0 auto;
+   width: 50%;
+}
+.photo_resize .photo img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.bg_fixed {
+   margin: 500px 0;
+   background: url(../images/bgfixed.jpg)no-repeat center center / cover;
+   height: 640px;
+   background-attachment: fixed;
+}
+.bg_fixed h2 {
+   color: #fff;
+   font-size: 50px;
+   font-weight: 700;
+   line-height: 1.2;
+   padding: 200px 0;
+}
+.bg_change.black {
+   background-color: #1d1d1d;
+   color: #fff;
+}
+.bg_change .video_fit .tit {
+   padding: 130px 0 120px 0;
+}
+.bg_change .video_fit .tit  h2 {
+   color: #1d1d1d;
+   font-size: 50px;
+   font-weight: 700;
+   line-height: 1.2;
+   margin: 0 0 24px 0;
+
+}
+.bg_change .video_fit .videoWrap {
+   width: 100%;
+   height: 100vh;
+   margin: 0 auto;
+}
+.bg_change .video_fit .videoWrap video {
+   width: 100%;
+}
+body {
+    margin: 0 0 100vh 0;
+}
+
