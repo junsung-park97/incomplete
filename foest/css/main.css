@@ -1,0 +1,20 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+@import url(layout.css?v=2501071217);
+
+.visual, .introduce {
+    background-color: var(--main-color);
+    color: #fff;
+    font-size: 100px;
+    text-align: center;
+}
+.tree, .story {
+    background-color: var(--sub-color);
+    color: #fff;
+    font-size: 100px;
+    text-align: center;
+}
+footer {
+    background-color: #000;
+}
