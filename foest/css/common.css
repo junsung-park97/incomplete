@@ -37,26 +37,26 @@ body, html {
 :root {
     --title-font-size: 45px;
     --titsub-font-size: 35px;
-    --sub-font-size: 25px;
+    --sub-font-size: 23px;
     --base-font-size: 16px;
     --header-h: 80px;
     --header-depth2-h: 300px;
     --main-color: #003483;
     --sub-color: #00A287;
 }
-@media screen and (max-width:1300px){
+@media screen and (max-width:1280px){
     :root {
         --title-font-size: 40px;
         --titsub-font-size: 30px;
-        --sub-font-size: 20px;
+        --sub-font-size: 23px;
         --base-font-size: 15px;
     }
 }/* media */
-@media screen and (max-width:1000px){ 
+@media screen and (max-width:1024px){ 
     :root {
         --title-font-size: 35px;
         --titsub-font-size: 25px;
-        --sub-font-size: 17px;
+        --sub-font-size: 20px;
         --base-font-size: 14px;
     }
 }/* media */

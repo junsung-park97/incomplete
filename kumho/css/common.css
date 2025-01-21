@@ -47,15 +47,18 @@ body, html {
     --header-h: 100px;
     --header-depth2-h: 300px;
     --main-color: #ED1C24;
+    --section-min-height: 700px;
 }
 @media screen and (max-width:1300px){
     :root {
         --base-font-size: 16px;
+        
     }
 }/* media */
-@media screen and (max-width:1000px){ 
+@media screen and (max-width:1024px){ 
     :root {
         --base-font-size: 15px;
+        --section-min-height: 0;
     }
 }/* media */
 @media screen and (max-width:768px){ 
