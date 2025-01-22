@@ -23,9 +23,10 @@
         <!-- pc에서 menu에 hover 경우 : header > addClass menuPc-->
         <!-- mobile에서 menu에 hover 경우 : header > addClass menuMo-->
         <!-- background가 흰색의 경우 : header > addClass dark-->
+        <!-- scroll되는경우 haeder > addClass fixed -->
         <header class="">
             <h1 class="logo"><a href="index.html">생명의숲</a></h1>
-            <nav class="gnb">
+            <nav class="gnb" id="skipNav">
                 <button class="gnbOpen">메뉴열기</button>
                 <div class="gnbWrap"><!-- 모바일에서 언어와 닫기가 슬라이드로 같이 움직임 > 하나의 모임으로 만듬-->
                     <ul class="depth1">
@@ -72,7 +73,7 @@
                             <a href="#"><span>나의후원</span></a>
                         </li>
                     </ul>
-                    <div class="mLang"><button>모바일언어선택</button></div>
+                    <div class="mLang"><button>한국어</button></div>
                     <button class="gnbClose">메뉴닫기</button>
                 </div>
             </nav>
@@ -83,7 +84,7 @@
         </header>
         <div id="fullpage"> 
             <section class="visual section fp-auto-height-responsive"><!-- "fp-auto-height-responsive" 모바일에서 컨텐츠의 높이를 내가 지정하겠다 -->
-                <h2>팝업</h2>
+                <h2 id="skipContent">팝업</h2>
                 <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
                     <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
                         <li class="swiper-slide video">
@@ -119,7 +120,7 @@
                             </div>
                         </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
                     </ul>
-                    <div class="swiper-pagination"></div>  <!-- 컨트롤 요소는 swiper 안에 배치-->
+                    <div class="paging"></div>  <!-- 컨트롤 요소는 swiper 안에 배치-->
                 </div>
             </section>
             <section class="tree section fp-auto-height-responsive">
@@ -131,12 +132,22 @@
             <section class="story section fp-auto-height-responsive">
                 story
             </section>
+            
             <footer class="section fp-auto-height"><!--fp-auto-height의 높이를 제한하지 않습니다-->
             </footer>
         </div>
-        <nav class="quickNav">
+        <div class="quickLink">
             <ul>
-                <li><a href="#main"><span>main</span></a></li>
+                <li class="link1"><a href="#"><span>마이트리</span></a></li>
+                <li class="link2"><a href="#"><span>해피빈</span></a></li>
+                <li class="link3"><a href="#"><span>같이가치</span></a></li>
+            </ul>
+            <button class="top"><span>TOP</span></button>
+        </div>
+        <nav class="quickNav">
+            <!-- 배경이 흰색이라 글자가 검은색으로 들어가야할때 dark클래스 추가-->
+            <ul>
+                <li class="active"><a href="#main"><span>main</span></a></li>
                 <li><a href="#tree"><span>나무심기</span></a></li>
                 <li><a href="#introduce"><span>숲 활동</span></a></li>
                 <li><a href="#story"><span>활동이야기</span></a></li>

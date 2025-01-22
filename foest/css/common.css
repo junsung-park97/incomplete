@@ -43,6 +43,7 @@ body, html {
     --header-depth2-h: 300px;
     --main-color: #003483;
     --sub-color: #00A287;
+    --section-min-height: 700px;
 }
 @media screen and (max-width:1280px){
     :root {
@@ -50,6 +51,7 @@ body, html {
         --titsub-font-size: 30px;
         --sub-font-size: 23px;
         --base-font-size: 15px;
+        --section-min-height: 0;
     }
 }/* media */
 @media screen and (max-width:1024px){ 

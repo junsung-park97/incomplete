@@ -55,6 +55,165 @@
     line-height: 1.2;
     font-weight: 700;
 }
+
+
+
+.quickNav {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    z-index: 90;
+}
+.quickNav ul li {
+    margin-bottom: 1em;
+}
+.quickNav ul li a {
+    display: block;
+    padding-left: 1.5em;
+    color: rgba(255,255,255,0.6);
+    position: relative;
+}
+.quickNav ul li a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 0.5em;
+    height: 0.5em;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 50%;
+}
+.quickNav ul li.active a {
+    font-weight: 700;
+    color: #fff;
+}
+.quickNav ul li.active a::before {
+    background-color: #fff;
+}
+
+/*    addClass .dark       */
+.quickNav.dark ul li a {
+    color: rgba(61,61,61,0.8);
+}
+.quickNav.dark ul li a::before {
+    border: 1px solid rgba(61,61,61,0.8);
+}
+.quickNav.dark ul li.active a {
+    color: var(--main-color);
+}
+.quickNav.dark ul li.active a::before {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+
+
+.visual .swiper .paging {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4.7em;
+    z-index: 1;
+    display: flex;
+    border-top: 1px solid rgba(255,255,255,0.3) ;
+    color: #fff;
+    backdrop-filter: blur(10px);
+}
+.visual .swiper .paging .abcswiper-pagination-bullet {
+    margin: 0;
+    width: 33.33%;
+    height: 100%;
+    display: block;
+    border-radius: 0;
+    background: transparent;
+    opacity: 1;
+    border: 1px solid rgba(255,255,255,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--sub-color);
+}
+@media screen and (max-width:1024px){
+    .visual .swiper ul li {
+        height: 46.875em;
+    }
+    .visual .swiper .paging {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 1.2em;
+        width: auto;
+        height: auto;
+        gap: 0.3em;
+        border-top: 0;
+        backdrop-filter: none;
+    }
+    .visual .swiper .paging .abcswiper-pagination-bullet {
+        width: 1.1em;
+        height: 1.1em;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        font-size: var(--sub-color);
+    }
+    .visual .swiper .paging .abcswiper-pagination-bullet button {
+        display: none;
+    }
+}
+@media screen and (max-width:768px){
+    .visual .swiper ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: var(--section-min-height);
+    }
+    .visual .swiper ul li .photo {
+        overflow: hidden;
+        position: absolute; /* li를 기준으로 */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    .visual .swiper ul li.video .photo::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.2);
+    }
+    .visual .swiper ul li .photo img,
+    .visual .swiper ul li .photo video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    
+    }
+    .visual .swiper ul li .visualText {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        text-align: center;
+        gap: 1em;
+    }
+    .visual .swiper ul li .visualText h3 {
+        font-size: var(--title-font-size);
+        line-height: 1.2;
+        font-weight: 700;
+    }
+    
+    .quickNav {
+        position: fixed;
+        left: 20px;
+        top: 50%;
+        color: #fff;
+    }
+}
 .tree {
     font-size: 100px;
     text-align: center;
@@ -72,12 +231,100 @@
     font-size: 100px;
     text-align: center;
 }
+
+
+.quickLink {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    z-index: 90;
+    transform: translateY(-50%);
+}
+.quickLink ul {
+    width: 5.5em;
+    background-color: #fff;
+    border: 3px solid var(--main-color);
+    border-radius: 40px;
+    padding: 2em 0;
+}
+.quickLink ul li a {
+    display: block;
+    padding: 3.5em 0 1.5em 0;
+    text-align: center;
+    position: relative;
+    color: var(--main-color);
+}
+.quickLink ul li a::before {
+    content: "";
+    position: absolute;
+    left: 1.375em;
+    top: 1.0625em;
+    width: 2.1em;
+    height: 2.1em;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.quickLink ul li.link1 a::before{
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='22' viewBox='0 0 26 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.78747 21.2442V16.7223H0.374512L4.79176 9.93962H2.6569L9.48315 0.178711L12.8745 5.03967L16.2659 0.178711L23.0921 9.93962H20.9573L25.3745 16.7223H17.9616V21.2442H14.5702V16.7223H11.1788V21.2442H7.78747ZM17.4984 15.0267H22.2703L17.8355 8.24394H19.8268L16.2659 3.15689L13.9224 6.50049L16.3094 9.93962H14.1745L17.4984 15.0267ZM3.47874 15.0267H15.4876L11.0528 8.24394H13.0441L9.48315 3.15689L5.92222 8.24394H7.91351L3.47874 15.0267ZM3.47874 15.0267H7.91351H5.92222H13.0441H11.0528H15.4876H3.47874ZM17.4984 15.0267H14.1745H16.3094H13.9224H19.8268H17.8355H22.2703H17.4984Z' fill='%23003483'/%3E%3C/svg%3E ");
+    background-size: 1.8em;
+}
+.quickLink ul li.link2 a::before{
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='19' viewBox='0 0 18 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.80234 18.6145V10.3473C6.75807 10.3473 5.75712 10.1497 4.79948 9.75436C3.84201 9.35905 2.99601 8.79412 2.26146 8.05957C1.52708 7.32502 0.96658 6.47702 0.579948 5.51556C0.193316 4.5541 0 3.55184 0 2.50879V0.946289H1.5625C2.58733 0.946289 3.5796 1.14594 4.53932 1.54525C5.49922 1.94438 6.34514 2.51061 7.07708 3.24395C7.62205 3.78891 8.0691 4.39759 8.41823 5.06999C8.76754 5.74238 9.01762 6.45653 9.16849 7.21243C9.28863 7.0041 9.42248 6.80671 9.57005 6.62025C9.71762 6.43396 9.88229 6.25002 10.0641 6.06842C10.7976 5.33509 11.6452 4.76886 12.607 4.36973C13.5688 3.97042 14.5714 3.77077 15.6148 3.77077H17.1773V5.33327C17.1773 6.37684 16.9776 7.37962 16.5781 8.3416C16.1786 9.30358 15.6121 10.1515 14.8784 10.8854C14.1447 11.619 13.3035 12.1792 12.3547 12.5658C11.4057 12.9525 10.4091 13.1458 9.36484 13.1458V18.6145H7.80234ZM7.8125 8.75879C7.8125 7.92546 7.65191 7.13118 7.33073 6.37598C7.00955 5.62077 6.55382 4.94802 5.96354 4.35775C5.37326 3.76747 4.70052 3.31174 3.94531 2.99056C3.1901 2.66938 2.39583 2.50879 1.5625 2.50879C1.5625 3.34212 1.71875 4.14073 2.03125 4.90462C2.34375 5.66851 2.79514 6.34559 3.38542 6.93587C3.97569 7.52615 4.65278 7.97754 5.41667 8.29004C6.18056 8.60254 6.97917 8.75879 7.8125 8.75879ZM9.36484 11.5833C10.1982 11.5833 10.9924 11.427 11.7477 11.1145C12.5029 10.802 13.1756 10.3506 13.7659 9.76035C14.3562 9.17007 14.8119 8.49299 15.1331 7.7291C15.4543 6.96521 15.6148 6.1666 15.6148 5.33327C14.7815 5.33327 13.9829 5.49386 13.219 5.81504C12.4551 6.13622 11.778 6.59195 11.1878 7.18223C10.5975 7.7725 10.1461 8.44525 9.83359 9.20046C9.52109 9.95566 9.36484 10.7499 9.36484 11.5833Z' fill='%23003483'/%3E%3C/svg%3E ");
+    background-size: 1.5em;
+}
+.quickLink ul li.link3 a::before{
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.89608 18.1737L8.74634 17.1401C7.0196 15.5736 5.59165 14.2275 4.46248 13.1018C3.33332 11.976 2.43853 10.974 1.77811 10.0958C1.11769 9.21788 0.656321 8.41693 0.393994 7.69297C0.131494 6.96918 0.000244141 6.23472 0.000244141 5.48958C0.000244141 4.01128 0.498682 2.77361 1.49556 1.77656C2.49261 0.779687 3.73028 0.28125 5.20858 0.28125C6.11795 0.28125 6.97733 0.493924 7.7867 0.919271C8.59608 1.34462 9.2992 1.9546 9.89608 2.74922C10.493 1.9546 11.1961 1.34462 12.0055 0.919271C12.8148 0.493924 13.6742 0.28125 14.5836 0.28125C16.0619 0.28125 17.2996 0.779687 18.2966 1.77656C19.2935 2.77361 19.7919 4.01128 19.7919 5.48958C19.7919 6.23472 19.6607 6.96918 19.3982 7.69297C19.1358 8.41693 18.6745 9.21788 18.014 10.0958C17.3536 10.974 16.4605 11.976 15.3346 13.1018C14.2089 14.2275 12.7793 15.5736 11.0458 17.1401L9.89608 18.1737ZM9.89608 16.0625C11.5627 14.5628 12.9343 13.2774 14.0107 12.2063C15.0871 11.1352 15.9377 10.2048 16.5627 9.41484C17.1877 8.62491 17.6218 7.92344 17.8648 7.31042C18.1079 6.69757 18.2294 6.09063 18.2294 5.48958C18.2294 4.44792 17.8822 3.57986 17.1877 2.88542C16.4933 2.19097 15.6252 1.84375 14.5836 1.84375C13.761 1.84375 13.0008 2.07708 12.3028 2.54375C11.6051 3.01059 11.0526 3.65998 10.6453 4.49193H9.14686C8.7328 3.65321 8.17854 3.00217 7.4841 2.5388C6.78965 2.07543 6.03115 1.84375 5.20858 1.84375C4.17351 1.84375 3.3071 2.19097 2.60936 2.88542C1.91162 3.57986 1.56274 4.44792 1.56274 5.48958C1.56274 6.09063 1.68427 6.69757 1.92733 7.31042C2.17038 7.92344 2.60441 8.62491 3.22941 9.41484C3.85441 10.2048 4.70511 11.1336 5.78149 12.2013C6.85788 13.269 8.22941 14.5561 9.89608 16.0625Z' fill='%23003483'/%3E%3C/svg%3E ");
+    background-size: 1.5em;
+}
+.quickLink ul li:last-child a {
+    padding-bottom: 0;
+}
+.quickLink ul li + li {
+    position: relative;
+}
+.quickLink ul li + li::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 0;
+    width: calc(100% - 16px);
+    height: 3px;
+    background-color: var(--main-color);
+}
+.quickLink .top {
+    width: 100%;
+    height: 5.1563em;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    position: relative;
+}
+.quickLink .top::before {
+    content: "";
+    position: absolute;
+    width: 2.1em;
+    height: 2.1em;
+    left: 23px;
+    top: 0;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='11' viewBox='0 0 18 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.77778 3.48746L1.96297 10.3023L0.401855 8.74116L8.77778 0.365234L17.1537 8.74116L15.5926 10.3023L8.77778 3.48746Z' fill='white'/%3E%3C/svg%3E ");
+}
+.quickLink .top span {
+    color: #fff;
+    font-weight: 700;
+}
+.quickLink.color2 .top span {
+    color: var(--main-color);
+}
+.quickLink.color2 .top::before {
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='11' viewBox='0 0 18 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.77778 3.48746L1.96297 10.3023L0.401855 8.74116L8.77778 0.365234L17.1537 8.74116L15.5926 10.3023L8.77778 3.48746Z' fill='%23003483'/%3E%3C/svg%3E ");
+}
+.quickLink.color2 .top {
+    background-color: #fff;
+    border: 3px solid var(--main-color);
+}
+
 footer {
     background-color: #000;
-}
-.quickNav {
-    position: fixed;
-    left: 20px;
-    top: 50%;
-    color: #fff;
 }
