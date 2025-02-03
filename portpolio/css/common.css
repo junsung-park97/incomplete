@@ -49,6 +49,7 @@ body, html {
         --titsub-font-size: 32px;
         --sub-font-size: 22px;
         --base-font-size: 16px;
+        --header-depth2-h: 350px;
     }
 }/* media */
 @media screen and (max-width:1024px){ 
@@ -57,6 +58,7 @@ body, html {
         --titsub-font-size: 27px;
         --sub-font-size: 20px;
         --base-font-size: 15px;
+        --header-depth2-h: 340px;
     }
 }/* media */
 @media screen and (max-width:768px){ 
