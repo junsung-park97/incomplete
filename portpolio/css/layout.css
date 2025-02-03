@@ -1,0 +1,97 @@
+/*
+ * layout.css
+ * header/footer 모든 페이지의 공통 스타일 적용
+*/
+.skipnav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.skipnav a {
+    position: absolute; /* skipnav를 기준으로 정렬 */
+    left: 0;
+    top: -100px;
+    width: 100%;
+    display: block;
+    background-color: #0063AF;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+.skipnav a.menu {
+    background-color: #00AF00;
+}
+.skipnav a:focus {
+    top: 0;
+}
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: var(--header-h);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+header .logo a{
+    display: block;
+    width: 8.23em;
+    height: 2.73em;
+    color: transparent;
+    text-indent: -999px;
+    position: relative;
+}
+header .logo a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/logo.svg)no-repeat center center / cover;
+}
+@media screen and (min-width:1300px){ /* n > 1025 실행  */
+  
+    header .gnb_open,
+    header .gnb_close {
+        display: none;
+    }
+    header .gnb_wrap ul.depth1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header .gnb_wrap ul.depth1 > li {
+        width: 10.58em;
+        text-align: center;
+    }
+    header .gnb_wrap ul.depth1 > li > a {
+        display: block;
+        font-size: var(--heading-font-size);
+        font-weight: 700;
+        line-height: 1.4;
+    }
+    header .gnb_wrap ul.depth1 > li > ul.depth2 {
+        display: none;
+    }
+    header .h_tab .lang ul{
+        display: flex;
+        align-items: center;
+        gap: 0.88em;
+    }
+    header .h_tab .lang ul li a {
+        display: block;
+        font-size: var(--heading-font-size);
+        padding-bottom: 0.38em;
+    }
+    header .h_tab .lang ul li.active a {
+        border-bottom: 1px solid #fff;
+    }
+}
