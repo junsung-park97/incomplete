@@ -1,24 +1,73 @@
-body, html {
-    font-family: "Pretendard", sans-serif; /* sans-serif 고딕서체 */
-    font-size: 17px;
+/*
+ * common.css
+ * 글자의 기본 스타일 및 wrapper/wrap 설정
+ */
+ body, html {
+    font-family: "Paperlogy", "맑은고딕","Malgun Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* sans-serif 고딕서체 */
+    /* 먼저 선언한 폰트를 사용, 먼저 선언한 폰트가 한글이 지원X - 그럼 자동으로 두번째 폰트로 표시됨 */
+    font-size: var(--base-font-size);
     font-weight: 400;
     color: #555;
     line-height: 1.4; /* 배수 - 글자크기에 몇배 */
-    letter-spacing: 0; /* 자간 */
     word-break: keep-all; /* 단어별로(여백기준) 줄바꿈 */
     word-wrap: break-word; /* 단어가 너무 길면 그걸 강제로 줄바꿈 하는 명령 */
 }
 .wrapper {
     /* 디자인파일에 레이아웃 그리드 처럼 홈페이지 영역 제한하고 
        브라우저에 가운데 정렬 */
-    width: 1260px;
+    width: 1440px;
     margin: 0 auto;
 }
 #wrap {
-    min-width: 1300px;
-    /* 콘텐츠영역이 1260px 좌우여백 20px씩 
-       1260 + 20 + 20 = 1300 */
+    width: 100%;
     overflow: hidden; 
-    /* wrap 영역 밖으로 나간 요소는 숨김처리
-       absolute가 대부분 나감. */
+    /* wrap 영역 밖으로 나간 요소는 숨김처리  absolute가 대부분 나감. */
+    position: relative; /* header 정렬의 기준값 */
 }
+@media screen and (max-width:1300px){
+                        .wrapper {
+                            width: auto; 
+                            /* 원래 너 하던대로해 - block요소 
+                            - 감싸는 요소의 넓이의 100% 
+                            - 100%로 주면 margin과 충돌 그래서 auto */
+                            margin: 0 20px;
+                        }
+}/*media*/
+
+:root {
+    --title-font-size: 45px;
+    --tit-sub-font-size: 37px;
+    --sub-font-size: 25px;
+    --heading-font-size: 20px;
+    --base-font-size: 17px;
+    --header-h: 80px;
+    --header-depth2-h: 358px;
+}
+@media screen and (max-width:1280px){
+    :root {
+        --title-font-size: 40px;
+        --titsub-font-size: 32px;
+        --sub-font-size: 22px;
+        --base-font-size: 16px;
+        --header-depth2-h: 350px;
+    }
+}/* media */
+@media screen and (max-width:1024px){ 
+    :root {
+        --title-font-size: 35px;
+        --titsub-font-size: 27px;
+        --sub-font-size: 20px;
+        --base-font-size: 15px;
+        --header-depth2-h: 340px;
+    }
+}/* media */
+@media screen and (max-width:768px){ 
+    :root {
+        --title-font-size: 36px;
+        --titsub-font-size: 24px;
+        --sub-font-size: 18px;
+        --base-font-size: 13px;
+        --header-h: 50px;
+        --heading-font-size: 16px;
+    }
+}/* media */

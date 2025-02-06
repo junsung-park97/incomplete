@@ -91,21 +91,21 @@
             <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소-->
                 <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소-->
                     <li class="swiper-slide">
-                        <div class="photo"><img src="images/visual_bg.jpg" alt="배경사진"></div>
+                        <div class="photo"><img src="images/visual/visual_bg.jpg" alt="배경사진"></div>
                         <div class="visual_text">
                             <h3>신라의 혼이 깃든 예술, 시간을 넘어 마주하다</h2>
                             <div class="reserve"><a href="#n">예약바로가기</a></div>
                         </div>
                     </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
                     <li class="swiper-slide">
-                        <div class="photo"><img src="images/visual_bg02.jpg" alt="배경사진"></div>
+                        <div class="photo"><img src="images/visual/visual_bg02.jpg" alt="배경사진"></div>
                         <div class="visual_text">
                             <h3>신라의 혼이 깃든 예술, 시간을 넘어 마주하다</h2>
                             <div class="reserve"><a href="#n">예약바로가기</a></div>
                         </div>
                     </li> <!-- 팝업 요소들 (div로 해도 상관없음)-->
                     <li class="swiper-slide">
-                        <div class="photo"><img src="images/visual_bg03.jpg" alt="배경사진"></div>
+                        <div class="photo"><img src="images/visual/visual_bg03.jpg" alt="배경사진"></div>
                         <div class="visual_text">
                             <h3>신라의 혼이 깃든 예술, 시간을 넘어 마주하다</h2>
                             <div class="reserve"><a href="#n">예약바로가기</a></div>
@@ -120,18 +120,18 @@
                 <div class="ex_tab_cnt">
                     <div class="ex_tabs">
                         <ul>
-                            <li class="tab_ing on" data-ex_tab="tab_ing" role="tab_ing"><button type="button" title="선택됨">현재 전시</button></li>
-                            <li class="tab_ed" data-ex_tab="tab_ed" role="tab_ed"><button type="button">지난 전시</button></li>
+                            <li class="tab_panel tab_ing" data-ex_tab="tab_ing" role="tab_ing"><button class="on" type="button" title="선택됨">현재 전시</button></li>
+                            <li class="tab_panel tab_ed" data-ex_tab="tab_ed" role="tab_ed"><button type="button">지난 전시</button></li>
                         </ul>
                     </div>
                     <div class="ex_tab_list">
-                        <div class="tab_ing on" data-ex_tab="tab_ing" role="tab_ing">
+                        <div class="tab_panel tab_ing on" data-ex_tab="tab_ing" role="tab_ing">
                             <h3>현재 진행중인 전시 목록입니다.</h3>
                             <ul>
                                 <li>
                                     <a href="#n">
                                         <div class="photo">
-                                            <img src="images/ex_01.jpg" alt="현재 진행중인 전시 포스터 사진01">
+                                            <img src="images/exhibit/ex_01.jpg" alt="현재 진행중인 전시 포스터 사진01">
                                         </div>
                                         <div class="inner_txt">
                                             <h4>일체유심조 : 모든 것은 마음으로부</h4>
@@ -143,7 +143,7 @@
                                 <li>
                                     <a href="#n">
                                         <div class="photo">
-                                            <img src="images/ex_02.jpg" alt="현재 진행중인 전시 포스터 사진02">
+                                            <img src="images/exhibit/ex_02.jpg" alt="현재 진행중인 전시 포스터 사진02">
                                         </div>
                                         <div class="inner_txt">
                                             <h4>경주미술인 공모선정전</h4>
@@ -155,7 +155,7 @@
                                 <li>
                                     <a href="#n">
                                         <div class="photo">
-                                            <img src="images/ex_03.jpg" alt="현재 진행중인 전시 포스터 사진03">
+                                            <img src="images/exhibit/ex_03.jpg" alt="현재 진행중인 전시 포스터 사진03">
                                         </div>
                                         <div class="inner_txt">
                                             <h4>과정의 과정 : Process of Proces</h4>
@@ -166,37 +166,43 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="tab_ed" data-ex_tab="tab_ed" role="tab_ed">
+                        <div class="tab_panel tab_ed" data-ex_tab="tab_ed" role="tab_ed">
                             <h3>과거에 진행했던 전시목록입니다.</h3>
                             <ul>
                                 <li>
                                     <a href="#n">
                                         <div class="photo">
-                                            <img src="images/ex_ed01.jpg" alt="과거에 전시되었던 전시 포스터사진01">
+                                            <img src="images/exhibit/ex_ed01.jpg" alt="과거에 전시되었던 전시 포스터사진01">
                                         </div>
-                                        <h4>에너지 보존의 법칙</h4>
-                                        <p>2024. 09. 14.(토) ~ 2024. 11. 10.(일)</p>
-                                        <p>경주솔거미술관 기획 1~2실</p>
+                                        <div class="inner_txt">
+                                            <h4>에너지 보존의 법칙</h4>
+                                            <p>2024. 09. 14.(토) ~ 2024. 11. 10.(일)</p>
+                                            <p>경주솔거미술관 기획 1~2실</p>
+                                        </div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#n">
                                         <div class="photo">
-                                            <img src="images/ex_ed02.jpg" alt="과거에 전시되었던 전시 포스터사진02">
+                                            <img src="images/exhibit/ex_ed02.jpg" alt="과거에 전시되었던 전시 포스터사진02">
                                         </div>
-                                        <h4>빛과 사물의 조응 : 시각의 추상적 흐름 읽기</h4>
-                                        <p>2024.08.10.(토)~ 2024.09.22.(일)</p>
-                                        <p>박대성 1관~5관</p>
+                                        <div class="inner_txt">
+                                            <h4>빛과 사물의 조응 : 시각의 추상적 흐름 읽기</h4>
+                                            <p>2024.08.10.(토)~ 2024.09.22.(일)</p>
+                                            <p>박대성 1관~5관</p>
+                                        </div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#n">
                                         <div class="photo">
-                                            <img src="images/ex_ed03.jpg" alt="과거에 전시되었던 전시 포스터사진03">
+                                            <img src="images/exhibit/ex_ed03.jpg" alt="과거에 전시되었던 전시 포스터사진03">
                                         </div>
-                                        <h4>당신이 바라는, 누군가 바라보는</h4>
-                                        <p>2023.09.28.(목) ~ 2023.11.03.(금)</p>
-                                        <p>경주솔거미술관 야외 정원</p>
+                                        <div class="inner_txt">
+                                            <h4>당신이 바라는, 누군가 바라보는</h4>
+                                            <p>2023.09.28.(목) ~ 2023.11.03.(금)</p>
+                                            <p>경주솔거미술관 야외 정원</p>
+                                        </div>
                                     </a>
                                 </li>
                             </ul>
@@ -211,72 +217,176 @@
         <section class="stady_program">
             <div class="wrapper">
                 <h2>교육</h2>
-                <div class="sp_tab_cnt">
+                <div class="sp_cnt">
                     <div class="sp_tabs">
                         <ul>
                             <li data-ex_tab="tab01 on" class="tab01 on" role="tab01"><button type="button" title="선택됨">성인</button></li>
-                            <li data-ex_tab="tab01" class="tab01 on" role="tab01"><button type="button">청소년</button></li>
-                            <li data-ex_tab="tab01" class="tab01 on" role="tab01"><button type="button">아동</button></li>
+                            <li data-ex_tab="tab02" class="tab02" role="tab02"><button type="button">청소년</button></li>
+                            <li data-ex_tab="tab03" class="tab03" role="tab03"><button type="button">아동</button></li>
                         </ul>
                     </div>
                     <div class="tab_cnt">
-                        <div data-ex_tab="tab01" class="tab01 on" role="tab01">
+                        <div data-ex_tab="tab01" class="tab_panel tab1 on" role="tab01">
                             <h3>성인관람 교육프로그램입니다.</h3>
                             <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
                                 <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
                                     <li class="swiper-slide">
                                         <a href="#n">
                                             <div class="photo">
-                                                <img src="images/adult_study01.jpg" alt="성인에게 제공되는 교육프로그램의 포스터사진01">
+                                                <img src="images/stady_program/adult/sp_adult01.jpg" alt="성인에게 제공되는 교육프로그램의 포스터사진01">
                                             </div>
-                                            <h4></h4>
-                                            <p></p>
-                                            <p></p>
+                                            <h4>[특별초청강연] 2019 "이효재와 함께하는 가치 있는 라이프"</h4>
+                                            <span class="recruit">모집인원 : 30명</span>
                                         </a>
                                     </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
                                     <li class="swiper-slide">
                                         <a href="#n">
                                             <div class="photo">
-                                                <img src="images/adult_study01.jpg" alt="성인에게 제공되는 교육프로그램의 포스터사진01">
+                                                <img src="images/stady_program/adult/sp_adult02.jpg" alt="성인에게 제공되는 교육프로그램의 포스터사진02">
                                             </div>
-                                            <h4></h4>
-                                            <p></p>
-                                            <p></p>
+                                            <h4>[전시연계] 문화가 있는 날 &lt;예술프로그램&gt;</h4>
+                                            <span>모집인원 : 20명</span>
                                         </a>
                                     </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
                                     <li class="swiper-slide">
                                         <a href="#n">
                                             <div class="photo">
-                                                <img src="images/adult_study02.jpg" alt="성인에게 제공되는 교육프로그램의 포스터사진01">
+                                                <img src="images/stady_program/adult/sp_adult03.jpg" alt="성인에게 제공되는 교육프로그램의 포스터사진03">
                                             </div>
-                                            <h4></h4>
-                                            <p></p>
-                                            <p></p>
+                                            <h4>[전시연계] 문화가 있는 날 &lt;그린나래&gt;</h4>
+                                            <span>모집인원 : 20명</span>
                                         </a>
                                     </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
                                     <li class="swiper-slide">
                                         <a href="#n">
                                             <div class="photo">
-                                                <img src="images/adult_study03.jpg" alt="성인에게 제공되는 교육프로그램의 포스터사진01">
+                                                <img src="images/stady_program/adult/everthing.jpg" alt="성인에게 제공되는 교육프로그램의 포스터사진04">
                                             </div>
-                                            <h4></h4>
-                                            <p></p>
-                                            <p></p>
+                                            <h4>[작품감상] Free drawing with artist 홍지민</h4>
+                                            <span>모집인원 : 30명</span>
                                         </a>
                                     </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
                                     <li class="swiper-slide">
                                         <a href="#n">
                                             <div class="photo">
-                                                <img src="images/adult_study04.jpg" alt="성인에게 제공되는 교육프로그램의 포스터사진01">
+                                                <img src="images/stady_program/adult/sp_adult05.jpg" alt="성인에게 제공되는 교육프로그램의 포스터사진05">
                                             </div>
-                                            <h4></h4>
-                                            <p></p>
-                                            <p></p>
+                                            <h4>[관람예절] 경주개 동경이와 함께하는 전시관람예절 - 비대면 교육프로그램</h4>
+                                            <span>상시모집</span>
                                         </a>
                                     </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
                                 </ul>
                             </div>
-                        </div>
+                        </div><!--this-->
+                        <div data-ex_tab="tab02" class="tab_panel tab02" role="tab02">
+                            <h3>청소년 교육프로그램입니다.</h3>
+                            <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                                <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo">
+                                                <img src="images/stady_program/youth/youth01.jpg" alt="청소년에게 제공되는 교육프로그램의 포스터사진01">
+                                            </div>
+                                            <h4>강재준 작가와 함께하는 &lt;상상친구 만들기&gt; 모집 안내</h4>
+                                            <span>모집인원 : 1회당 14명</span>
+                                        </a>
+                                    </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo">
+                                                <img src="images/stady_program/youth/youth02.jpg" alt="청소년에게 제공되는 교육프로그램의 포스터사진02">
+                                            </div>
+                                            <h4>[체험교육] &lt;'탈춤'과 함께하는 룰루랄라 크리스마스 어린이 대상 특별 탈춤 교실&gt;</h4>
+                                            <span>모집인원 : 20명</span>
+                                        </a>
+                                    </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo">
+                                                <img src="images/stady_program/youth/youth03.jpg" alt="청소년에게 제공되는 교육프로그램의 포스터사진03">
+                                            </div>
+                                            <h4>[작품감상] 꿈꾸는 미술관</h4>
+                                            <span>모집인원 : 10 - 30명</span>
+                                        </a>
+                                    </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo">
+                                                <img src="images/stady_program/youth/youth04.jpg" alt="청소년에게 제공되는 교육프로그램의 포스터사진04">
+                                            </div>
+                                            <h4>[작품감상] 들어봐요 미술관</h4>
+                                            <span>모집인원 : 10 - 30명</span>
+                                            <span>2022년 7월 이후 상시 운영</span>
+                                        </a>
+                                    </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo">
+                                                <img src="images/stady_program/adult/everthing.jpg" alt="청소년에게 제공되는 교육프로그램의 포스터사진05">
+                                            </div>
+                                            <h4>[작품감상] Free drawing with artist 홍지민</h4>
+                                            <span>모집인원 : 30명</span>
+                                            <span>2023.03.05 - 2023.03.26</span>
+                                        </a>
+                                    </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                </ul>
+                            </div>
+                        </div><!--this-->
+                        <div data-ex_tab="tab03" class="tab_panel tab03" role="tab03">
+                            <h3>아동관람 교육프로그램입니다.</h3>
+                            <div class="swiper"> <!-- 팝업의 높이와 넓이를 css에서 줄 수 있는 요소 -->
+                                <ul class="swiper-wrapper"> <!-- 각 팝업 콘텐츠를 감싸는 요소 -->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo">
+                                                <img src="images/stady_program/baby/baby01.jpg" alt="성인에게 제공되는 교육프로그램의 포스터사진01">
+                                            </div>
+                                            <h4>[전시연계] 푸릉푸릉 우리 에너지</h4>
+                                            <span>4~5세 어린이, 동반 보호자 1인 (총 5팀)</span>
+                                            <span>10.14 / 10.28 / 11.11 / 11.25 / 12.09 격주 월요일 (총 5회) 10:00~12:00(120분)</span>
+                                        </a>
+                                    </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo">
+                                                <img src="images/stady_program/adult/everthing.jpg" alt="아동에게 제공되는 교육프로그램의 포스터사진02">
+                                            </div>
+                                            <h4>[작품감상] Free drawing with artist 홍지민</h4>
+                                            <span>모집인원 : 30명</span>
+                                            <span>2023.03.05 - 2023.03.26</span>
+                                        </a>
+                                    </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo">
+                                                <img src="images/stady_program/baby/baby03.jpg" alt="아동에게 제공되는 교육프로그램의 포스터사진03">
+                                            </div>
+                                            <h4>[체험교육] 솔거미술관과 함께하는 포토그램 체험 프로그램 - 비대면 교육프로그램</h4>
+                                            <span>상시 모집</span>
+                                        </a>
+                                    </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo">
+                                                <img src="images/stady_program/youth/youth02.jpg" alt="아동에게 제공되는 교육프로그램의 포스터사진04">
+                                            </div>
+                                            <h4>[체험교육] &lt;'탈춤'과 함께하는 룰루랄라 크리스마스 어린이 대상 특별 탈춤 교실&gt;</h4>
+                                            <span>모집인원 : 20명</span>
+                                            <span>2022년 12.24.(토) 오후 1시, 2시, 3시(회당50분)</span>
+                                        </a>
+                                    </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                    <li class="swiper-slide">
+                                        <a href="#n">
+                                            <div class="photo">
+                                                <img src="images/stady_program/baby/baby05.jpg" alt="아동에게 제공되는 교육프로그램의 포스터사진05">
+                                            </div>
+                                            <h4>[관람예절] 경주개 동경이와 함께하는 전시관람예절 - 비대면 교육프로그램</h4>
+                                            <span>상시 모집</span>
+                                        </a>
+                                    </li> <!-- 팝업 요소들 (div로 해도 상관없음) -->
+                                </ul>
+                            </div>
+                        </div><!--this-->
                     </div>
                 </div>
             </div>
@@ -287,21 +397,21 @@
                 <div class="coll_cnt">
                     <div class="left">
                         <div class="photo">
-                            <img src="" alt="">
+                            <img src="images/collrection/collrection_main.jpg" alt="소장품사진1">
                         </div>
-                        <div class="inner_txt">
+                        <div class="left_txt">
                             <ul>
-                                <li class="preson_name">
-                                    <span></span>
-                                    <span></span>
-                                </li>
                                 <li class="art_name">
-                                    <span></span>
-                                    <span></span>
+                                    <span>작품명</span>
+                                    <span>書</span>
+                                </li>
+                                <li class="preson_name">
+                                    <span>작가명 :</span>
+                                    <span>소산 박대성</span>
                                 </li>
                                 <li class="make_years">
-                                    <span></span>
-                                    <span></span>
+                                    <span>제작년도 :</span>
+                                    <span>2000</span>
                                 </li>
                             </ul>
                         </div>
@@ -310,33 +420,33 @@
                         <div class="inner_left">
                             <ul>
                                 <li>
-                                    <a href="#n">
-                                        <div class="photo"></div>
-                                        <p></p>
+                                    <a class="over" href="#n">
+                                        <div class="photo"><img src="images/collrection/collrection_sub01.jpg" alt="소장품사진2"></div>
+                                        <span>사슴</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#n">
-                                        <div class="photo"></div>
-                                        <p></p>
+                                        <div class="photo"><img src="images/collrection/collrection_sub02.jpg" alt="소장품사진3"></div>
+                                        <span>고양이</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#n">
-                                        <div class="photo"></div>
-                                        <p></p>
+                                        <div class="photo"><img src="images/collrection/collrection_sub03.jpg" alt="소장품사진4"></div>
+                                        <span>얼굴</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#n">
-                                        <div class="photo"></div>
-                                        <p></p>
+                                        <div class="photo"><img src="images/collrection/collrection_sub04.jpg" alt="소장품사진5"></div>
+                                        <span>꽃</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#n">
-                                        <div class="photo"></div>
-                                        <p></p>
+                                        <div class="photo"><img src="images/collrection/collrection_sub05.jpg" alt="소장품사진6"></div>
+                                        <span>하루방</span>
                                     </a>
                                 </li>
                             </ul>
@@ -345,32 +455,32 @@
                             <ul>
                                 <li>
                                     <a href="#n">
-                                        <div class="photo"></div>
-                                        <p></p>
+                                        <div class="photo"><img src="images/collrection/collrection_sub06.jpg" alt="소장품사진7"></div>
+                                        <span>등꽃</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#n">
-                                        <div class="photo"></div>
-                                        <p></p>
+                                        <div class="photo"><img src="images/collrection/collrection_sub07.jpg" alt="소장품사진8"></div>
+                                        <span>양귀비</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#n">
-                                        <div class="photo"></div>
-                                        <p></p>
+                                        <div class="photo"><img src="images/collrection/collrection_sub08.jpg" alt="소장품사진9"></div>
+                                        <span>고미10</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#n">
-                                        <div class="photo"></div>
-                                        <p></p>
+                                        <div class="photo"><img src="images/collrection/collrection_sub09.jpg" alt="소장품사진10"></div>
+                                        <span>천하대장군</span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#n">
-                                        <div class="photo"></div>
-                                        <p></p>
+                                        <div class="photo"><img src="images/collrection/collrection_sub10.jpg" alt="소장품사진11"></div>
+                                        <span>호랑이</span>
                                     </a>
                                 </li>
                             </ul>
