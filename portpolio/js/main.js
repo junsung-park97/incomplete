@@ -30,11 +30,31 @@ $(document).ready(function(){
     swiper.autoplay.stop();  /* 일시정지 기능 */
     swiper.autoplay.start();  /* 재생 기능 */
 
+    let tab_name
 
-    $('.exhibit .ex_tab_cnt .ex_tabs ul li button').on('click',function(){
-        $('.exhibit .ex_tab_cnt .ex_tabs ul li button').removeClass('on')
+    
+
+
+
+    $('.exhibit .ex_tab_cnt .ex_tabs ul li').on('click',function(){
+        $('.exhibit .ex_tab_cnt .ex_tabs ul li').removeClass('on')
         $(this).addClass('on')
+        $('.exhibit .ex_tab_cnt .ex_tab_list .tab_panel').removeClass('on')
+        tab_name = $(this).attr('data-ex_tab')
+        //console.log(tab_name)
+        $('.exhibit .ex_tab_cnt .ex_tab_list').find('[data-ex_tab="'+tab_name+'"]').addClass('on')
     })
+
+
+    $('.stady_program .sp_cnt .sp_tabs ul li').on('click',function(){
+        $('.stady_program .sp_cnt .sp_tabs ul li').removeClass('on')
+        $(this).addClass('on')
+        $('.stady_program .sp_cnt .tab_cnt .tab_panel').removeClass('on')
+        tab_name = $(this).attr('data-ex_tab')
+        //console.log(tab_name)
+        $('.stady_program .sp_cnt .tab_cnt').find('[data-ex_tab="'+tab_name+'"]').addClass('on')
+    })
+
 
     $('.collrection .coll_cnt .right ul li a').on('mouseenter',function(){
         // console.log('yes')
@@ -44,6 +64,16 @@ $(document).ready(function(){
     $('.collrection .coll_cnt .right ul li').on('mouseleave',function(){
         //console.log('yes')
         $('.collrection .coll_cnt .right ul li a').removeClass('over')
+    })
+
+
+    $('.story .news_cnt .tab_list ul li').on('click',function(){
+        $('.story .news_cnt .tab_list ul li').removeClass('active')
+        $(this).addClass('active')
+        $('.story .tab_cnt .tab_panel').removeClass('active')
+        tab_name = $(this).attr('data-news_tab')
+        console.log(tab_name)
+        $('.story .tab_cnt').find('[data-news_tab="'+tab_name+'"]').addClass('active')
     })
 
 })
