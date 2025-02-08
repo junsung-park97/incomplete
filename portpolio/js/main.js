@@ -32,6 +32,7 @@ $(document).ready(function(){
 
     let tab_name
 
+<<<<<<< Updated upstream
     
 
 
@@ -55,6 +56,18 @@ $(document).ready(function(){
         $('.stady_program .sp_cnt .tab_cnt').find('[data-ex_tab="'+tab_name+'"]').addClass('on')
     })
 
+=======
+    $('.exhibit .ex_tab_cnt .ex_tabs ul li').on('click',function(){
+        $('.exhibit .ex_tab_cnt .ex_tabs ul li').removeClass('on')
+        $(this).addClass('on')
+        tab_name = $(this).attr('data-ex_tab')
+        console.log(tab_name)
+        $('.exhibit .ex_tab_cnt .ex_tab_list .tab_panel').removeClass('on')
+        $('.exhibit .ex_tab_cnt .ex_tab_list').find('[data-ex_tab="'+tab_name+'"]').addClass('on')
+    })
+
+    let tab_name
+>>>>>>> Stashed changes
 
     $('.collrection .coll_cnt .right ul li a').on('mouseenter',function(){
         // console.log('yes')
