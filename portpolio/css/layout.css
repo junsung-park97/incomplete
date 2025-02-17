@@ -220,9 +220,19 @@ header .logo a::before {
         margin-top: var(--header-h);
     }
     header .gnb_wrap ul.depth1 > li {
+        height: 80px;
+        border-bottom: rgba(81,81,81,0.6);
+    }
+    header .gnb_wrap ul.depth1 > li > a {
+        display: block;
         font-size: var(--sub-font-size);
         color: #1d1d1d;
         font-weight: 700;
+        padding: 25px 20px;
+        position: relative;
+    }
+    header .gnb_wrap ul.depth1 > li > ul.depth2{
+        display: none;
     }
     header.menu_mo .gnb_wrap{
         transform: translateX(0%);

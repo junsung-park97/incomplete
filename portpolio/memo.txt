@@ -35,26 +35,6 @@ then, left를 스트키하면 coll_cnt안에서 노는게정상 아니야?
 
 
 3rd.
-<<<<<<< Updated upstream
-  .exhibit .ex_tab_cnt .ex_tabs ul li를 누르면 li에 on클래스 추가 >   
-  >내가 누른 li 몇번째 탭 메뉴인지 찾아서>
-  >그 순서에 맞는   .exhibit .ex_tab_cnt .ex_tabs ul li button의 title에 선택됨 추가 >
-  >내가 누른 탭이 몇번째 탭인지 찾아서>
-  >그 순서를 변수에 넣음>
-  >.exhibit .ex_tab_cnt .ex_tab_list .tab_pane의 data값에 대입함 >
-  >그 data값에 맞는 panel이 있는곳에 on클래스를 추가함
-
-
-탭메뉴리스트   .stady_program .sp_cnt .sp_tabs ul li
-
-탭메뉴리스트 버튼  .stady_program .sp_cnt .sp_tabs ul li button
-
-각각 탭컨텐츠  .stady_program .sp_cnt .tab_cnt .tab_panel
-
-각각 탭컨텐츠를 감싸고 있는 요소 .stady_program .sp_cnt .tab_cnt
-
-
-=======
  .exhibit .ex_tab_cnt .ex_tabs ul li.on button 클릭하면,
 
  .exhibit .ex_tab_cnt .ex_tab_list .tab_panel에 over클래스가 들어가고 보임
@@ -70,7 +50,6 @@ then, left를 스트키하면 coll_cnt안에서 노는게정상 아니야?
 그리고 
 
 .exhibit .ex_tab_cnt .ex_tabs ul li.on button의 title에 선택됨이 들어가고 빠지고 해야함
->>>>>>> Stashed changes
 
 
 
@@ -92,4 +71,10 @@ then, left를 스트키하면 coll_cnt안에서 노는게정상 아니야?
 Ex okey 
 Study_progeam
 
+아니 일단 내가 지금 해야될것 정리해볼게 
+Header 부터 천천히 정리해보자
+
+일단 header에 moblie버전 정리해야되는데 이거 어케하냐 진짜 ㅁ씨발 
+Depth1에 depth2가 나타날때  depth2 밀면서 나타나야되는데 씨발 이게안나타나 
+왜 abs로 나타날까 시발 난 abs 준적이 없는데.............
 

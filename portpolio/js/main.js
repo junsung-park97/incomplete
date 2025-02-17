@@ -19,7 +19,6 @@ $(document).ready(function(){
                 return '<span class="' + className + '">' + (index + 1) + "</span>";
             },
         },
-        
 
         navigation: {  /* 이전, 다음 버튼 */
             nextEl: '.swiper-button-next',  /* 다음 버튼의 클래스명 */
@@ -31,11 +30,6 @@ $(document).ready(function(){
     swiper.autoplay.start();  /* 재생 기능 */
 
     let tab_name
-
-<<<<<<< Updated upstream
-    
-
-
 
     $('.exhibit .ex_tab_cnt .ex_tabs ul li').on('click',function(){
         $('.exhibit .ex_tab_cnt .ex_tabs ul li').removeClass('on')
@@ -56,19 +50,7 @@ $(document).ready(function(){
         $('.stady_program .sp_cnt .tab_cnt').find('[data-ex_tab="'+tab_name+'"]').addClass('on')
     })
 
-=======
-    $('.exhibit .ex_tab_cnt .ex_tabs ul li').on('click',function(){
-        $('.exhibit .ex_tab_cnt .ex_tabs ul li').removeClass('on')
-        $(this).addClass('on')
-        tab_name = $(this).attr('data-ex_tab')
-        console.log(tab_name)
-        $('.exhibit .ex_tab_cnt .ex_tab_list .tab_panel').removeClass('on')
-        $('.exhibit .ex_tab_cnt .ex_tab_list').find('[data-ex_tab="'+tab_name+'"]').addClass('on')
-    })
-
-    let tab_name
->>>>>>> Stashed changes
-
+    
     $('.collrection .coll_cnt .right ul li a').on('mouseenter',function(){
         // console.log('yes')
         $('.collrection .coll_cnt .right ul li a').removeClass('over')
