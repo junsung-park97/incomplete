@@ -1,0 +1,96 @@
+/*
+ * common.css
+ * 글자의 기본 스타일 및 wrapper/wrap 설정
+ */
+body, html {
+    font-family: "Pretendard", "맑은고딕","Malgun Gothic", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* sans-serif 고딕서체 */
+    /* 먼저 선언한 폰트를 사용, 먼저 선언한 폰트가 한글이 지원X - 그럼 자동으로 두번째 폰트로 표시됨 */
+    font-size: 16px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.4; /* 배수 - 글자크기에 몇배 */
+    word-break: keep-all; /* 단어별로(여백기준) 줄바꿈 */
+    word-wrap: break-word; /* 단어가 너무 길면 그걸 강제로 줄바꿈 하는 명령 */
+}
+.wrapper {
+    /* 디자인파일에 레이아웃 그리드 처럼 홈페이지 영역 제한하고 
+       브라우저에 가운데 정렬 */
+    width: 1260px;
+    margin: 0 auto;
+}
+#wrap {
+    width: 100%;
+    overflow: hidden; 
+    /* wrap 영역 밖으로 나간 요소는 숨김처리  absolute가 대부분 나감. */
+    position: relative; /* header 정렬의 기준값 */
+}
+@media screen and (max-width:1300px){
+                        .wrapper {
+                            width: auto; 
+                            /* 원래 너 하던대로해 - block요소 
+                            - 감싸는 요소의 넓이의 100% 
+                            - 100%로 주면 margin과 충돌 그래서 auto */
+                            margin: 0 20px;
+                        }
+}/*media*/
+
+:root {
+    --header-L: 2.81rem; /*45*/
+    --header-M: 2.62rem; /*41*/
+    --header-S: 2.43rem; /*38*/
+    --section-tit-L: 2.31rem; /*34*/
+    --section-tit-M: 2.06rem; /*31*/
+    --section-tit-S: 1.81rem; /*28*/
+    --section-L: 1.56rem; /*25*/
+    --section-M: 1.37rem; /*22*/
+    --section-S: 1.19rem; /*19*/
+    --default: 1rem; /*16*/
+    --input-text-L: 37.5em; /*600*/
+    --input-text-M: 25em;  /*400*/
+    --input-text-S: 13.125em; /*210*/
+}
+@media screen and (max-width:1280px){
+    :root {
+    --header-L: 2.62rem;
+    --header-M: 2.43rem;
+    --header-S: 2.18rem;
+    --section-tit-L: 1.93rem;
+    --section-tit-M: 1.81rem;
+    --section-tit-S: 1.56rem;
+    --section-L: 1.37rem;
+    --section-M: 1.19rem;
+    --section-S: 1rem;
+    --default: 0.87rem;
+    --input-text-L: 34.375em; /*550*/
+    --input-text-M: 21.875em;  /*350*/
+    --input-text-S: 11.875em; /*180*/
+    }
+}/* media */
+@media screen and (max-width:1024px){ 
+    :root {
+        --header-L: 2.43rem;
+        --header-M: 2.18rem;
+        --header-S: 1.93rem;
+        --section-tit-L: 1.81rem;
+        --section-tit-M: 1.56rem;
+        --section-tit-S: 1.37rem;
+        --section-L: 1.19rem;
+        --section-M: 1rem;
+        --section-S: 0.85rem;
+        --default: 0.82rem;
+    }
+}/* media */
+@media screen and (max-width:768px){ 
+    :root {
+        --header-L: 2.18rem;
+        --header-M: 1.93rem;
+        --header-S: 1.81rem;
+        --section-tit-L: 1.56rem;
+        --section-tit-M: 1.37rem;
+        --section-tit-S: 1.19rem;
+        --section-L: 1rem;
+        --section-M: 0.85rem;
+        --section-S: 0.8rem;
+        --default: 0.75rem;
+    }
+}/* media */

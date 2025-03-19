@@ -1,0 +1,287 @@
+@import url(default.css);
+@import url(font.css);
+@import url(common.css);
+@import url(layout.css);
+
+.fuckyou {
+    background-color: #f4f4f4;
+    padding: 9.375em 0;
+}
+.fuckyou .wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.fuckyou h2 {
+    font-size: var(--header-L);
+    font-weight: 700;
+    color: #1d1d1d;
+    line-height: 1.2;
+    margin-bottom: 1.25em;
+}
+.fuckyou .personal_infor {
+    display: flex;
+    align-items: center;
+    gap: 1.75em;
+    height: 420px;
+}
+.fuckyou .personal_infor .bereaved_infor {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 1.6em 1.6em;
+    border-radius: 0.625em;
+    width: calc(100% - 14px);
+    height: 100%;
+    gap: 1.56em;
+}
+.fuckyou .personal_infor .bereaved_infor .customer,
+.fuckyou .personal_infor .bereaved_infor .funeral, 
+.fuckyou .personal_infor .bereaved_infor .meeting,
+.fuckyou .personal_infor .bereaved_infor .funeral_home {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625em;
+}
+.fuckyou .personal_infor .bereaved_infor h3 {
+    font-size: var(--section-tit-S);
+    color: #1d1d1d;
+}
+.fuckyou .personal_infor .bereaved_infor ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.56em;
+    width: 100%;
+}
+.fuckyou .personal_infor .bereaved_infor ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.63em;
+}
+.fuckyou .personal_infor .bereaved_infor ul li.name {
+    width: calc(100% - 200px);
+}
+.fuckyou .personal_infor .bereaved_infor ul li.phon {
+    width: 100%;
+}
+.fuckyou .personal_infor .bereaved_infor ul li span {
+    font-size:  var(--section-S);
+    display: block;
+}
+.fuckyou .personal_infor .bereaved_infor ul li input[type=text] {
+    width: 100%;
+    height: 2em;
+}
+.fuckyou .personal_infor .bereaved_infor .funeral_home ul li {
+    font-size: var(--section-S);
+}
+.fuckyou .personal_infor .gravedigger {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 1.6em 1.6em;
+    width: calc(100% - 14px);
+    height: 424px;
+    border-radius: 0.625em;
+    gap: 1.2em;
+    height: 100%;
+}
+.fuckyou .personal_infor .gravedigger h3 {
+    font-size: var(--section-tit-S);
+    color: #1d1d1d; 
+    margin-bottom: 0.6em;
+}
+.fuckyou .personal_infor .gravedigger ul {
+    display: flex;
+    align-items: center;
+    gap: 1.56em;
+}
+.fuckyou .personal_infor .gravedigger ul li.count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8em;
+}
+.fuckyou .personal_infor .gravedigger ul li input[type=checkbox]{
+    font-size: var(--section-S);
+}
+.fuckyou .additionalInfor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.625em;
+    padding: 1.6em 1.6em;
+    margin-top: 1.5em;
+}
+.fuckyou .additionalInfor h3 {
+    font-size: var(--section-tit-S);
+    color: #1d1d1d;
+}
+.fuckyou .additionalInfor .address,
+.fuckyou .additionalInfor .detail_work  {
+    display: flex;
+    flex-direction: column;
+    gap: 0.62em;
+    width: calc(50% - 14px);
+}
+.fuckyou .additionalInfor .detail_work input[type=text]{
+    width: 100%;
+}
+.fuckyou .mountain_estimate {
+    margin-top: 1.75em;
+}
+.fuckyou .mountain_estimate h2 {
+    font-size: var(--header-L);
+    font-weight: 700;
+    color: #1d1d1d;
+    line-height: 1.2;
+    margin: 1.25em 0;
+}
+.fuckyou .mountain_estimate .total_btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fuckyou .mountain_estimate .total_btn .left_btn {
+    width: 100%;
+}
+.fuckyou .mountain_estimate .total_btn .right_btn {
+    width: 100%;
+}
+.fuckyou .mountain_estimate button {
+    width: calc(100% - 14px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 0.625em;
+    padding: 1.25em 1.25em;
+    margin-top: 1.25em;
+}
+.fuckyou .mountain_estimate button:nth-child(1) {
+    margin-top: 0;
+}
+.fuckyou .mountain_estimate button h4 {
+    font-size: var(--section-M);
+    font-weight: 700;
+    color: #1d1d1d;
+    width: calc(100% - 490px);
+}
+.fuckyou .mountain_estimate button .number input[type=number] {
+    width: 6.25em;
+    padding: 0.35em 0.65em;
+}
+.fuckyou .mountain_estimate button .price {
+    display: flex;
+    width: calc(100% - 420px);
+}
+.fuckyou .mountain_estimate .another_btn button {
+    margin-top: 1.25em;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.65em;
+}
+.fuckyou .mountain_estimate .another_btn button h4 {
+    width: 100%;
+    text-align: left;
+}
+.fuckyou .mountain_estimate .another_btn button .text {
+    width: 100%;
+    height: 4.0625em;
+}
+.fuckyou .mountain_estimate .another_btn button .text  input[type=text]{
+    width: 100%;
+    height: 100%;
+    padding: 0.65em 0.65em;
+}
+.tombstone_estimate {
+    margin: 9.3em 0;
+}
+.tombstone_estimate h2 {
+    font-size: var(--header-L);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+}
+.tombstone_estimate .tombstone_list {
+    display: flex;
+    flex-direction: column;
+    gap: 3.125em;
+    margin-top: 3.12em;
+}
+.tombstone_estimate .tombstone_list .tombstone_infor {
+    display: flex;
+    flex-direction: column;
+}
+.tombstone_estimate .tombstone_list .tombstone_infor h3 {
+    font-size: var(--section-tit-S);
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    color: #1d1d1d;
+    height: 2.5em;
+    border-bottom: 1px solid #555;
+}
+.tombstone_estimate .tombstone_list .tombstone_infor .btn_list {
+    margin-top: 1.875em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.tombstone_estimate .tombstone_list .tombstone_infor .btn_list button {
+    width: calc(50% - 10px);
+    background-color: #f1f1f1;
+    color: #3d3d3d;
+    font-size: var(--section-S);
+    font-weight: 700;
+    padding: 0.4375em 0;
+    border-radius: 0.625em;
+}
+.tombstone_estimate .tombstone_list .tombstone_infor .btn_list button.active {
+    background-color: #0177B7;
+    color: #fff;
+}
+.tombstone_estimate .tombstone_list .tombstone_infor .tombstone_detail {
+    display: flex;
+    align-items: center;
+    margin: 1.8em 0 0.8em 0;
+    gap: 1.875em;
+}
+.tombstone_estimate .tombstone_list .tombstone_infor .tombstone_detail .tombstone_count {
+    display: flex;
+    align-items: center;
+    gap: 0.3125em;
+}
+.tombstone_estimate .tombstone_list .tombstone_infor .tombstone_detail .size {
+    display: flex;
+    gap: 0.3125em;
+    align-items: center;
+}
+.tombstone_estimate .tombstone_list .tombstone_infor .none {
+    display: flex;
+    align-items: center;
+    margin-top: 0.625em;
+    gap: 0.3125em;
+}
+.link {
+    margin: 3.125em 0;
+}
+.link .link_inner {
+    width: 100%; 
+    height: 5em;
+}
+.link .link_inner a {
+    font-size: var(--header-L);
+    font-weight: 700;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0177B7;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+}

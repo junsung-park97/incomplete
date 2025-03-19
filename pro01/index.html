@@ -3,159 +3,694 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>prototype</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <title>MVP</title>
 </head>
 <body>
-    <section class="">
-        <div class="">
-            <h1>주문자</h1>
-            <div class="">
-                <span>성함</span>
-                <input type="text" name="" id="" value="">
-                <span>전화번호</span>
-                <input type="text" name="" id="" value="">
+    <div id="wrap">
+        <section class="fuckyou">
+            <div class="wrapper">
+                <h2>예약자정보</h2>
+                <div class="personal_infor">
+                    <div class="bereaved_infor">
+                        <div class="customer">
+                            <h3>주문자</h3>
+                            <ul>
+                                <li class="name">
+                                    <span for="name">성함</span>
+                                    <input type="text" name="name" id="name">
+                                </li>
+                                <li class="phon">
+                                    <span for="phon">연락처</span>
+                                    <input type="text" name="phon" id="phon">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="funeral">
+                            <h3>상조팀장</h3>
+                            <ul>
+                                <li class="name">
+                                    <span for="name">성함</span>
+                                    <input type="text" name="name" id="name">
+                                </li>
+                                <li class="phon">
+                                    <span for="phon">연락처</span>
+                                    <input type="text" name="phon" id="phon">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="meeting">
+                            <h3>만나실분</h3>
+                            <ul>
+                                <li class="name">
+                                    <span for="name">성함</span>
+                                    <input type="text" name="name" id="name">
+                                </li>
+                                <li class="phon">
+                                    <span for="phon">연락처</span>
+                                    <input type="text" name="phon" id="phon">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="funeral_home">
+                            <h3>장례식장</h3>
+                            <ul>
+                                <li><label for="area">지역명</label></li>
+                                <li><label for="locality">장례식장</label></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="gravedigger">
+                        <div class="bereaved_arrive">
+                            <h3>상가 도착 예정시간</h3>
+                            <ul>
+                                <li>ㅇ시</li>
+                                <li>ㅇ분</li>
+                            </ul>
+                        </div>
+                        <div class="worker_arrive">
+                            <h3>작업팀 도착 예정시간</h3>
+                            <ul>
+                                <li>ㅇ 시</li>
+                                <li>ㅇ 분</li>
+                            </ul>
+                        </div>
+                        <div class="catering_truck ">
+                            <h3>식사차량</h3>
+                            <ul>
+                                <li><input type="checkbox" name="유" id="yes">유</li>
+                                <li><input type="checkbox" name="무" id="'no">무</li>
+                                <li class="count">
+                                    <span>수량</span>
+                                    <form action="#">
+                                        <select name="num" id="num">
+                                            <option value="one">1</option>
+                                            <option value="two">2</option>
+                                            <option value="three">3</option>
+                                            <option value="four">4</option>
+                                            <option value="five">5</option>
+                                            <option value="six">6</option>
+                                            <option value="seven">7</option>
+                                            <option value="eight">8</option>
+                                            <option value="nine">9</option>
+                                            <option value="ten">10</option>
+                                        </select>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ritual_food">
+                            <h3>제사음식</h3>
+                            <ul>
+                                <li><input type="checkbox" name="노재" id="yes">노제</li>
+                                <li><input type="checkbox" name="봉분제물" id="'no">봉분제물</li>
+                                <li class="count">
+                                    <span>수량</span>
+                                    <form action="#">
+                                        <select name="num" id="num">
+                                            <option value="one">1</option>
+                                            <option value="two">2</option>
+                                            <option value="three">3</option>
+                                            <option value="four">4</option>
+                                            <option value="five">5</option>
+                                            <option value="six">6</option>
+                                            <option value="seven">7</option>
+                                            <option value="eight">8</option>
+                                            <option value="nine">9</option>
+                                            <option value="ten">10</option>
+                                        </select>
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="additionalInfor">
+                    <div class="address">
+                        <h3>주소입력</h3>
+                        <p>우체국api</p>
+                    </div>
+                    <div class="detail_work">
+                        <h3>작업 세부내용</h3>
+                        <input type="text" name="작업세부내용">
+                    </div>
+                </div>
+                <div class="reservationMenu"></div>
             </div>
-        </div>
-        <div class="">
-            <h1>상조팀장</h1>
-            <div>
-                <span>성함</span>
-                <input type="text" name="" id="" value="">
-                <span>전화번호</span>
-                <input type="text" name="" id="" value="">
+            <div class="mountain_estimate">
+                <div class="wrapper">
+                    <h2>산역 견적서</h2>
+                    <div class="total_btn">
+                        <div class="left_btn">
+                            <button type="button">
+                                <h4>포크레인</h4>
+                                <div class="number">
+                                    <span>수량</span>
+                                    <input type="number" value="0">
+                                </div>
+                                <div class="price">
+                                    <span>가격</span>
+                                    <p>db구현후 등록</p>
+                                </div>
+                            </button>
+                            <button type="button">
+                                <h4>석공</h4>
+                                <div class="number">
+                                    <span>수량</span>
+                                    <input type="number" value="0">
+                                </div>
+                                <div class="price">
+                                    <span>가격</span>
+                                    <p>db구현후 등록</p>
+                                </div>
+                            </button>
+                            <button type="button">
+                                <h4>차량</h4>
+                                <div class="number">
+                                    <span>수량</span>
+                                    <input type="number" value="0">
+                                </div>
+                                <div class="price">
+                                    <span>가격</span>
+                                    <p>db구현후 등록</p>
+                                </div>
+                            </button>
+                            <button type="button">
+                                <h4>잔디</h4>
+                                <div class="number">
+                                    <span>수량</span>
+                                    <input type="number" value="0">
+                                </div>
+                                <div class="price">
+                                    <span>가격</span>
+                                    <p>db구현후 등록</p>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="right_btn">
+                            <button type="button">
+                                <h4>벌목</h4>
+                                <div class="number">
+                                    <span>수량</span>
+                                    <input type="number" value="0">
+                                </div>
+                                <div class="price">
+                                    <span>가격</span>
+                                    <p>db구현후 등록</p>
+                                </div>
+                            </button>
+                            <button type="button">
+                                <h4>인부</h4>
+                                <div class="number">
+                                    <span>수량</span>
+                                    <input type="number" value="0">
+                                </div>
+                                <div class="price">
+                                    <span>가격</span>
+                                    <p>db구현후 등록</p>
+                                </div>
+                            </button>
+                            <button type="button">
+                                <h4>석회</h4>
+                                <div class="number">
+                                    <span>수량</span>
+                                    <input type="number" value="0">
+                                </div>
+                                <div class="price">
+                                    <span>가격</span>
+                                    <p>db구현후 등록</p>
+                                </div>
+                            </button>
+                            <button type="button">
+                                <h4>횡대</h4>
+                                <div class="number">
+                                    <span>수량</span>
+                                    <input type="number" value="0">
+                                </div>
+                                <div class="price">
+                                    <span>가격</span>
+                                    <span>db구현후 등록</span>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="another_btn">
+                        <button type="button">
+                            <h4>추가할것</h4>
+                            <div class="text">
+                                <input type="text" value="0">
+                            </div>
+                        </button>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="">
-            <h1>만나실분</h1>
-            <div>
-                <span>성함</span>
-                <input type="text" name="" id="" value="">
-                <span>전화번호</span>
-                <input type="text" name="" id="" value="">
+        </section>
+        <section class="tombstone_estimate">
+            <div class="wrapper">
+                <h2>비석 견적서</h2>
+                <div class="tombstone_list">
+                    <div class="tombstone_infor"> 
+                        <h3>와비</h3>
+                        <div class="btn_list">
+                            <button class="acive" type="button" name="평장와비">평장와비</button>
+                            <button type="button" name="피와비">피와비</button>
+                            <button type="button" name="평와비">평와비</button>
+                        </div>
+                        <div class="tombstone_detail">
+                            <div class="tombstone_count">
+                                <span>수량</span>
+                                <form action="#">
+                                    <select name="num" id="num">
+                                        <option value="one">1</option>
+                                        <option value="two">2</option>
+                                        <option value="three">3</option>
+                                        <option value="four">4</option>
+                                        <option value="five">5</option>
+                                        <option value="six">6</option>
+                                        <option value="seven">7</option>
+                                        <option value="eight">8</option>
+                                        <option value="nine">9</option>
+                                        <option value="ten">10</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="size">
+                                <span>사이즈</span>
+                                <form action="#">
+                                    <select name="size" id="size">
+                                        <option value="300 X 200">300 X 200</option>
+                                        <option value="400 X 300">400 X 300</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="tombstone_price">
+                                <span>가격 :</span>
+                                <div class="price"></div>
+                            </div>
+                        </div>
+                        <div class="none">
+                            <input type="checkbox" name="해당없음" value="해당없음"> 
+                            <span>해당없음</span>
+                        </div>
+                    </div><!--tombstone_infor-->
+                    <div class="tombstone_infor"> 
+                        <h3>비석</h3>
+                        <div class="btn_list">
+                            <button class="acive" type="button" name="평장와비">표석</button>
+                            <button type="button" name="피와비">갓빗석</button>
+                        </div>
+                        <div class="tombstone_detail">
+                            <div class="tombstone_count">
+                                <span>수량</span>
+                                <form action="#">
+                                    <select name="num" id="num">
+                                        <option value="one">1</option>
+                                        <option value="two">2</option>
+                                        <option value="three">3</option>
+                                        <option value="four">4</option>
+                                        <option value="five">5</option>
+                                        <option value="six">6</option>
+                                        <option value="seven">7</option>
+                                        <option value="eight">8</option>
+                                        <option value="nine">9</option>
+                                        <option value="ten">10</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="size">
+                                <span>사이즈</span>
+                                <form action="#">
+                                    <select name="size" id="size">
+                                        <option value="2.5ja">2.5자</option>
+                                        <option value="3ja">3자</option>
+                                        <option value="3.5ja">3.5자</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="tombstone_price">
+                                <span>가격 :</span>
+                                <div class="price"></div>
+                            </div>
+                        </div>
+                        <div class="none">
+                            <input type="checkbox" name="해당없음" value="해당없음"> 
+                            <span>해당없음</span>
+                        </div>
+                    </div><!--tombstone_infor-->
+                    <div class="tombstone_infor"> 
+                        <h3>석싫</h3>
+                        <div class="btn_list">
+                            <button class="acive" type="button" name="평장와비">단장용</button>
+                            <button type="button" name="피와비">합장용</button>
+                        </div>
+                        <div class="tombstone_detail">
+                            <div class="tombstone_count">
+                                <span>수량</span>
+                                <form action="#">
+                                    <select name="num" id="num">
+                                        <option value="one">1</option>
+                                        <option value="two">2</option>
+                                        <option value="three">3</option>
+                                        <option value="four">4</option>
+                                        <option value="five">5</option>
+                                        <option value="six">6</option>
+                                        <option value="seven">7</option>
+                                        <option value="eight">8</option>
+                                        <option value="nine">9</option>
+                                        <option value="ten">10</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="size">
+                                <span>사이즈</span>
+                                <form action="#">
+                                    <select name="size" id="size">
+                                        <option value="2.5ja">2.5자</option>
+                                        <option value="3ja">3자</option>
+                                        <option value="3.5ja">3.5자</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="tombstone_price">
+                                <span>가격 :</span>
+                                <div class="price"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="해당없음" value="해당없음"> 
+                            <span>해당없음</span>
+                        </div>
+                    </div><!--tombstone_infor-->
+                    <div class="tombstone_infor"> 
+                        <h3>둘레석</h3>
+                        <div class="btn_list">
+                            <button class="acive" type="button" name="평장와비">사각둘레석</button>
+                            <button type="button" name="피와비">원형둘레석</button>
+                        </div>
+                        <div class="tombstone_detail">
+                            <div class="tombstone_count">
+                                <span>수량</span>
+                                <form action="#">
+                                    <select name="num" id="num">
+                                        <option value="one">1</option>
+                                        <option value="two">2</option>
+                                        <option value="three">3</option>
+                                        <option value="four">4</option>
+                                        <option value="five">5</option>
+                                        <option value="six">6</option>
+                                        <option value="seven">7</option>
+                                        <option value="eight">8</option>
+                                        <option value="nine">9</option>
+                                        <option value="ten">10</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="size">
+                                <span>사이즈</span>
+                                <form action="#">
+                                    <select name="size" id="size">
+                                        <option value="8ja">8자</option>
+                                        <option value="9ja">9자</option>
+                                        <option value="10ja">10자</option>
+                                        <option value="12ja">12자</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="tombstone_price">
+                                <span>수량</span>
+                                <div class="price"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="해당없음" value="해당없음"> 
+                            <span>해당없음</span>
+                        </div>
+                    </div><!--tombstone_infor-->
+                    <div class="tombstone_infor"> 
+                        <h3>석관</h3>
+                        <div class="btn_list">
+                            <button class="acive" type="button" name="평장와비">일반석관</button>
+                            <button type="button" name="피와비">특관석관</button>
+                        </div>
+                        <div class="tombstone_detail">
+                            <div class="tombstone_count">
+                                <span>수량</span>
+                                <form action="#">
+                                    <select name="num" id="num">
+                                        <option value="one">1</option>
+                                        <option value="two">2</option>
+                                        <option value="three">3</option>
+                                        <option value="four">4</option>
+                                        <option value="five">5</option>
+                                        <option value="six">6</option>
+                                        <option value="seven">7</option>
+                                        <option value="eight">8</option>
+                                        <option value="nine">9</option>
+                                        <option value="ten">10</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="tombstone_price">
+                                <span>가격 :</span>
+                                <div class="price"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="해당없음" value="해당없음"> 
+                            <span>해당없음</span>
+                        </div>
+                    </div><!--tombstone_infor-->
+                    <div class="tombstone_infor"> 
+                        <h3>망두석</h3>
+                        <div class="btn_list">
+                            <button class="acive" type="button" name="평장와비">일반 망두석</button>
+                            <button type="button" name="피와비">용호 망두석</button>
+                        </div>
+                        <div class="tombstone_detail">
+                            <div class="tombstone_count">
+                                <span>수량</span>
+                                <form action="#">
+                                    <select name="num" id="num">
+                                        <option value="one">1</option>
+                                        <option value="two">2</option>
+                                        <option value="three">3</option>
+                                        <option value="four">4</option>
+                                        <option value="five">5</option>
+                                        <option value="six">6</option>
+                                        <option value="seven">7</option>
+                                        <option value="eight">8</option>
+                                        <option value="nine">9</option>
+                                        <option value="ten">10</option>
+                                    </select>
+                                </form>
+                            </div><div class="size">
+                                <span>사이즈</span>
+                                <form action="#">
+                                    <select name="size" id="size">
+                                        <option value="7.5ja">7.5자</option>
+                                        <option value="8ja">8자</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="tombstone_price">
+                                <span>수량</span>
+                                <div class="price"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="해당없음" value="해당없음"> 
+                            <span>해당없음</span>
+                        </div>
+                    </div><!--tombstone_infor-->
+                    <div class="tombstone_infor"> 
+                        <h3>납골묘</h3>
+                        <div class="btn_list">
+                            <button class="acive" type="button" name="평장와비">사각 납골묘</button>
+                            <button type="button" name="피와비">원형 납골묘</button>
+                        </div>
+                        <div class="tombstone_detail">
+                            <div class="tombstone_count">
+                                <span>수량</span>
+                                <form action="#">
+                                    <select name="num" id="num">
+                                        <option value="one">1</option>
+                                        <option value="two">2</option>
+                                        <option value="three">3</option>
+                                        <option value="four">4</option>
+                                        <option value="five">5</option>
+                                        <option value="six">6</option>
+                                        <option value="seven">7</option>
+                                        <option value="eight">8</option>
+                                        <option value="nine">9</option>
+                                        <option value="ten">10</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="tombstone_price">
+                                <span>가격 :</span>
+                                <div class="price"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="해당없음" value="해당없음"> 
+                            <span>해당없음</span>
+                        </div>
+                    </div><!--tombstone_infor-->
+                     <div class="tombstone_infor"> 
+                        <h3>상석</h3>
+                        <div class="tombstone_detail">
+                            <div class="tombstone_count">
+                                <span>수량</span>
+                                <form action="#">
+                                    <select name="num" id="num">
+                                        <option value="one">1</option>
+                                        <option value="two">2</option>
+                                        <option value="three">3</option>
+                                        <option value="four">4</option>
+                                        <option value="five">5</option>
+                                        <option value="six">6</option>
+                                        <option value="seven">7</option>
+                                        <option value="eight">8</option>
+                                        <option value="nine">9</option>
+                                        <option value="ten">10</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="size">
+                                <span>사이즈</span>
+                                <form action="#">
+                                    <select name="size" id="size">
+                                        <option value="2.5ja">2.5자</option>
+                                        <option value="3ja">3자</option>
+                                        <option value="3.5ja">3.5자</option>
+                                        <option value="4ja">4자</option>
+                                        <option value="5ja">5자</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="tombstone_price">
+                                <span>가격 :</span>
+                                <div class="price"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="해당없음" value="해당없음"> 
+                            <span>해당없음</span>
+                        </div>
+                    </div><!--tombstone_infor-->
+                    <div class="tombstone_infor"> 
+                        <h3>  자갈 </h3>
+                        <div class="tombstone_detail">
+                            <div class="tombstone_count">
+                                <span>수량</span>
+                                <form action="#">
+                                    <select name="num" id="num">
+                                        <option value="one">1</option>
+                                        <option value="two">2</option>
+                                        <option value="three">3</option>
+                                        <option value="four">4</option>
+                                        <option value="five">5</option>
+                                        <option value="six">6</option>
+                                        <option value="seven">7</option>
+                                        <option value="eight">8</option>
+                                        <option value="nine">9</option>
+                                        <option value="ten">10</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="tombstone_price">
+                                <span>가격 :</span>
+                                <div class="price"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="해당없음" value="해당없음"> 
+                            <span>해당없음</span>
+                        </div>
+                    </div><!--tombstone_infor-->
+                    <div class="tombstone_infor"> 
+                        <h3>석등</h3>
+                        <div class="tombstone_detail">
+                            <div class="tombstone_count">
+                                <span>수량</span>
+                                <form action="#">
+                                    <select name="num" id="num">
+                                        <option value="one">1</option>
+                                        <option value="two">2</option>
+                                        <option value="three">3</option>
+                                        <option value="four">4</option>
+                                        <option value="five">5</option>
+                                        <option value="six">6</option>
+                                        <option value="seven">7</option>
+                                        <option value="eight">8</option>
+                                        <option value="nine">9</option>
+                                        <option value="ten">10</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="size">
+                                <span>사이즈</span>
+                                <form action="#">
+                                    <select name="size" id="size">
+                                        <option value="2.5ja">4자</option>
+                                        <option value="3.5ja">4.5자</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="tombstone_price">
+                                <span>가격 :</span>
+                                <div class="price"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="해당없음" value="해당없음"> 
+                            <span>해당없음</span>
+                        </div>
+                    </div><!--tombstone_infor-->
+                    <div class="tombstone_infor"> 
+                        <h3>장군석</h3>
+                        <div class="tombstone_detail">
+                            <div class="tombstone_count">
+                                <span>수량</span>
+                                <form action="#">
+                                    <select name="num" id="num">
+                                        <option value="one">1</option>
+                                        <option value="two">2</option>
+                                        <option value="three">3</option>
+                                        <option value="four">4</option>
+                                        <option value="five">5</option>
+                                        <option value="six">6</option>
+                                        <option value="seven">7</option>
+                                        <option value="eight">8</option>
+                                        <option value="nine">9</option>
+                                        <option value="ten">10</option>
+                                    </select>
+                                </form>
+                            </div>
+                            <div class="tombstone_price">
+                                <span>가격 :</span>
+                                <div class="price"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="해당없음" value="해당없음"> 
+                            <span>해당없음</span>
+                        </div>
+                    </div><!--tombstone_infor-->
+                </div>
             </div>
-        </div>
-        <div class="">
-            <h1>장례식장</h1>
-            <input type="text" name="" id="" value="">
-        </div>
-        <div class="">
-            <h1>상가도차시간<h1>
-            <form action="" class="">
-                <select name="" id="">
-                    <option value="7h">7h</option>
-                    <option value="7h30m">7h30m</option>
-                    <option value="8h">8h</option>
-                    <option value="8h30m">8h30m</option>
-                    <option value="9h">9h</option>
-                    <option value="9h30m">9h30m</option>
-                    <option value="10h">10h</option>
-                    <option value="10h30m">10h30m</option>
-                    <option value="11h">11h</option>
-                    <option value="11h30m">11h30m</option>
-                    <option value="12h">12h</option>
-                    <option value="12h30m">12h30m</option>
-                    <option value="13h">13h</option>
-                    <option value="13h30m">13h30m</option>
-                    <option value="14h">14h</option>
-                    <option value="14h30m">14h30m</option>
-                    <option value="15h">15h</option>
-                    <option value="15h30m">15h30m</option>
-                    <option value="16h">16h</option>
-                    <option value="16h30m">16h30m</option>
-                    <option value="17h">17h</option>
-                    <option value="17h30m">17h30m</option>
-                    <option value="18h">18h</option>
-                </select>
-            </form>
-        </div>
-        <div class="">
-            <h1>작업팀도차시간<h1>
-            <form action="" class="">
-                <select name="" id="">
-                    <option value="7h">7h</option>
-                    <option value="7h30m">7h30m</option>
-                    <option value="8h">8h</option>
-                    <option value="8h30m">8h30m</option>
-                    <option value="9h">9h</option>
-                    <option value="9h30m">9h30m</option>
-                    <option value="10h">10h</option>
-                    <option value="10h30m">10h30m</option>
-                    <option value="11h">11h</option>
-                    <option value="11h30m">11h30m</option>
-                    <option value="12h">12h</option>
-                    <option value="12h30m">12h30m</option>
-                    <option value="13h">13h</option>
-                    <option value="13h30m">13h30m</option>
-                    <option value="14h">14h</option>
-                    <option value="14h30m">14h30m</option>
-                    <option value="15h">15h</option>
-                    <option value="15h30m">15h30m</option>
-                    <option value="16h">16h</option>
-                    <option value="16h30m">16h30m</option>
-                    <option value="17h">17h</option>
-                    <option value="17h30m">17h30m</option>
-                    <option value="18h">18h</option>
-                </select>
-            </form>
-        </div>
-        <div class="">
-            <h1>현장주소</h1>
-            <div class="">
-                <form action="">
-                    <select name="" id="">
-                        <option value="seoul">Seoul</option>
-                        <option value="busan">Busan</option>
-                        <option value="daegu">Daegu</option>
-                        <option value="incheon">Incheon</option>
-                        <option value="gwangju">Gwangju</option>
-                        <option value="daejeon">Daejeon</option>
-                        <option value="ulsan">Ulsan</option>
-                        <option value="sejong">Sejong</option>
-                    </select>
-                    <span>도/시</span>
-                </form>
-            </div>
-        </div>
-        <div class="">
-            <h1>식사차량</h1>
-            <div class="">
-                <input type="radio" name="" id="" class="">
-                <label for="">yes</label>
-                <input type="radio" name="" id="" class="">
-                <label for="">no</label>
-                <form action="">
-                    <select name="" id="">
-                        <option value="seoul">50인</option>
-                        <option value="busan">100인</option>
-                        <option value="daegu">150인</option>
-                        <option value="incheon">200인</option>
-                        <option value="gwangju">250인</option>
-                        <option value="daejeon">300인</option>
-                        <option value="ulsan">350인</option>
-                        <option value="sejong">400인</option>
-                    </select>
-                </form>
-            </div>
-        </div>
-        <div class="">
-            <h1>제사음식</h1>
-            <div>
-                <input type="radio" name="" id="">
-                <label for="">노제수량</label>
-                <input type="radio" name="" id="">
-                <label for="">봉분제물</label>
-                <label for="">수량</label>
-                <input type="text" name="" id="">
-                <label for="">추가사항</label>
-                <input type="text" name="" id="">
-            </div>
-        </div>
-        <div>
-            <h1>작업내용</h1>
-            <div>
-                <input type="text" name="" id="">
-            </div>
-        </div>
-    </section>
+        </section>
+        <section class="link">
+            <div class="wrapper">
+                <div class="link_inner">
+                    <a href="#n">
+                        예약바로가기
+                    </a>
+                </div>
+            </div>        
+        </section>
+    </div>
 </body>
 </html>
