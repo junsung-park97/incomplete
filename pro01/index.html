@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="js/sub.js"></script>
     <title>MVP</title>
 </head>
 <body>
@@ -131,7 +129,17 @@
                 <div class="additionalInfor">
                     <div class="address">
                         <h3>주소입력</h3>
-                        <p>우체국api</p>
+                        <form action="" name="form1" class="form1">
+                            <div class="form2">
+                                <input type="text" name="zipcode" maxlength="5" readonly>
+                                <input type="button" value="우편번호검색" id="btn">
+                            </div>
+                            <div class="form2">
+                                <input type="text" name="addr1" readonly>
+                                <input type="text" name="addr2">
+                            </div>
+                        </form>
+                        
                     </div>
                     <div class="detail_work">
                         <h3>작업 세부내용</h3>
@@ -255,8 +263,8 @@
                     <div class="tombstone_infor"> 
                         <h3>와비</h3>
                         <div class="btn_list">
-                            <button class="acive" type="button" name="평장와비">평장와비</button>
-                            <button type="button" name="피와비">피와비</button>
+                            <button class="" type="button" name="평장와비">평장와비</button>
+                            <button class="" type="button" name="피와비">피와비</button>
                             <button type="button" name="평와비">평와비</button>
                         </div>
                         <div class="tombstone_detail">
@@ -691,6 +699,7 @@
                     </div><!--tombstone_infor-->
                 </div>
             </div>
+        
         </section>
         <section class="link">
             <div class="wrapper">
@@ -702,12 +711,5 @@
             </div>        
         </section>
     </div>
-    <script>
-        new daum.Postcode({
-            oncomplete: function(data) {
-                console.log(data)
-            }
-        }).open();
-    </script>
 </body>
 </html>
