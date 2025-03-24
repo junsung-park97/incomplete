@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
+<head></head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/sub.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" defer></script>
+    <script src="js/address.js" defer></script>
+    <script src="js/main.js" defer></script>
     <title>MVP</title>
 </head>
 <body>
@@ -134,12 +136,11 @@
                                 <input type="text" name="zipcode" maxlength="5" readonly>
                                 <input type="button" value="우편번호검색" id="btn">
                             </div>
-                            <div class="form2">
+                            <div class="form3">
                                 <input type="text" name="addr1" readonly>
                                 <input type="text" name="addr2">
                             </div>
-                        </form>
-                        
+                        </form>  
                     </div>
                     <div class="detail_work">
                         <h3>작업 세부내용</h3>
@@ -157,7 +158,7 @@
                                 <h4>포크레인</h4>
                                 <div class="number">
                                     <span>수량</span>
-                                    <input type="number" value="0">
+                                    <input type="number" value="0" min="0" max="5">
                                 </div>
                                 <div class="price">
                                     <span>가격</span>
@@ -168,7 +169,7 @@
                                 <h4>석공</h4>
                                 <div class="number">
                                     <span>수량</span>
-                                    <input type="number" value="0">
+                                    <input type="number" value="0" min="0" max="10">
                                 </div>
                                 <div class="price">
                                     <span>가격</span>
@@ -179,7 +180,7 @@
                                 <h4>차량</h4>
                                 <div class="number">
                                     <span>수량</span>
-                                    <input type="number" value="0">
+                                    <input type="number" value="0" min="0" max="5">
                                 </div>
                                 <div class="price">
                                     <span>가격</span>
@@ -190,7 +191,7 @@
                                 <h4>잔디</h4>
                                 <div class="number">
                                     <span>수량</span>
-                                    <input type="number" value="0">
+                                    <input type="number" value="0" min="0" max="50">
                                 </div>
                                 <div class="price">
                                     <span>가격</span>
@@ -203,7 +204,7 @@
                                 <h4>벌목</h4>
                                 <div class="number">
                                     <span>수량</span>
-                                    <input type="number" value="0">
+                                    <input type="number" value="0" min="0" max="5">
                                 </div>
                                 <div class="price">
                                     <span>가격</span>
@@ -214,7 +215,7 @@
                                 <h4>인부</h4>
                                 <div class="number">
                                     <span>수량</span>
-                                    <input type="number" value="0">
+                                    <input type="number" value="0" min="0" max="10">
                                 </div>
                                 <div class="price">
                                     <span>가격</span>
@@ -225,7 +226,7 @@
                                 <h4>석회</h4>
                                 <div class="number">
                                     <span>수량</span>
-                                    <input type="number" value="0">
+                                    <input type="number" value="0" min="0" max="50">
                                 </div>
                                 <div class="price">
                                     <span>가격</span>
@@ -236,7 +237,7 @@
                                 <h4>횡대</h4>
                                 <div class="number">
                                     <span>수량</span>
-                                    <input type="number" value="0">
+                                    <input type="number" value="0" min="0" max="10">
                                 </div>
                                 <div class="price">
                                     <span>가격</span>
@@ -263,9 +264,9 @@
                     <div class="tombstone_infor"> 
                         <h3>와비</h3>
                         <div class="btn_list">
-                            <button class="" type="button" name="평장와비">평장와비</button>
-                            <button class="" type="button" name="피와비">피와비</button>
-                            <button type="button" name="평와비">평와비</button>
+                            <button class="" type="button" name="평장와비" data-product="product1">평장와비</button>
+                            <button class="" type="button" name="피와비" data-product="product2">피와비</button>
+                            <button class="" type="button" name="평와비" data-product="product3">평와비</button>
                         </div>
                         <div class="tombstone_detail">
                             <div class="tombstone_count">
@@ -307,8 +308,8 @@
                     <div class="tombstone_infor"> 
                         <h3>비석</h3>
                         <div class="btn_list">
-                            <button class="acive" type="button" name="평장와비">표석</button>
-                            <button type="button" name="피와비">갓빗석</button>
+                            <button class="acive" type="button" name="평장와비" data-product="product4">표석</button>
+                            <button class="" type="button" name="피와비" data-product="product5">갓빗석</button>
                         </div>
                         <div class="tombstone_detail">
                             <div class="tombstone_count">
@@ -387,7 +388,7 @@
                                 <div class="price"></div>
                             </div>
                         </div>
-                        <div>
+                        <div class="none">
                             <input type="checkbox" name="해당없음" value="해당없음"> 
                             <span>해당없음</span>
                         </div>
@@ -432,7 +433,7 @@
                                 <div class="price"></div>
                             </div>
                         </div>
-                        <div>
+                        <div class="none">
                             <input type="checkbox" name="해당없음" value="해당없음"> 
                             <span>해당없음</span>
                         </div>
@@ -466,7 +467,7 @@
                                 <div class="price"></div>
                             </div>
                         </div>
-                        <div>
+                        <div class="none">
                             <input type="checkbox" name="해당없음" value="해당없음"> 
                             <span>해당없음</span>
                         </div>
@@ -508,7 +509,7 @@
                                 <div class="price"></div>
                             </div>
                         </div>
-                        <div>
+                        <div class="none">
                             <input type="checkbox" name="해당없음" value="해당없음"> 
                             <span>해당없음</span>
                         </div>
@@ -542,7 +543,7 @@
                                 <div class="price"></div>
                             </div>
                         </div>
-                        <div>
+                        <div class="none">
                             <input type="checkbox" name="해당없음" value="해당없음"> 
                             <span>해당없음</span>
                         </div>
@@ -584,7 +585,7 @@
                                 <div class="price"></div>
                             </div>
                         </div>
-                        <div>
+                        <div class="none">
                             <input type="checkbox" name="해당없음" value="해당없음"> 
                             <span>해당없음</span>
                         </div>
@@ -614,7 +615,7 @@
                                 <div class="price"></div>
                             </div>
                         </div>
-                        <div>
+                        <div class="none">
                             <input type="checkbox" name="해당없음" value="해당없음"> 
                             <span>해당없음</span>
                         </div>
@@ -653,7 +654,7 @@
                                 <div class="price"></div>
                             </div>
                         </div>
-                        <div>
+                        <div class="none">
                             <input type="checkbox" name="해당없음" value="해당없음"> 
                             <span>해당없음</span>
                         </div>
@@ -692,14 +693,13 @@
                                 <div class="price"></div>
                             </div>
                         </div>
-                        <div>
+                        <div class="none">
                             <input type="checkbox" name="해당없음" value="해당없음"> 
                             <span>해당없음</span>
                         </div>
                     </div><!--tombstone_infor-->
                 </div>
             </div>
-        
         </section>
         <section class="link">
             <div class="wrapper">

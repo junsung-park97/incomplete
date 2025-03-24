@@ -130,13 +130,22 @@
     display: flex;
     flex-direction: column;
     gap: 0.8em;
+    width: 100%;
+    height: 100%;
 }
-.fuckyou .additionalInfor .address .form1 .form2 {
+.fuckyou .additionalInfor .address .form1 .form3 {
     display: flex;
     gap: 0.35em;
+    width: 100%;
+}
+.fuckyou .additionalInfor .address .form1 .form3 input[type='text']{
+    width: 100%;
 }
 .fuckyou .additionalInfor .address .form1 .form2 > input[type="button"] {
     padding: 0.31em 0.31em;
+}
+.fuckyou .additionalInfor .detail_work {
+    height: 100%;
 }
 .fuckyou .additionalInfor .detail_work input[type=text]{
     width: 100%;
@@ -203,7 +212,7 @@
     width: 100%;
     height: 4.0625em;
 }
-.fuckyou .mountain_estimate .another_btn button .text  input[type=text]{
+.fuckyou .mountain_estimate .another_btn button .text input[type=text]{
     width: 100%;
     height: 100%;
     padding: 0.65em 0.65em;
@@ -226,6 +235,16 @@
 .tombstone_estimate .tombstone_list .tombstone_infor {
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+.tombstone_estimate .tombstone_list .tombstone_infor.none::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -20px;
+    left: 0;
+    background-color: rgba(81,81,81,0.8);
 }
 .tombstone_estimate .tombstone_list .tombstone_infor h3 {
     font-size: var(--section-tit-S);
@@ -243,7 +262,7 @@
     justify-content: center;
     gap: 10px;
 }
-.tombstone_estimate .tombstone_list .tombstone_infor .btn_list button {
+.tombstone_estimate .tombstone_list  .tombstone_infor  .btn_list button {
     width: calc(50% - 10px);
     background-color: #f1f1f1;
     color: #3d3d3d;
