@@ -1,5 +1,5 @@
 // 데이터 import
-import { menuData } from './mountain_data.js';
+import { tombstoneData } from './tombstone_data.js';
 
 // 가격 계산 함수
 export function calculatePrice(itemId, quantity) {

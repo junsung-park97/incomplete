@@ -8,4 +8,3 @@ export const menuData = [
     {id: 7, name: "석회", price: 5000},
     {id: 8, name: "횡대", price: 150000},
 ];
-
