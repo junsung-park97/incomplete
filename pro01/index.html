@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" defer></script>
-    <script src="js/address.js" defer></script>
+    <script type="module" src="js/address.js" defer></script>
+    <script type="module" src="js/index.js" defer></script>
     <script src="js/main.js" defer></script>
     <title>MVP</title>
 </head>
@@ -153,106 +154,16 @@
                 <div class="wrapper">
                     <h2>산역 견적서</h2>
                     <div class="total_btn">
-                        <div class="left_btn">
-                            <button type="button">
-                                <h4>포크레인</h4>
-                                <div class="number">
-                                    <span>수량</span>
-                                    <input type="number" value="0" min="0" max="5">
-                                </div>
-                                <div class="price">
-                                    <span>가격</span>
-                                    <p>db구현후 등록</p>
-                                </div>
-                            </button>
-                            <button type="button">
-                                <h4>석공</h4>
-                                <div class="number">
-                                    <span>수량</span>
-                                    <input type="number" value="0" min="0" max="10">
-                                </div>
-                                <div class="price">
-                                    <span>가격</span>
-                                    <p>db구현후 등록</p>
-                                </div>
-                            </button>
-                            <button type="button">
-                                <h4>차량</h4>
-                                <div class="number">
-                                    <span>수량</span>
-                                    <input type="number" value="0" min="0" max="5">
-                                </div>
-                                <div class="price">
-                                    <span>가격</span>
-                                    <p>db구현후 등록</p>
-                                </div>
-                            </button>
-                            <button type="button">
-                                <h4>잔디</h4>
-                                <div class="number">
-                                    <span>수량</span>
-                                    <input type="number" value="0" min="0" max="50">
-                                </div>
-                                <div class="price">
-                                    <span>가격</span>
-                                    <p>db구현후 등록</p>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="right_btn">
-                            <button type="button">
-                                <h4>벌목</h4>
-                                <div class="number">
-                                    <span>수량</span>
-                                    <input type="number" value="0" min="0" max="5">
-                                </div>
-                                <div class="price">
-                                    <span>가격</span>
-                                    <p>db구현후 등록</p>
-                                </div>
-                            </button>
-                            <button type="button">
-                                <h4>인부</h4>
-                                <div class="number">
-                                    <span>수량</span>
-                                    <input type="number" value="0" min="0" max="10">
-                                </div>
-                                <div class="price">
-                                    <span>가격</span>
-                                    <p>db구현후 등록</p>
-                                </div>
-                            </button>
-                            <button type="button">
-                                <h4>석회</h4>
-                                <div class="number">
-                                    <span>수량</span>
-                                    <input type="number" value="0" min="0" max="50">
-                                </div>
-                                <div class="price">
-                                    <span>가격</span>
-                                    <p>db구현후 등록</p>
-                                </div>
-                            </button>
-                            <button type="button">
-                                <h4>횡대</h4>
-                                <div class="number">
-                                    <span>수량</span>
-                                    <input type="number" value="0" min="0" max="10">
-                                </div>
-                                <div class="price">
-                                    <span>가격</span>
-                                    <span>db구현후 등록</span>
-                                </div>
-                            </button>
-                        </div>
+                        <div class="left_btn"></div>
+                        <div class="right_btn"></div>
                     </div>
                     <div class="another_btn">
-                        <button type="button">
+                        <div class="mountain_menu">
                             <h4>추가할것</h4>
                             <div class="text">
-                                <input type="text" value="0">
+                                <input type="text" value="0" id="additional">
                             </div>
-                        </button>
+                        </div>
                     </div>
                 </div>
             </div>

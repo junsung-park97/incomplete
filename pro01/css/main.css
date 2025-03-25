@@ -171,7 +171,7 @@
 .fuckyou .mountain_estimate .total_btn .right_btn {
     width: 100%;
 }
-.fuckyou .mountain_estimate button {
+.fuckyou .mountain_estimate .mountain_menu {
     width: calc(100% - 14px);
     display: flex;
     justify-content: space-between;
@@ -181,41 +181,104 @@
     padding: 1.25em 1.25em;
     margin-top: 1.25em;
 }
-.fuckyou .mountain_estimate button:nth-child(1) {
+.fuckyou .mountain_estimate .mountain_menu:nth-child(1) {
     margin-top: 0;
 }
-.fuckyou .mountain_estimate button h4 {
+.fuckyou .mountain_estimate .mountain_menu h4 {
     font-size: var(--section-M);
     font-weight: 700;
     color: #1d1d1d;
     width: calc(100% - 490px);
 }
-.fuckyou .mountain_estimate button .number input[type=number] {
-    width: 6.25em;
+.fuckyou .mountain_estimate .mountain_menu .number input[type=number] {
+    width: 4.25em;
     padding: 0.35em 0.65em;
 }
-.fuckyou .mountain_estimate button .price {
+.fuckyou .mountain_estimate .mountain_menu .price {
     display: flex;
     width: calc(100% - 420px);
 }
-.fuckyou .mountain_estimate .another_btn button {
+.fuckyou .mountain_estimate .another_btn .mountain_menu {
     margin-top: 1.25em;
     width: 100%;
     flex-direction: column;
     gap: 0.65em;
 }
-.fuckyou .mountain_estimate .another_btn button h4 {
+.fuckyou .mountain_estimate .another_btn .mountain_menu h4 {
     width: 100%;
     text-align: left;
 }
-.fuckyou .mountain_estimate .another_btn button .text {
+.fuckyou .mountain_estimate .another_btn .mountain_menu .text {
     width: 100%;
     height: 4.0625em;
 }
-.fuckyou .mountain_estimate .another_btn button .text input[type=text]{
+.fuckyou .mountain_estimate .another_btn .mountain_menu .text input[type=text]{
     width: 100%;
     height: 100%;
     padding: 0.65em 0.65em;
+}
+.fuckyou .mountain_estimate .menu-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25em;
+    margin-bottom: 1.25em;
+}
+.fuckyou .mountain_estimate .menu-item {
+    background-color: #fff;
+    border-radius: 0.625em;
+    padding: 1.25em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fuckyou .mountain_estimate .menu-item .item-name {
+    font-size: var(--section-M);
+    font-weight: 700;
+    color: #1d1d1d;
+    width: 30%;
+}
+.fuckyou .mountain_estimate .menu-item .item-price {
+    font-size: var(--section-M);
+    color: #1d1d1d;
+    width: 30%;
+    text-align: right;
+}
+.fuckyou .mountain_estimate .menu-item .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    width: 40%;
+    justify-content: flex-end;
+}
+.fuckyou .mountain_estimate .menu-item .quantity-controls button {
+    width: 2em;
+    height: 2em;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 0.25em;
+    cursor: pointer;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fuckyou .mountain_estimate .menu-item .quantity-controls button:hover {
+    background-color: #f5f5f5;
+}
+.fuckyou .mountain_estimate .menu-item .quantity-controls .quantity {
+    min-width: 2em;
+    text-align: center;
+    font-size: var(--section-M);
+}
+.fuckyou .mountain_estimate .total-price {
+    text-align: right;
+    font-size: var(--section-L);
+    font-weight: 700;
+    color: #1d1d1d;
+    margin-top: 1.25em;
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 0.625em;
 }
 .tombstone_estimate {
     margin: 9.3em 0;

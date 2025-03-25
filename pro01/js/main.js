@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded',() => {
 
+
+
     const btn = document.querySelectorAll('.tombstone_estimate .tombstone_list .tombstone_infor .btn_list button')
 
     btn.forEach(button => {
@@ -8,7 +10,7 @@ document.addEventListener('DOMContentLoaded',() => {
         })
     })
 
-    const chk = document.querySelectorAll('.tombstone_estimate .tombstone_list .tombstone_infor .none');
+    const chk = document.querySelectorAll('.tombstone_estimate .tombstone_list .tombstone_infor .none input');
 
     chk.forEach(checkBox => {
         checkBox.addEventListener("click", () => {
@@ -17,5 +19,6 @@ document.addEventListener('DOMContentLoaded',() => {
             grandparentElement.classList.toggle('none');
         });
     });
+
 
 })
