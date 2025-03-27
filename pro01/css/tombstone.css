@@ -1,0 +1,165 @@
+/* 비석 견적 섹션 스타일 */
+.tombstone_estimate h2 {
+    font-size: var(--section-tit-M);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1d1d1d;
+    margin-bottom: 20px;
+}
+.tombstone_list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin: 90px 0;
+}
+
+/* 개별 비석 아이템 스타일 */
+.tombstone_infor {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 2px 4px 4px rgba(0,0,0,0.3);
+    margin-bottom: 1.25em; /* 20px */
+}
+
+.tombstone_infor h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: ;
+}
+
+.tombstone_infor span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+/* 컨트롤 영역 스타일 */
+.item-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* 사이즈 선택 영역 */
+.size-control {
+    flex: 2;
+    min-width: 200px;
+}
+
+.size-control label,
+.quantity-control label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+/* 셀렉트 박스 공통 스타일 */
+.size-select,
+.quantity-select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+/* 수량 선택 영역 */
+.quantity-control {
+    flex: 1;
+    min-width: 120px;
+}
+
+/* 가격 표시 영역 */
+.item-price {
+    flex: 1;
+    min-width: 150px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: right;
+}
+
+/* 총 가격 표시 영역 */
+.total-price {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* 호버 효과 */
+.size-select:hover,
+.quantity-select:hover {
+    border-color: #aaa;
+}
+
+/* 포커스 효과 */
+.size-select:focus,
+.quantity-select:focus {
+    border-color: #666;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .tombstone_list {
+        gap: 30px;
+        margin: 50px 0;
+    }
+    .item-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .size-control,
+    .quantity-control {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .item-price {
+        text-align: left;
+        margin-top: 10px;
+    }
+}
+
+/* 애니메이션 효과 */
+.tombstone_infor {
+    transition: transform 0.2s ease;
+}
+
+.tombstone_infor:hover {
+    transform: translateY(-2px);
+}
+
+/* 선택된 상태 스타일 */
+.size-select:not(:placeholder-shown),
+.quantity-select:not([value="0"]) {
+    border-color: #666;
+    background-color: #f8f9fa;
+}
+
+/* 카테고리 섹션 내부 여백 */
+.category-section {
+    margin-bottom: 1.25em; /* 20px */
+}
+
+/* 마지막 아이템은 여백 제거 */
+.tombstone_infor:last-child {
+    margin-bottom: 0;
+}
+
+/* 카테고리 제목과 첫 번째 아이템 사이 여백 */
+.category-title {
+    margin-bottom: 1.25em; /* 20px */
+} 
