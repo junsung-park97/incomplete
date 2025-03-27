@@ -68,17 +68,19 @@
                     <div class="gravedigger">
                         <div class="bereaved_arrive">
                             <h3>상가 도착 예정시간</h3>
-                            <ul>
-                                <li>ㅇ시</li>
-                                <li>ㅇ분</li>
-                            </ul>
+                            <form action="" class="bereaved_arrive">
+                                <label for="">
+                                    <input type="time" value="{time}">
+                                </label>
+                            </form>
                         </div>
                         <div class="worker_arrive">
                             <h3>작업팀 도착 예정시간</h3>
-                            <ul>
-                                <li>ㅇ 시</li>
-                                <li>ㅇ 분</li>
-                            </ul>
+                            <form action="">
+                                <label for="">
+                                    <input type="time" value="{time}">
+                                </label>
+                            </form>
                         </div>
                         <div class="catering_truck ">
                             <h3>식사차량</h3>
@@ -109,6 +111,7 @@
                             <ul>
                                 <li><input type="checkbox" name="노재" id="yes">노제</li>
                                 <li><input type="checkbox" name="봉분제물" id="'no">봉분제물</li>
+                                <li><input type="checkbox" name="무" id="'no">무</li>
                                 <li class="count">
                                     <span>수량</span>
                                     <form action="#">

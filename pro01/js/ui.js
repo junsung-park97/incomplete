@@ -9,10 +9,12 @@ export function initializeMenu() {
     menuData.forEach((item, index) => {
         const menuHtml = `
             <div class="mountain_menu">
-                <h4>${item.name}</h4>
-                <div class="number">
-                    <span>수량</span>
-                    <input type="number" value="0" min="0" data-id="${item.id}">
+                <div class="contain">
+                    <h4>${item.name}</h4>
+                    <div class="number">
+                        <span>수량</span>
+                        <input type="number" value="0" min="0" data-id="${item.id}">
+                    </div>
                 </div>
                 <div class="price">
                     <span>가격</span>

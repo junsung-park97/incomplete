@@ -303,7 +303,7 @@ export const tombstoneData = {
                     {
                         id : '8001-1',
                         size : '일반',
-                        defaultPrice: 50000
+                        defaultPrice: 25000
                     }
                 ]
             }

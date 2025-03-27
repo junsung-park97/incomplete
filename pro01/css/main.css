@@ -8,7 +8,7 @@
     padding: 9.375em 0;
 }
 .fuckyou h2 {
-    font-size: var(--section-tit-M);
+    font-size: var(--header-M);
     font-weight: 700;
     color: #1d1d1d;
     line-height: 1.2;
@@ -19,6 +19,7 @@
     align-items: center;
     gap: 1.75em;
     margin-bottom: 1.25em;
+    height: 100%;
 }
 .fuckyou .personal_infor .bereaved_infor,
 .fuckyou .personal_infor .gravedigger,
@@ -27,6 +28,9 @@
     padding: 1.6em;
     border-radius: 0.625em;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25em;
 }
 .fuckyou .personal_infor .bereaved_infor .customer,
 .fuckyou .personal_infor .bereaved_infor .funeral, 
@@ -36,9 +40,13 @@
     flex-direction: column;
     gap: 0.625em;
 }
+.fuckyou .personal_infor .bereaved_infor .funeral_home {
+    margin-bottom: 0;
+}
 .fuckyou .personal_infor .bereaved_infor h3 {
-    font-size: var(--section-tit-S);
+    font-size: var(--section-tit-L);
     color: #1d1d1d;
+    font-weight: 700;
 }
 .fuckyou .personal_infor .bereaved_infor ul {
     display: flex;
@@ -52,15 +60,14 @@
     align-items: center;
     gap: 0.63em;
 }
-.fuckyou .personal_infor .bereaved_infor ul li.name {
+.fuckyou .personal_infor .bereaved_infor ul li.name,
+.fuckyou .personal_infor .bereaved_infor ul li.phon {
    width: 100%;
 }
-.fuckyou .personal_infor .bereaved_infor ul li.phon {
-    width: 100%;
-}
 .fuckyou .personal_infor .bereaved_infor ul li span {
-    font-size:  var(--section-S);
+    font-size:  var(--section-L);
     display: block;
+    width: 80px;
 }
 .fuckyou .personal_infor .bereaved_infor ul li input[type=text] {
     width: 100%;
@@ -69,10 +76,25 @@
 .fuckyou .personal_infor .bereaved_infor .funeral_home ul li {
     font-size: var(--section-S);
 }
+.fuckyou .personal_infor .gravedigger {
+    width: calc(50% - 14px);
+    height: 100%;
+}
 .fuckyou .personal_infor .gravedigger h3 {
-    font-size: var(--section-tit-S);
+    font-size: var(--section-tit-L);
+    font-weight: 700;
     color: #1d1d1d; 
-    margin-bottom: 0.6em;
+}
+.fuckyou .personal_infor .gravedigger .bereaved_arrive,
+.fuckyou .personal_infor .gravedigger .worker_arrive,
+.fuckyou .personal_infor .gravedigger .catering_truck ,
+.fuckyou .personal_infor .gravedigger .ritual_food {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625em;
+}
+.fuckyou .personal_infor .gravedigger .ritual_food {
+    margin-bottom: 0;
 }
 .fuckyou .personal_infor .gravedigger ul {
     display: flex;
@@ -91,6 +113,10 @@
 .fuckyou .additionalInfor h3 {
     font-size: var(--section-tit-S);
     color: #1d1d1d;
+    font-weight: 700;
+}
+.fuckyou .additionalInfor {
+    display: flex;
 }
 .fuckyou .additionalInfor .address,
 .fuckyou .additionalInfor .detail_work  {
@@ -158,10 +184,15 @@
     margin-top: 0;
 }
 .fuckyou .mountain_estimate .mountain_menu h4 {
-    font-size: var(--section-M);
+    font-size: var(--section-tit-S);
     font-weight: 700;
     color: #1d1d1d;
-    width: 15%;
+    width: 150px;
+}
+.fuckyou .mountain_estimate .mountain_menu .contain {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 .fuckyou .mountain_estimate .mountain_menu .number {
     display: flex;
@@ -180,7 +211,8 @@
     display: flex;
     align-items: center;
     justify-content: end;
-    width: 20%;
+    width: 100%;
+    font-size: var(--section-M);
 }
 .fuckyou .mountain_estimate .another_btn .mountain_menu {
     margin-top: 1.25em;
@@ -294,10 +326,15 @@
     .fuckyou .personal_infor .gravedigger {
         width: 100%;
     }
-
+    .fuckyou .personal_infor .gravedigger {
+        gap: 2em;
+    }
     .fuckyou .mountain_estimate .total_btn {
         grid-template-columns: 1fr;
         gap: 0;
+    }
+    .fuckyou .mountain_estimate .mountain_menu .price {
+        font-size: var(--section-tit-S);
     }
 }
 
@@ -315,33 +352,31 @@
     .fuckyou .personal_infor select {
         font-size: 16px; /* 모바일에서 자동 확대 방지 */
     }
-
     .fuckyou .personal_infor ul,
     .fuckyou .personal_infor .gravedigger ul {
         flex-direction: column;
-        /* gap: 1em; */
-    }
-
-    .fuckyou .personal_infor ul li,
-    .fuckyou .personal_infor .gravedigger ul li {
+        gap: 1.65em;
         width: 100%;
+    }
+    .fuckyou .personal_infor .gravedigger ul li.count {
+        justify-content: flex-start;
     }
     .fuckyou .personal_infor .bereaved_infor ul  {
         gap: 10px;
         margin-bottom: 20px;
     }
     .fuckyou .personal_infor .bereaved_infor ul li span {
-        width: 40px;
+        width: 45px;
     }
+    .fuckyou .mountain_estimate .mountain_menu h4 {
+        width: 80px;
+    }
+    
 }
 
 @media (max-width: 480px) {
     .fuckyou h2 {
-        font-size: var(--header-M);
-    }
-
-    .fuckyou .mountain_estimate .mountain_menu h4 {
-        font-size: var(--section-S);
+        font-size: var(--header-L);
     }
 }
 
