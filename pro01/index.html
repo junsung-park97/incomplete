@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/tombstone.css">
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" defer></script>
     <script type="module" src="js/address.js" defer></script>
     <script type="module" src="js/index.js" defer></script>
@@ -60,8 +59,18 @@
                         <div class="funeral_home">
                             <h3>장례식장</h3>
                             <ul>
-                                <li><label for="area">지역명</label></li>
-                                <li><label for="locality">장례식장</label></li>
+                                <li>
+                                    <label for="area">지역명</label>
+                                    <select name="area" id="area"></select>
+                                </li>
+                                <li>
+                                    <label for="locality">시/도</label>
+                                    <select name="locality" id="locality"></select>
+                                </li>
+                                <li>
+                                    <select name="funeral" id="funeral"></select>
+                                    <label for="funeral">장례식장</label>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -180,7 +189,7 @@
         <section class="link">
             <div class="wrapper">
                 <div class="link_inner">
-                    <a href="#n">
+                    <a href="proposal/index.html">
                         예약바로가기
                     </a>
                 </div>
