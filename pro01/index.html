@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head></head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" defer></script>
-    <script type="module" src="js/address.js" defer></script>
-    <script type="module" src="js/index.js" defer></script>
-    <script src="js/main.js" defer></script>
+    <!-- 데이터 파일들은 서버에서 로드하므로 제거 -->
+    <!-- <script src="/pro01/js/funeral_data.js"></script>
+    <script src="/pro01/js/mountain_data.js"></script>
+    <script src="/pro01/js/tombstone_data.js"></script> -->
+    <!-- 그 다음 모듈 스크립트 로드 -->
+    <script type="module" src="/pro01/js/address.js" defer></script>
+    <script type="module" src="/pro01/js/index.js" defer></script>
+    <script src="/pro01/js/main.js" defer></script>
     <title>MVP</title>
 </head>
 <body>
@@ -187,13 +191,11 @@
             </div>
         </section>
         <section class="link">
-            <div class="wrapper">
-                <div class="link_inner">
-                    <a href="proposal/index.html">
-                        예약바로가기
-                    </a>
-                </div>
-            </div>        
+            <div class="reservation_btn">
+                <h2>
+                    <button type="button" id="goToProposal">예약바로가기</button>
+                </h2>
+            </div>       
         </section>
     </div>
 </body>

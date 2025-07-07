@@ -3,13 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>최종견적서</title>
+    <title>예약 확인</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="./css/proposal.css">
+    <!-- 데이터 파일들을 먼저 로드 -->
+    <script src="../../js/funeral_data.js"></script>
+    <script src="../../js/mountain_data.js"></script>
+    <script src="../../js/tombstone_data.js"></script>
 </head>
 <body>
-    <div id="wrap">
-        <div class="wrapper">
-            
+    <div class="proposal_wrap">
+        <h1>예약 내역 확인</h1>
+        <div class="reservation_summary">
+            <div class="info_section">
+                <div class="customer_info">
+                    <h2>고객 정보</h2>
+                    <div id="customerInfo" class="info_content"></div>
+                </div>
+
+                <div class="funeral_info">
+                    <h2>장례식장 정보</h2>
+                    <div id="funeralInfo" class="info_content"></div>
+                </div>
+
+                <div class="location_info">
+                    <h3>위치 정보</h3>
+                    <div class="location_select">
+                        <select id="area" name="area" required>
+                            <option value="">지역 선택</option>
+                        </select>
+                        <select id="district" name="district" required disabled>
+                            <option value="">구 선택</option>
+                        </select>
+                        <select id="neighborhood" name="neighborhood" required disabled>
+                            <option value="">동 선택</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work_section">
+                <div class="address_info">
+                    <h2>주소 정보</h2>
+                    <div id="addressInfo" class="info_content"></div>
+                </div>
+
+                <div class="gravedigger_info">
+                    <h2>작업 정보</h2>
+                    <div id="gravediggerInfo" class="info_content"></div>
+                </div>
+            </div>
+
+            <div class="mountain_info">
+                <h2>산역 견적</h2>
+                <div id="mountainInfo" class="info_content"></div>
+            </div>
+
+            <div class="service_info">
+                <h2>비석견적</h2>
+                <div id="serviceInfo" class="info_content"></div>
+            </div>
+
+            <div class="total_price_info">
+                <h2>총 견적</h2>
+                <div id="totalPriceInfo" class="info_content"></div>
+            </div>
+
+            <div class="reservation_btn">
+                <h2>
+                    <button type="button" id="confirmReservation">예약하기</button>
+                </h2>
+            </div>
         </div>
     </div>
+    
+    <!-- 메인 스크립트 로드 -->
+    <script src="js/proposal.js"></script>
 </body>
 </html>

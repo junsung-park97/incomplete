@@ -1,4 +1,5 @@
-import { tombstoneData } from './tombstone_data.js';
+// tombstone_data.js는 index.html에서 로드됨
+// import { tombstoneData } from './tombstone_data.js';
 
 // 선택된 아이템을 카테고리별로 저장할 객체
 let selectedItems = {};
@@ -22,10 +23,10 @@ export function initializeTombstoneUI() {
     }
 
     // 데이터 구조 확인
-    console.log('데이터 확인:', tombstoneData);
+    console.log('데이터 확인:', window.tombstoneData);
 
     // 각 카테고리별 UI 생성
-    tombstoneData.categories.forEach(category => {
+    window.tombstoneData.categories.forEach(category => {
         const categorySection = document.createElement('div');
         categorySection.className = 'category-section';
         
@@ -170,7 +171,7 @@ function updateTotalPrice() {
 // 디버깅용 전역 접근 설정
 window.debugTombstone = {
     selectedItems,
-    tombstoneData,
+    tombstoneData: window.tombstoneData,
     resetSelections: () => {
         selectedItems = {};
         console.log('선택 항목 초기화됨');

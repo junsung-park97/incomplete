@@ -382,6 +382,12 @@
     .fuckyou .personal_infor .bereaved_infor ul  {
         gap: 10px;
         margin-bottom: 20px;
+
+    }
+    .fuckyou .personal_infor .bereaved_infor .customer ul,
+    .fuckyou .personal_infor .bereaved_infor .funeral ul,
+    .fuckyou .personal_infor .bereaved_infor .meeting ul {
+        flex-direction: column;
     }
     .fuckyou .personal_infor .bereaved_infor ul li span {
         width: 45px;
